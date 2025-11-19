@@ -1,0 +1,131 @@
+#!/usr/bin/env node
+
+import { ask, s, view } from "./ui/terminal.mjs";
+import { VocabRepository } from "./data/repository.mjs";
+import { JsonDataStore } from "./data/dataStore.mjs";
+import { handleFastInput } from "./modes/addFastMode.mjs";
+import { handleNormalInput } from "./modes/addNormalMode.mjs";
+import { handleDetailInput } from "./modes/addDetailMode.mjs";
+import { handleSearch } from "./commands/searchCommand.mjs";
+import { handleDelete } from "./commands/deleteCommand.mjs";
+import { handleEditInput } from "./commands/editCommand.mjs";
+import { handleList } from "./commands/listCommand.mjs";
+
+// Get data file path from environment variable or use default
+const dataFilePath = process.env.VOCAB_DATA_PATH;
+
+if (!dataFilePath) throw new Error("Environment variable VOCAB_DATA_PATH is not set.");
+
+// Initialize data store and repository
+const dataStore = new JsonDataStore(dataFilePath);
+const repo = new VocabRepository(dataStore);
+
+const modeHandlers = {
+  fast: (input: string) => handleFastInput(input, repo),
+  normal: (input: string) => handleNormalInput(input, repo),
+  detail: (input: string) => handleDetailInput(input, repo),
+};
+
+let currentMode: keyof typeof modeHandlers = "normal";
+
+const commandRegistry = {
+  // info & control
+  help: () => displayHelp(currentMode),
+  mode: () => view(`Current mode: ${currentMode.toUpperCase()}`),
+  quit: () => {
+    console.clear();
+    process.exit(0);
+  },
+  // modes
+  fast: () => {
+    currentMode = "fast";
+    view("Switched to FAST INPUT mode.");
+  },
+  normal: () => {
+    currentMode = "normal";
+    view("Switched to NORMAL INPUT mode.");
+  },
+  detail: () => {
+    currentMode = "detail";
+    view("Switched to DETAIL INPUT mode.");
+  },
+  // actions
+  search: (argument: string) => handleSearch(argument, repo),
+  delete: (argument: string) => handleDelete(argument, repo),
+  edit: async (argument: string) => await handleEditInput(argument, repo, currentMode),
+  list: (argument: string) => handleList(argument, repo),
+};
+
+const commandHandlers = {
+  ...commandRegistry,
+  // info & control
+  q: commandRegistry.quit,
+  // modes
+  n: commandRegistry.normal,
+  f: commandRegistry.fast,
+  dt: commandRegistry.detail,
+  // actions
+  s: commandRegistry.search,
+  d: commandRegistry.delete,
+  e: commandRegistry.edit,
+  ls: commandRegistry.list,
+};
+const availableCommands = Object.keys(commandHandlers);
+
+// Process user input
+async function processInput(unTrimmedInput: string): Promise<void> {
+  console.clear();
+  const input = unTrimmedInput.trim();
+
+  if (availableCommands.includes(input.split(" ")[0])) {
+    const command = input.split(" ")[0] as keyof typeof commandRegistry;
+    const argument = input.slice(command.length).trim();
+
+    await commandHandlers[command](argument);
+  } else await modeHandlers[currentMode](input);
+}
+
+// Prompt for user input
+async function promptUser(): Promise<void> {
+  const modeIndicator = currentMode.toUpperCase();
+
+  const answer = await ask(`\n[${modeIndicator}] > `);
+
+  await processInput(answer);
+  promptUser();
+}
+
+// Main function
+export async function main(): Promise<void> {
+  console.clear();
+  view(s.aH("=== Dutch Vocabulary App ==="));
+  view("Type 'help' for available commands.\n");
+
+  promptUser();
+}
+
+main();
+
+function displayHelp(currentMode: string): void {
+  view("\n=== Dutch Vocabulary App ===");
+
+  view("\nModes:");
+  view(`${s.aH("f | fast")} :Switch to Fast Input Mode (just enter words)`);
+  view(`${s.aH("n | normal")} :Switch to Normal Input Mode (word with optional fields)`);
+  view(`${s.aH("dt | detail")} :Switch to Detail Input Mode (all fields with auto-defaults)`);
+
+  view("\nCommands:");
+  view(`${s.aH("d | delete <word>")} :Delete a specific word (or last word if no argument)`);
+  view(`${s.aH("e | edit <word>")} :Edit a word's entries`);
+  view(`${s.aH("ls | list  -c <cursor> -l <limit>")} :List words (defaults: cursor=1, limit=50)`);
+  view(
+    `${s.aH(
+      "s | search [-s] <query>",
+    )} :Search for words (use -s for starts with, default: contains)`,
+  );
+
+  view(`${s.aH("help")} :Show this help`);
+  view(`${s.aH("mode")} :Show current mode`);
+  view(`${s.aH("q")} :Exit the application`);
+  view(`\nCurrent mode: ${currentMode.toUpperCase()}`);
+}

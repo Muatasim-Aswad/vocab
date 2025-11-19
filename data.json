@@ -1,0 +1,2247 @@
+[
+  {
+    "word": "de slee",
+    "example": "De kinderen spelen met de slee.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.158Z",
+    "modifiedAt": "2025-11-19T12:19:24.159Z",
+    "related": [
+      "de slede"
+    ]
+  },
+  {
+    "word": "de sneeuw",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.161Z",
+    "modifiedAt": "2025-11-19T12:19:24.161Z"
+  },
+  {
+    "word": "de beek",
+    "example": "De beek stroomt door het bos.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.161Z",
+    "modifiedAt": "2025-11-19T12:19:24.161Z"
+  },
+  {
+    "word": "de rivier",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "related": [
+      "de rivier is breed"
+    ]
+  },
+  {
+    "word": "het gebied",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "related": [
+      "de streek"
+    ]
+  },
+  {
+    "word": "de streek",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "related": [
+      "het gebied"
+    ]
+  },
+  {
+    "word": "het bos",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "related": [
+      "we wandelen in het bos"
+    ]
+  },
+  {
+    "word": "de heide",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.163Z",
+    "modifiedAt": "2025-11-19T12:19:24.163Z"
+  },
+  {
+    "word": "de dijk",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.163Z",
+    "modifiedAt": "2025-11-19T12:19:24.163Z"
+  },
+  {
+    "word": "de dam",
+    "example": "De dam houdt het water tegen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.163Z",
+    "modifiedAt": "2025-11-19T12:19:24.163Z"
+  },
+  {
+    "word": "tandenpoetsen",
+    "example": "Ik poets elke ochtend mijn tanden.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.163Z",
+    "modifiedAt": "2025-11-19T12:19:24.163Z"
+  },
+  {
+    "word": "de kraan",
+    "example": "De kraan lekt. de kraan opendraaien, de kraan dichtdoen, onder de kraan.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.164Z",
+    "modifiedAt": "2025-11-19T12:19:24.164Z",
+    "related": [
+      "de waterkraan"
+    ]
+  },
+  {
+    "word": "de lampen",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.164Z",
+    "modifiedAt": "2025-11-19T12:19:24.164Z"
+  },
+  {
+    "word": "uitdoen",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.164Z",
+    "modifiedAt": "2025-11-19T12:19:24.164Z",
+    "related": [
+      "kun je het licht uitdoen?"
+    ]
+  },
+  {
+    "word": "de rand",
+    "example": "Hij staat aan de rand van het bos.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.164Z",
+    "modifiedAt": "2025-11-19T12:19:24.164Z"
+  },
+  {
+    "word": "het bord",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.165Z",
+    "modifiedAt": "2025-11-19T12:19:24.165Z",
+    "related": [
+      "aanwijsbord"
+    ]
+  },
+  {
+    "word": "het stiltegebied",
+    "example": "In het stiltegebied moet je zacht praten.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.165Z",
+    "modifiedAt": "2025-11-19T12:19:24.165Z",
+    "related": [
+      "het gebied"
+    ]
+  },
+  {
+    "word": "beschikbaar",
+    "example": "Ik ben vanavond beschikbaar.",
+    "addedAt": "2025-11-19T12:19:24.166Z",
+    "modifiedAt": "2025-11-19T12:19:24.166Z"
+  },
+  {
+    "word": "de veiligheid",
+    "example": "Voor je veiligheid moet je een helm dragen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.166Z",
+    "modifiedAt": "2025-11-19T12:19:24.166Z"
+  },
+  {
+    "word": "de begeleiding",
+    "example": "Hij krijgt begeleiding op school.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.166Z",
+    "modifiedAt": "2025-11-19T12:19:24.166Z"
+  },
+  {
+    "word": "de kabel",
+    "example": "De kabl is te kort.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.167Z",
+    "modifiedAt": "2025-11-19T12:19:24.167Z"
+  },
+  {
+    "word": "vereniging",
+    "addedAt": "2025-11-19T12:19:24.168Z",
+    "modifiedAt": "2025-11-19T12:19:24.168Z"
+  },
+  {
+    "word": "druppels",
+    "addedAt": "2025-11-19T12:19:24.168Z",
+    "modifiedAt": "2025-11-19T12:19:24.168Z"
+  },
+  {
+    "word": "de geul",
+    "example": "Water stroomt door de geul.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.169Z",
+    "modifiedAt": "2025-11-19T12:19:24.169Z",
+    "related": [
+      "riviergeul"
+    ]
+  },
+  {
+    "word": "verdrinken",
+    "example": "Hij is bijna verdrinken in de rivier.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.169Z",
+    "modifiedAt": "2025-11-19T12:19:24.169Z",
+    "related": [
+      "verdrinkingsgevaar"
+    ]
+  },
+  {
+    "word": "terechtkomen",
+    "example": "We kwamen in een vreemde stad terecht. Hoe ben je hier terechtgekomen?In de problemen terechtkomen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.170Z",
+    "modifiedAt": "2025-11-19T12:19:24.170Z"
+  },
+  {
+    "word": "uitmonden",
+    "example": "De rivier mondt uit in de zee.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.170Z",
+    "modifiedAt": "2025-11-19T12:19:24.170Z"
+  },
+  {
+    "word": "overstromen",
+    "example": "Het gebied overstroomt na de regen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.170Z",
+    "modifiedAt": "2025-11-19T12:19:24.170Z"
+  },
+  {
+    "word": "de rust",
+    "example": "Ik geniet van de rust in het bos.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.171Z",
+    "modifiedAt": "2025-11-19T12:19:24.171Z",
+    "related": [
+      "stilte, kalmte"
+    ]
+  },
+  {
+    "word": "uitslijten",
+    "example": "Het water slijt de rotsen uit.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.171Z",
+    "modifiedAt": "2025-11-19T12:19:24.171Z"
+  },
+  {
+    "word": "breken",
+    "example": "Hij breekt het brood in twee stukken.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.172Z",
+    "modifiedAt": "2025-11-19T12:19:24.172Z"
+  },
+  {
+    "word": "merken",
+    "example": "Hij merkt dat het regent.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.172Z",
+    "modifiedAt": "2025-11-19T12:19:24.172Z"
+  },
+  {
+    "word": "flink",
+    "example": "Het waait flink.",
+    "addedAt": "2025-11-19T12:19:24.173Z",
+    "modifiedAt": "2025-11-19T12:19:24.173Z"
+  },
+  {
+    "word": "beheren",
+    "example": "Zij beheert de website.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.173Z",
+    "modifiedAt": "2025-11-19T12:19:24.173Z"
+  },
+  {
+    "word": "uitgesleten",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.173Z",
+    "modifiedAt": "2025-11-19T12:19:24.173Z",
+    "related": [
+      "uitslijten"
+    ]
+  },
+  {
+    "word": "springen",
+    "example": "Het kid springt hoog.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.174Z",
+    "modifiedAt": "2025-11-19T12:19:24.174Z"
+  },
+  {
+    "word": "de toestand",
+    "example": "De toestand van het huis is slecht.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.174Z",
+    "modifiedAt": "2025-11-19T12:19:24.174Z",
+    "related": [
+      "situatie, conditie, staat"
+    ]
+  },
+  {
+    "word": "de watersnoodramp",
+    "example": "De watersnoodramp richtte veel schade aan.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.174Z",
+    "modifiedAt": "2025-11-19T12:19:24.175Z",
+    "related": [
+      "water, nood, ramp"
+    ]
+  },
+  {
+    "word": "verstrekken",
+    "example": "De organidsatie heeft voedsel verstrekt.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.175Z",
+    "modifiedAt": "2025-11-19T12:19:24.175Z",
+    "related": [
+      "aanbieden"
+    ]
+  },
+  {
+    "word": "de wet",
+    "example": "In Nederland moet iedereen zich aan de wet houden.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.175Z",
+    "modifiedAt": "2025-11-19T12:19:24.175Z",
+    "related": [
+      "de wet verbiedt dat"
+    ]
+  },
+  {
+    "word": "de regering",
+    "example": "De regering is onderdeel van de overheid.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.176Z",
+    "modifiedAt": "2025-11-19T12:19:24.176Z"
+  },
+  {
+    "word": "de landbouw",
+    "example": "De landbouw is belangrijk voor het land.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.177Z",
+    "modifiedAt": "2025-11-19T12:19:24.177Z",
+    "related": [
+      "landbouwer, landbouwproducten"
+    ]
+  },
+  {
+    "word": "enorm",
+    "example": "Een enorme storm komat eraan.",
+    "addedAt": "2025-11-19T12:19:24.178Z",
+    "modifiedAt": "2025-11-19T12:19:24.178Z",
+    "related": [
+      "gigantisch"
+    ]
+  },
+  {
+    "word": "het meer",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.178Z",
+    "modifiedAt": "2025-11-19T12:19:24.178Z",
+    "related": [
+      "vijver"
+    ]
+  },
+  {
+    "word": "waardoor",
+    "example": "Het regende hard, waardoor de weg glad werd.",
+    "addedAt": "2025-11-19T12:19:24.179Z",
+    "modifiedAt": "2025-11-19T12:19:24.179Z",
+    "related": [
+      "hierdoor"
+    ]
+  },
+  {
+    "word": "stromen",
+    "example": "De rivier stroomt snel.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.179Z",
+    "modifiedAt": "2025-11-19T12:19:24.179Z",
+    "related": [
+      "vloeien"
+    ]
+  },
+  {
+    "word": "ramp",
+    "example": "De overstorming was een grote ramp.",
+    "addedAt": "2025-11-19T12:19:24.179Z",
+    "modifiedAt": "2025-11-19T12:19:24.179Z",
+    "related": [
+      "natuurramp, rampgebied, rampenplan"
+    ]
+  },
+  {
+    "word": "winnen",
+    "example": "Hij wint de wedstrijd. Een prijs winnen. De oorlog winnen. Iets winnen bij ..",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.179Z",
+    "modifiedAt": "2025-11-19T12:19:24.180Z",
+    "related": [
+      "-verliezen"
+    ]
+  },
+  {
+    "word": "vechten",
+    "example": "De jjongens vechten met elkaar.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.180Z",
+    "modifiedAt": "2025-11-19T12:19:24.180Z",
+    "related": [
+      "strijden, knokken"
+    ]
+  },
+  {
+    "word": "de voorstelling",
+    "example": "We gaan vanavond naar een voorstelling.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.180Z",
+    "modifiedAt": "2025-11-19T12:19:24.180Z",
+    "related": [
+      "optreden, presentatie, (voorstelling maken*)"
+    ]
+  },
+  {
+    "word": "zich verbazen",
+    "example": "Hij verbaast zich over het resultaat.",
+    "form": "verb",
+    "types": [
+      "reflexive"
+    ],
+    "addedAt": "2025-11-19T12:19:24.181Z",
+    "modifiedAt": "2025-11-19T12:19:24.181Z",
+    "related": [
+      "-verwachent"
+    ]
+  },
+  {
+    "word": "slingeren",
+    "example": "Het koord slingert in de wind.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.181Z",
+    "modifiedAt": "2025-11-19T12:19:24.181Z",
+    "related": [
+      "slingerpad"
+    ]
+  },
+  {
+    "word": "de spiegeling",
+    "example": "De spiegeling in het water is mooi.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.181Z",
+    "modifiedAt": "2025-11-19T12:19:24.181Z",
+    "related": [
+      "spiegel"
+    ]
+  },
+  {
+    "word": "de steun",
+    "example": "Hij geeft mij veel steun.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.182Z",
+    "modifiedAt": "2025-11-19T12:19:24.182Z",
+    "related": [
+      "hulp"
+    ]
+  },
+  {
+    "word": "steunen",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.182Z",
+    "modifiedAt": "2025-11-19T12:19:24.182Z",
+    "related": [
+      "de steun"
+    ]
+  },
+  {
+    "word": "verliezen",
+    "example": "Ik ben mijn sleutel verloren.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.182Z",
+    "modifiedAt": "2025-11-19T12:19:24.182Z",
+    "related": [
+      "-vinden, -winnen"
+    ]
+  },
+  {
+    "word": "de expositie",
+    "example": "De expositie opent morgen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.183Z",
+    "modifiedAt": "2025-11-19T12:19:24.183Z",
+    "related": [
+      "tentoonstelling"
+    ]
+  },
+  {
+    "word": "het slot",
+    "example": "Het slot van de deur is kapot.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.183Z",
+    "modifiedAt": "2025-11-19T12:19:24.183Z"
+  },
+  {
+    "word": "ophouden",
+    "example": "Het regent niet meer; het is opgehouden.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.183Z",
+    "modifiedAt": "2025-11-19T12:19:24.183Z",
+    "related": [
+      "stoppen"
+    ]
+  },
+  {
+    "word": "de agressie",
+    "example": "Agressie wordt niet getolereerd.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.183Z",
+    "modifiedAt": "2025-11-19T12:19:24.183Z",
+    "related": [
+      "-vrede"
+    ]
+  },
+  {
+    "word": "het lawaai",
+    "example": "Er is veel lawaai buiten.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.184Z",
+    "modifiedAt": "2025-11-19T12:19:24.184Z",
+    "related": [
+      "herrie, geluid, -stilte"
+    ]
+  },
+  {
+    "word": "het geweld",
+    "example": "Het geweld ijdens de protesten was ernstig.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.184Z",
+    "modifiedAt": "2025-11-19T12:19:24.184Z",
+    "related": [
+      "agressie, brute kracht, -vrede"
+    ]
+  },
+  {
+    "word": "de sleutel",
+    "example": "Ik ben mijn sleutel kwijt.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.184Z",
+    "modifiedAt": "2025-11-19T12:19:24.184Z",
+    "related": [
+      "sleutelbos"
+    ]
+  },
+  {
+    "word": "het geluid",
+    "example": "Ik hoor een vreemd geluid.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.185Z",
+    "modifiedAt": "2025-11-19T12:19:24.185Z",
+    "related": [
+      "klank, geluidsniveau"
+    ]
+  },
+  {
+    "word": "de poep",
+    "example": "Er ligt poep op het gras.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.185Z",
+    "modifiedAt": "2025-11-19T12:19:24.185Z",
+    "related": [
+      "ontlasting, kak"
+    ]
+  },
+  {
+    "word": "stoppen",
+    "example": "Kun je stoppen met praten?",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.185Z",
+    "modifiedAt": "2025-11-19T12:19:24.185Z",
+    "related": [
+      "ophouden, eindigen"
+    ]
+  },
+  {
+    "word": "opruimen",
+    "example": "Ik moet mijn kamer opruimen.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.186Z",
+    "modifiedAt": "2025-11-19T12:19:24.186Z",
+    "related": [
+      "schoonmaken, ordenen, netjes maken"
+    ]
+  },
+  {
+    "word": "het plafond",
+    "example": "Het plafond is wit geverfd.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.186Z",
+    "modifiedAt": "2025-11-19T12:19:24.186Z",
+    "related": [
+      "-vloer"
+    ]
+  },
+  {
+    "word": "enerzijds",
+    "example": "Enerzijds wil ik verhuizen, anderzijds niet.",
+    "addedAt": "2025-11-19T12:19:24.186Z",
+    "modifiedAt": "2025-11-19T12:19:24.186Z"
+  },
+  {
+    "word": "de geur",
+    "example": "De geur van bloemen is heerlijk.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.187Z",
+    "modifiedAt": "2025-11-19T12:19:24.187Z",
+    "related": [
+      "+aroma, -stank"
+    ]
+  },
+  {
+    "word": "gooien",
+    "example": "Ik gooi de bal.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.187Z",
+    "modifiedAt": "2025-11-19T12:19:24.187Z",
+    "related": [
+      "weggooien, werpen"
+    ]
+  },
+  {
+    "word": "de vuilnisemmer",
+    "example": "Gooi het in de vuilnisemmer.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.187Z",
+    "modifiedAt": "2025-11-19T12:19:24.187Z",
+    "related": [
+      "vuilniszak, vuilniswagen"
+    ]
+  },
+  {
+    "word": "ondanks",
+    "example": "Ondanks de regen gingen we wandelen.",
+    "addedAt": "2025-11-19T12:19:24.187Z",
+    "modifiedAt": "2025-11-19T12:19:24.187Z"
+  },
+  {
+    "word": "verslaafd",
+    "example": "Hij is verslaafd aan koffie.",
+    "addedAt": "2025-11-19T12:19:24.188Z",
+    "modifiedAt": "2025-11-19T12:19:24.188Z",
+    "related": [
+      "verslaven"
+    ]
+  },
+  {
+    "word": "handelen",
+    "example": "Je moet nu snel handelen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.188Z",
+    "modifiedAt": "2025-11-19T12:19:24.188Z",
+    "related": [
+      "doen, reageren"
+    ]
+  },
+  {
+    "word": "waarschuwen",
+    "example": "Ik waarschuw je voor het gevaar.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.188Z",
+    "modifiedAt": "2025-11-19T12:19:24.188Z",
+    "related": [
+      "alarmeren"
+    ]
+  },
+  {
+    "word": "voorgoed",
+    "example": "Ze is voorgoed weg.",
+    "addedAt": "2025-11-19T12:19:24.189Z",
+    "modifiedAt": "2025-11-19T12:19:24.189Z",
+    "related": [
+      "-tijdelijk"
+    ]
+  },
+  {
+    "word": "dun",
+    "example": "Hij draagt een dunne jas.",
+    "addedAt": "2025-11-19T12:19:24.189Z",
+    "modifiedAt": "2025-11-19T12:19:24.189Z",
+    "related": [
+      "-dik"
+    ]
+  },
+  {
+    "word": "gehorig",
+    "example": "Ons huis is gehorig; je hoort de buren prate.",
+    "addedAt": "2025-11-19T12:19:24.189Z",
+    "modifiedAt": "2025-11-19T12:19:24.189Z",
+    "related": [
+      "slecht geisoleerd"
+    ]
+  },
+  {
+    "word": "de rechter",
+    "example": "De rechter moet altijd een objectief oordeel geven.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.190Z",
+    "modifiedAt": "2025-11-19T12:19:24.190Z"
+  },
+  {
+    "word": "hoogachtend",
+    "addedAt": "2025-11-19T12:19:24.190Z",
+    "modifiedAt": "2025-11-19T12:19:24.190Z",
+    "related": [
+      "met vriendelijke groeten (~i)"
+    ]
+  },
+  {
+    "word": "het gedrag",
+    "example": "Zijn gedrag is netjes.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.191Z",
+    "modifiedAt": "2025-11-19T12:19:24.191Z",
+    "related": [
+      "manieren"
+    ]
+  },
+  {
+    "word": "bedreigen",
+    "example": "Iemand bedreigen noemen we agressief gedrag.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.191Z",
+    "modifiedAt": "2025-11-19T12:19:24.191Z"
+  },
+  {
+    "word": "binnenstad",
+    "addedAt": "2025-11-19T12:19:24.191Z",
+    "modifiedAt": "2025-11-19T12:19:24.191Z",
+    "related": [
+      "centrum"
+    ]
+  },
+  {
+    "word": "platteland",
+    "example": "Mijn opa woont op het platteland.",
+    "addedAt": "2025-11-19T12:19:24.191Z",
+    "modifiedAt": "2025-11-19T12:19:24.191Z",
+    "related": [
+      "buitengebied, dorp"
+    ]
+  },
+  {
+    "word": "omdraaien",
+    "example": "Kun je het boek omdraaien?",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.192Z",
+    "modifiedAt": "2025-11-19T12:19:24.192Z",
+    "related": [
+      "omflippen"
+    ]
+  },
+  {
+    "word": "de plicht",
+    "example": "Het is mijn plicht om te helpen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.192Z",
+    "modifiedAt": "2025-11-19T12:19:24.192Z",
+    "related": [
+      "verantwoordelijkheid"
+    ]
+  },
+  {
+    "word": "ontkennen",
+    "example": "Hij ontkent de beschuldiging.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.192Z",
+    "modifiedAt": "2025-11-19T12:19:24.192Z",
+    "related": [
+      "-toegeven"
+    ]
+  },
+  {
+    "word": "sprake",
+    "example": "Er is sprake van een probleem. | Geen sprake van!",
+    "addedAt": "2025-11-19T12:19:24.192Z",
+    "modifiedAt": "2025-11-19T12:19:24.192Z"
+  },
+  {
+    "word": "overlast",
+    "example": "De buren maken veel overlast.",
+    "addedAt": "2025-11-19T12:19:24.193Z",
+    "modifiedAt": "2025-11-19T12:19:24.193Z",
+    "related": [
+      "lawaaioverlast, stankoverlast"
+    ]
+  },
+  {
+    "word": "verkomende",
+    "example": "Veelvoorkomende fouten.",
+    "addedAt": "2025-11-19T12:19:24.194Z",
+    "modifiedAt": "2025-11-19T12:19:24.194Z",
+    "related": [
+      "vaak voorkomend"
+    ]
+  },
+  {
+    "word": "klagen",
+    "example": "Hij klaagt over de kou.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.194Z",
+    "modifiedAt": "2025-11-19T12:19:24.194Z",
+    "related": [
+      "zeuren"
+    ]
+  },
+  {
+    "word": "veroorzaken",
+    "example": "De storm veroorzaakt schade.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.194Z",
+    "modifiedAt": "2025-11-19T12:19:24.194Z",
+    "related": [
+      "leiden tot"
+    ]
+  },
+  {
+    "word": "de stelling",
+    "example": "Ik ben het niet eens met die stelling.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.195Z",
+    "modifiedAt": "2025-11-19T12:19:24.195Z",
+    "related": [
+      "de mening"
+    ]
+  },
+  {
+    "word": "dreunend",
+    "example": "Midden in de nacht dreunende muziek draaien.",
+    "addedAt": "2025-11-19T12:19:24.195Z",
+    "modifiedAt": "2025-11-19T12:19:24.195Z",
+    "related": [
+      "de dreunende muziek hield ons wakker."
+    ]
+  },
+  {
+    "word": "aandacht hebben",
+    "example": "Aandacht hebben voor je zieke buurman.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.195Z",
+    "modifiedAt": "2025-11-19T12:19:24.195Z"
+  },
+  {
+    "word": "buurtbewoners",
+    "example": "Buurtbewoners helpen die sociale of geestelijke problemen hebben.",
+    "addedAt": "2025-11-19T12:19:24.195Z",
+    "modifiedAt": "2025-11-19T12:19:24.195Z"
+  },
+  {
+    "word": "schelden",
+    "example": "Agressief zijn en op iedereen schelden.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.195Z",
+    "modifiedAt": "2025-11-19T12:19:24.195Z"
+  },
+  {
+    "word": "melden",
+    "example": "Ik moet de schade melden bij de verzekering.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.196Z",
+    "modifiedAt": "2025-11-19T12:19:24.196Z"
+  },
+  {
+    "word": "ernstig",
+    "example": "Het is een ernstig probleem.",
+    "addedAt": "2025-11-19T12:19:24.196Z",
+    "modifiedAt": "2025-11-19T12:19:24.196Z"
+  },
+  {
+    "word": "aantreffen",
+    "example": "De politie trof de verdachte aan in het park.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.196Z",
+    "modifiedAt": "2025-11-19T12:19:24.196Z",
+    "related": [
+      "vinden"
+    ]
+  },
+  {
+    "word": "de stoep",
+    "example": "Kinderen spelen op de stoep.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.196Z",
+    "modifiedAt": "2025-11-19T12:19:24.196Z"
+  },
+  {
+    "word": "vliegen",
+    "example": "Vliegen is een relatief veilige manier van reizen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.197Z",
+    "modifiedAt": "2025-11-19T12:19:24.197Z"
+  },
+  {
+    "word": "knuffelen",
+    "example": "Knuffelen met je vriendin is niet huiselijk geweld. Kinderen knuffelen de kat.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.197Z",
+    "modifiedAt": "2025-11-19T12:19:24.197Z"
+  },
+  {
+    "word": "bovendien",
+    "example": "Het regent, bovendien is het koud.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.197Z",
+    "modifiedAt": "2025-11-19T12:19:24.197Z"
+  },
+  {
+    "word": "nauwelijks",
+    "example": "Ik heb nauwelijks tijd om te slapen.",
+    "addedAt": "2025-11-19T12:19:24.198Z",
+    "modifiedAt": "2025-11-19T12:19:24.198Z",
+    "related": [
+      "bijna niet, -veel"
+    ]
+  },
+  {
+    "word": "belachelijk",
+    "example": "Het is belachelijk om zoveel te betalen.",
+    "addedAt": "2025-11-19T12:19:24.198Z",
+    "modifiedAt": "2025-11-19T12:19:24.198Z"
+  },
+  {
+    "word": "afschuwelijk",
+    "example": "Het eten was afschuwelijk.",
+    "addedAt": "2025-11-19T12:19:24.198Z",
+    "modifiedAt": "2025-11-19T12:19:24.198Z",
+    "related": [
+      "verschrikkelijk, -geweldig, -prachtig"
+    ]
+  },
+  {
+    "word": "totdat",
+    "example": "Ik wacht hier totdat jij terugkomt.",
+    "addedAt": "2025-11-19T12:19:24.199Z",
+    "modifiedAt": "2025-11-19T12:19:24.199Z"
+  },
+  {
+    "word": "de gootsteen",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.199Z",
+    "modifiedAt": "2025-11-19T12:19:24.199Z"
+  },
+  {
+    "word": "het zand",
+    "example": "Het zand is warm aan mijn voeten.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.199Z",
+    "modifiedAt": "2025-11-19T12:19:24.199Z",
+    "related": [
+      "het strandzand, het duinzand"
+    ]
+  },
+  {
+    "word": "de oven",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.200Z",
+    "modifiedAt": "2025-11-19T12:19:24.200Z"
+  },
+  {
+    "word": "het bed",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.200Z",
+    "modifiedAt": "2025-11-19T12:19:24.200Z"
+  },
+  {
+    "word": "het landschap",
+    "example": "Het Nederlandse landschap is vlak.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.200Z",
+    "modifiedAt": "2025-11-19T12:19:24.200Z"
+  },
+  {
+    "word": "de afzuigkap",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.200Z",
+    "modifiedAt": "2025-11-19T12:19:24.200Z"
+  },
+  {
+    "word": "het aanrecht",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.201Z",
+    "modifiedAt": "2025-11-19T12:19:24.201Z"
+  },
+  {
+    "word": "de vriezer",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.201Z",
+    "modifiedAt": "2025-11-19T12:19:24.201Z"
+  },
+  {
+    "word": "kant-en-klaarmaaltijd",
+    "addedAt": "2025-11-19T12:19:24.202Z",
+    "modifiedAt": "2025-11-19T12:19:24.202Z"
+  },
+  {
+    "word": "de planken",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.202Z",
+    "modifiedAt": "2025-11-19T12:19:24.202Z"
+  },
+  {
+    "word": "ingewikkelde",
+    "addedAt": "2025-11-19T12:19:24.202Z",
+    "modifiedAt": "2025-11-19T12:19:24.202Z"
+  },
+  {
+    "word": "eromheen",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.203Z",
+    "modifiedAt": "2025-11-19T12:19:24.203Z"
+  },
+  {
+    "word": "dekken",
+    "example": "Wil jij de tafel dekken?",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.203Z",
+    "modifiedAt": "2025-11-19T12:19:24.203Z"
+  },
+  {
+    "word": "het vuur",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.203Z",
+    "modifiedAt": "2025-11-19T12:19:24.203Z"
+  },
+  {
+    "word": "trots",
+    "addedAt": "2025-11-19T12:19:24.203Z",
+    "modifiedAt": "2025-11-19T12:19:24.203Z"
+  },
+  {
+    "word": "afwassen",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.204Z",
+    "modifiedAt": "2025-11-19T12:19:24.204Z"
+  },
+  {
+    "word": "de klus",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.204Z",
+    "modifiedAt": "2025-11-19T12:19:24.204Z",
+    "related": [
+      "het werk dat je moet doen"
+    ]
+  },
+  {
+    "word": "de gebruiksaanwijzing",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.204Z",
+    "modifiedAt": "2025-11-19T12:19:24.204Z"
+  },
+  {
+    "word": "de toets",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.204Z",
+    "modifiedAt": "2025-11-19T12:19:24.204Z",
+    "related": [
+      "je drukt erop, dan start het apparaat."
+    ]
+  },
+  {
+    "word": "strijken",
+    "example": "Overhemd strijken.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.205Z",
+    "modifiedAt": "2025-11-19T12:19:24.205Z"
+  },
+  {
+    "word": "de borstel",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.205Z",
+    "modifiedAt": "2025-11-19T12:19:24.205Z"
+  },
+  {
+    "word": "stofzuigen",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.205Z",
+    "modifiedAt": "2025-11-19T12:19:24.205Z"
+  },
+  {
+    "word": "het wasmiddel",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.206Z",
+    "modifiedAt": "2025-11-19T12:19:24.206Z"
+  },
+  {
+    "word": "de zeep",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.206Z",
+    "modifiedAt": "2025-11-19T12:19:24.206Z"
+  },
+  {
+    "word": "instellen",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.206Z",
+    "modifiedAt": "2025-11-19T12:19:24.206Z"
+  },
+  {
+    "word": "de berg",
+    "example": "Ik wandel op de berg. We klimmen de berg op.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.206Z",
+    "modifiedAt": "2025-11-19T12:19:24.206Z"
+  },
+  {
+    "word": "beschrijven",
+    "example": "Kun je dit shilderij beschrijven?",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.207Z",
+    "modifiedAt": "2025-11-19T12:19:24.207Z"
+  },
+  {
+    "word": "de jeugd",
+    "example": "In mijn jeugd speelde ik buiten.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.207Z",
+    "modifiedAt": "2025-11-19T12:19:24.207Z"
+  },
+  {
+    "word": "de overeenkomst",
+    "example": "Er is een overeenkomst tussen de twee plannen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.207Z",
+    "modifiedAt": "2025-11-19T12:19:24.207Z",
+    "related": [
+      "de gelijkenis"
+    ]
+  },
+  {
+    "word": "vies",
+    "example": "De vloer is vies.",
+    "addedAt": "2025-11-19T12:19:24.208Z",
+    "modifiedAt": "2025-11-19T12:19:24.208Z"
+  },
+  {
+    "word": "de achtergrond",
+    "example": "Op de foto is de achtergrond wazig.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.208Z",
+    "modifiedAt": "2025-11-19T12:19:24.208Z"
+  },
+  {
+    "word": "de arbeider",
+    "example": "De arbeider begint om zes uur.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.209Z",
+    "modifiedAt": "2025-11-19T12:19:24.209Z"
+  },
+  {
+    "word": "beide",
+    "example": "Beide opties zijn goed.",
+    "addedAt": "2025-11-19T12:19:24.209Z",
+    "modifiedAt": "2025-11-19T12:19:24.209Z"
+  },
+  {
+    "word": "bouwen",
+    "example": "Ze bouwen een nieuw huis.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.209Z",
+    "modifiedAt": "2025-11-19T12:19:24.209Z"
+  },
+  {
+    "word": "de buitenlander",
+    "example": "Een buitenlander vraagt de weg.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.210Z",
+    "modifiedAt": "2025-11-19T12:19:24.210Z",
+    "related": [
+      "de nederlander"
+    ]
+  },
+  {
+    "word": "doordat",
+    "example": "Hij kwam te laat doordat de bus vertraging had.",
+    "addedAt": "2025-11-19T12:19:24.210Z",
+    "modifiedAt": "2025-11-19T12:19:24.210Z"
+  },
+  {
+    "word": "het enige",
+    "example": "Jij bent het enige kind hier.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.210Z",
+    "modifiedAt": "2025-11-19T12:19:24.210Z",
+    "related": [
+      "alleen"
+    ]
+  },
+  {
+    "word": "gevaarlijk",
+    "example": "Die weg is gevaarlijk.",
+    "addedAt": "2025-11-19T12:19:24.211Z",
+    "modifiedAt": "2025-11-19T12:19:24.211Z",
+    "related": [
+      "onveilig"
+    ]
+  },
+  {
+    "word": "zich herinneren",
+    "example": "Ik herinner me zijn naam.",
+    "form": "verb",
+    "types": [
+      "reflexive"
+    ],
+    "addedAt": "2025-11-19T12:19:24.211Z",
+    "modifiedAt": "2025-11-19T12:19:24.211Z",
+    "related": [
+      "onthouden"
+    ]
+  },
+  {
+    "word": "het kanaal",
+    "example": "Het tv-kanaal.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.211Z",
+    "modifiedAt": "2025-11-19T12:19:24.211Z",
+    "related": [
+      "het grachtje"
+    ]
+  },
+  {
+    "word": "de molen",
+    "example": "De molen draait snel.",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.212Z",
+    "modifiedAt": "2025-11-19T12:19:24.212Z",
+    "related": [
+      "windmolen, watermolen"
+    ]
+  },
+  {
+    "word": "het platteland",
+    "example": "We wonen op het platteland.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.213Z",
+    "modifiedAt": "2025-11-19T12:19:24.213Z"
+  },
+  {
+    "word": "de sigaret",
+    "example": "Hij rookt een sigaret.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.213Z",
+    "modifiedAt": "2025-11-19T12:19:24.213Z"
+  },
+  {
+    "word": "uitbreiden",
+    "example": "We willen ons bedrijf uitbreiden.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.213Z",
+    "modifiedAt": "2025-11-19T12:19:24.213Z",
+    "related": [
+      "vergroten"
+    ]
+  },
+  {
+    "word": "vlak",
+    "example": "De tafel is vlak.",
+    "addedAt": "2025-11-19T12:19:24.214Z",
+    "modifiedAt": "2025-11-19T12:19:24.214Z",
+    "related": [
+      "plat"
+    ]
+  },
+  {
+    "word": "het weiland",
+    "example": "De koeien staan in het weiland.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.215Z",
+    "modifiedAt": "2025-11-19T12:19:24.215Z"
+  },
+  {
+    "word": "zwemmen",
+    "example": "Wij zwemmen in het meer.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.215Z",
+    "modifiedAt": "2025-11-19T12:19:24.215Z"
+  },
+  {
+    "word": "de bejaarde",
+    "example": "De bejaarde loopt langzaam.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.215Z",
+    "modifiedAt": "2025-11-19T12:19:24.215Z",
+    "related": [
+      "de oudere"
+    ]
+  },
+  {
+    "word": "gelden",
+    "example": "De regels gelden voor iedereen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.216Z",
+    "modifiedAt": "2025-11-19T12:19:24.216Z"
+  },
+  {
+    "word": "de hond",
+    "example": "De hond blaft.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.216Z",
+    "modifiedAt": "2025-11-19T12:19:24.216Z"
+  },
+  {
+    "word": "de kat",
+    "example": "De kat slaapt.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.217Z",
+    "modifiedAt": "2025-11-19T12:19:24.217Z"
+  },
+  {
+    "word": "het konijn",
+    "example": "Het konjin eet wortels.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.218Z",
+    "modifiedAt": "2025-11-19T12:19:24.218Z"
+  },
+  {
+    "word": "de kooi",
+    "example": "De vogel zit in de kooi.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.218Z",
+    "modifiedAt": "2025-11-19T12:19:24.218Z"
+  },
+  {
+    "word": "kruipen",
+    "example": "De baby kruipt over de vloer.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.219Z",
+    "modifiedAt": "2025-11-19T12:19:24.219Z"
+  },
+  {
+    "word": "laten",
+    "example": "Ik laat mijn fiets repareren.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.219Z",
+    "modifiedAt": "2025-11-19T12:19:24.219Z"
+  },
+  {
+    "word": "het nadeel",
+    "example": "Het nadeel van rgen is natte kleren.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.219Z",
+    "modifiedAt": "2025-11-19T12:19:24.219Z",
+    "related": [
+      "-het voordeel"
+    ]
+  },
+  {
+    "word": "het ongedierte",
+    "example": "Ongedierte kan schade veroorzaken.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.219Z",
+    "modifiedAt": "2025-11-19T12:19:24.219Z"
+  },
+  {
+    "word": "de rat",
+    "example": "De rat rent weg.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.220Z",
+    "modifiedAt": "2025-11-19T12:19:24.220Z",
+    "related": [
+      "de muis"
+    ]
+  },
+  {
+    "word": "de reden",
+    "example": "Wat is de reden?",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.220Z",
+    "modifiedAt": "2025-11-19T12:19:24.220Z",
+    "related": [
+      "de oorzaak"
+    ]
+  },
+  {
+    "word": "ruim",
+    "example": "De kamer is ruim. Ruim honderd mensen.",
+    "addedAt": "2025-11-19T12:19:24.220Z",
+    "modifiedAt": "2025-11-19T12:19:24.220Z"
+  },
+  {
+    "word": "de schildpad",
+    "example": "De schildpad beweegt langzaam.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.220Z",
+    "modifiedAt": "2025-11-19T12:19:24.220Z"
+  },
+  {
+    "word": "de slang",
+    "example": "De slang kruipt door het gras.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.221Z",
+    "modifiedAt": "2025-11-19T12:19:24.221Z"
+  },
+  {
+    "word": "uitlaten",
+    "example": "Ik laat de hond uit.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.221Z",
+    "modifiedAt": "2025-11-19T12:19:24.221Z",
+    "related": [
+      "met de hond wandelen"
+    ]
+  },
+  {
+    "word": "verstaan",
+    "example": "Ik versta je niet.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.221Z",
+    "modifiedAt": "2025-11-19T12:19:24.221Z",
+    "related": [
+      "begrijpen, snappen"
+    ]
+  },
+  {
+    "word": "verzorgen",
+    "example": "Zij verzorgt haar moeder.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.222Z",
+    "modifiedAt": "2025-11-19T12:19:24.222Z",
+    "related": [
+      "zorgen voor"
+    ]
+  },
+  {
+    "word": "de vogel",
+    "example": "De vogel vilegt hoog.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.222Z",
+    "modifiedAt": "2025-11-19T12:19:24.222Z"
+  },
+  {
+    "word": "zacht",
+    "example": "Het kussen is zacht.",
+    "addedAt": "2025-11-19T12:19:24.222Z",
+    "modifiedAt": "2025-11-19T12:19:24.222Z",
+    "related": [
+      "hard"
+    ]
+  },
+  {
+    "word": "het argument",
+    "example": "Zijn argument is sterk.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.223Z",
+    "modifiedAt": "2025-11-19T12:19:24.223Z"
+  },
+  {
+    "word": "bereiken",
+    "example": "Ik kan hem niet bereiken.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.223Z",
+    "modifiedAt": "2025-11-19T12:19:24.223Z"
+  },
+  {
+    "word": "beschermen",
+    "example": "We moeten de natuur beschermen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.223Z",
+    "modifiedAt": "2025-11-19T12:19:24.223Z"
+  },
+  {
+    "word": "de discussie",
+    "example": "De discussie duurde lang.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.224Z",
+    "modifiedAt": "2025-11-19T12:19:24.224Z"
+  },
+  {
+    "word": "het doel",
+    "example": "Mijn doel is Nderlands leren.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.224Z",
+    "modifiedAt": "2025-11-19T12:19:24.224Z"
+  },
+  {
+    "word": "de energie",
+    "example": "Zij heeft veel energie.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.224Z",
+    "modifiedAt": "2025-11-19T12:19:24.224Z"
+  },
+  {
+    "word": "internationaal",
+    "example": "Ze werkt voor een internationaal bedrijf.",
+    "addedAt": "2025-11-19T12:19:24.224Z",
+    "modifiedAt": "2025-11-19T12:19:24.224Z"
+  },
+  {
+    "word": "de invloed",
+    "example": "Hij heeft veel invloed op het team.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.225Z",
+    "modifiedAt": "2025-11-19T12:19:24.225Z"
+  },
+  {
+    "word": "de kerncentrale",
+    "example": "De kerncentrale levert stroom.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.225Z",
+    "modifiedAt": "2025-11-19T12:19:24.225Z"
+  },
+  {
+    "word": "het middel",
+    "example": "Dit is een effectief middel.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.226Z",
+    "modifiedAt": "2025-11-19T12:19:24.226Z"
+  },
+  {
+    "word": "de natuur",
+    "example": "Ik wandel graag in de natuur.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.226Z",
+    "modifiedAt": "2025-11-19T12:19:24.226Z"
+  },
+  {
+    "word": "de organisatie",
+    "example": "De organisatie groeit snel.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.226Z",
+    "modifiedAt": "2025-11-19T12:19:24.226Z"
+  },
+  {
+    "word": "de overheid",
+    "example": "De overheid maakt regels.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.227Z",
+    "modifiedAt": "2025-11-19T12:19:24.227Z"
+  },
+  {
+    "word": "overleggen",
+    "example": "We moeten eerst overleggen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.227Z",
+    "modifiedAt": "2025-11-19T12:19:24.227Z"
+  },
+  {
+    "word": "het proefdier",
+    "example": "Proefdieren worden gebruikt voor onderzoek.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.228Z",
+    "modifiedAt": "2025-11-19T12:19:24.228Z"
+  },
+  {
+    "word": "professioneel",
+    "example": "Hij werkt professioneel.",
+    "addedAt": "2025-11-19T12:19:24.228Z",
+    "modifiedAt": "2025-11-19T12:19:24.228Z"
+  },
+  {
+    "word": "de publiciteit",
+    "example": "Het nieuws kreeg veel publiciteit.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.228Z",
+    "modifiedAt": "2025-11-19T12:19:24.228Z"
+  },
+  {
+    "word": "de regel",
+    "example": "Dat is een belangrijke regel.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.229Z",
+    "modifiedAt": "2025-11-19T12:19:24.229Z"
+  },
+  {
+    "word": "de samenleving",
+    "example": "Onze samenleving verandert snel.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.229Z",
+    "modifiedAt": "2025-11-19T12:19:24.229Z"
+  },
+  {
+    "word": "spectaculair",
+    "example": "Het uizicht is spectaculair.",
+    "addedAt": "2025-11-19T12:19:24.229Z",
+    "modifiedAt": "2025-11-19T12:19:24.229Z"
+  },
+  {
+    "word": "de stichting",
+    "example": "De stichting helpt kinderen.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.229Z",
+    "modifiedAt": "2025-11-19T12:19:24.229Z"
+  },
+  {
+    "word": "stimuleren",
+    "example": "De docent stimuleert de studenten.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.230Z",
+    "modifiedAt": "2025-11-19T12:19:24.230Z"
+  },
+  {
+    "word": "de vereniging",
+    "example": "Ik ben lid van de vereniging.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.230Z",
+    "modifiedAt": "2025-11-19T12:19:24.230Z"
+  },
+  {
+    "word": "de waarde",
+    "example": "Dit huis heeft een hoge waarde.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.231Z",
+    "modifiedAt": "2025-11-19T12:19:24.231Z"
+  },
+  {
+    "word": "het brood",
+    "example": "Het brood is vers.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.231Z",
+    "modifiedAt": "2025-11-19T12:19:24.231Z"
+  },
+  {
+    "word": "de ramp",
+    "example": "De storm was een grote ramp.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.231Z",
+    "modifiedAt": "2025-11-19T12:19:24.231Z"
+  },
+  {
+    "word": "de stilte",
+    "example": "In de ochtend is er veel stilte in het huis.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.232Z",
+    "modifiedAt": "2025-11-19T12:19:24.232Z"
+  },
+  {
+    "word": "de lamp",
+    "example": "De lamp geeft veel licht.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.232Z",
+    "modifiedAt": "2025-11-19T12:19:24.232Z",
+    "related": [
+      "de lamp aandoen, de lamp uitdoen, de lampenkap"
+    ]
+  },
+  {
+    "word": "de aansprakelijkheid",
+    "example": "De berhuurder heeft aansprakelijkheid voor grote gebreken.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.232Z",
+    "modifiedAt": "2025-11-19T12:19:24.232Z"
+  },
+  {
+    "word": "de begrafenis",
+    "example": "De begrafenis is morgen.",
+    "form": "noun",
+    "types": [
+      "plural"
+    ],
+    "addedAt": "2025-11-19T12:19:24.233Z",
+    "modifiedAt": "2025-11-19T12:19:24.233Z",
+    "related": [
+      "uitvaart"
+    ]
+  },
+  {
+    "word": "de dief",
+    "example": "De dief rende weg.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.235Z",
+    "modifiedAt": "2025-11-19T12:19:24.235Z"
+  },
+  {
+    "word": "de diefstal",
+    "example": "De politie onderzoekt de diefstal.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.235Z",
+    "modifiedAt": "2025-11-19T12:19:24.235Z"
+  },
+  {
+    "word": "de inboedel",
+    "example": "De inboedel is verzekerd.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.236Z",
+    "modifiedAt": "2025-11-19T12:19:24.236Z"
+  },
+  {
+    "word": "de inbraak",
+    "example": "Er was een inbraak gisteravond.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.236Z",
+    "modifiedAt": "2025-11-19T12:19:24.236Z"
+  },
+  {
+    "word": "inbreken",
+    "example": "Ze probeerden in te breken.",
+    "form": "verb",
+    "types": [
+      "separable"
+    ],
+    "addedAt": "2025-11-19T12:19:24.236Z",
+    "modifiedAt": "2025-11-19T12:19:24.236Z"
+  },
+  {
+    "word": "letterlijk",
+    "example": "Ik bedoel het letterlijk.",
+    "addedAt": "2025-11-19T12:19:24.237Z",
+    "modifiedAt": "2025-11-19T12:19:24.237Z"
+  },
+  {
+    "word": "de looptijd",
+    "example": "De looptijd van de verzerkering is een jaar.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.237Z",
+    "modifiedAt": "2025-11-19T12:19:24.237Z"
+  },
+  {
+    "word": "de maatschappij",
+    "example": "Onze maatschappij verandert snel.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.237Z",
+    "modifiedAt": "2025-11-19T12:19:24.237Z"
+  },
+  {
+    "word": "de premie",
+    "example": "De premie is $25 per maand.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.238Z",
+    "modifiedAt": "2025-11-19T12:19:24.238Z"
+  },
+  {
+    "word": "regelen",
+    "example": "Ik regel het wel.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.238Z",
+    "modifiedAt": "2025-11-19T12:19:24.238Z"
+  },
+  {
+    "word": "vergoeden",
+    "example": "De verzekering vergoedt de schade.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.238Z",
+    "modifiedAt": "2025-11-19T12:19:24.238Z"
+  },
+  {
+    "word": "verlengen",
+    "example": "Ik wil mijn abonnement verlengen.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.239Z",
+    "modifiedAt": "2025-11-19T12:19:24.239Z"
+  },
+  {
+    "word": "verplicht",
+    "example": "Een helm is verplicht.",
+    "addedAt": "2025-11-19T12:19:24.239Z",
+    "modifiedAt": "2025-11-19T12:19:24.239Z"
+  },
+  {
+    "word": "de vloerbedekking",
+    "example": "De vloerbedekking is nieuw.",
+    "addedAt": "2025-11-19T12:19:24.240Z",
+    "modifiedAt": "2025-11-19T14:39:02.337Z",
+    "form": "noun",
+    "types": [
+      "singular"
+    ]
+  },
+  {
+    "word": "het volk",
+    "example": "Het volk protesteerde.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.240Z",
+    "modifiedAt": "2025-11-19T12:19:24.240Z"
+  },
+  {
+    "word": "wettelijk",
+    "example": "Dat is wettelijk verplicht.",
+    "addedAt": "2025-11-19T12:19:24.241Z",
+    "modifiedAt": "2025-11-19T12:19:24.241Z"
+  },
+  {
+    "word": "de ziekte",
+    "example": "Hij heeft een ernstige ziekte.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.242Z",
+    "modifiedAt": "2025-11-19T12:19:24.242Z"
+  },
+  {
+    "word": "verzekeren",
+    "example": "Ik heb mijn telefoon verzekerd.",
+    "form": "verb",
+    "addedAt": "2025-11-19T12:19:24.242Z",
+    "modifiedAt": "2025-11-19T12:19:24.242Z"
+  },
+  {
+    "word": "vooraf",
+    "example": "Betaal vooraf alsjeblieft.",
+    "addedAt": "2025-11-19T12:19:24.242Z",
+    "modifiedAt": "2025-11-19T12:19:24.242Z"
+  },
+  {
+    "word": "de voorwaarde",
+    "example": "Een rijbewijs is een voorwaarde voor deze baan.",
+    "form": "noun",
+    "types": [
+      "singular"
+    ],
+    "addedAt": "2025-11-19T12:19:24.243Z",
+    "modifiedAt": "2025-11-19T12:19:24.243Z"
+  },
+  {
+    "word": "bijten",
+    "form": "verb",
+    "types": [
+      "inseparable"
+    ],
+    "forms": [
+      "beet",
+      "beten",
+      "gebeten",
+      "bijt"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-19T13:37:16.168Z",
+    "modifiedAt": "2025-11-19T14:32:37.030Z",
+    "related": [
+      "afbijten"
+    ],
+    "example": "De hond bijt niet."
+  },
+  {
+    "word": "dansen",
+    "form": "verb",
+    "forms": [
+      "danste",
+      "dansten",
+      "gedanst",
+      "dans",
+      "danst",
+      "dansen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-19T14:56:12.414Z",
+    "modifiedAt": "2025-11-19T15:21:56.860Z",
+    "example": "Wij dansen in de woonkamer."
+  },
+  {
+    "word": "brengen",
+    "form": "verb",
+    "forms": [
+      "bracht",
+      "brachten",
+      "gebracht",
+      "breng",
+      "brengt"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-19T14:58:38.217Z",
+    "modifiedAt": "2025-11-19T15:02:57.748Z",
+    "example": "Kun je me naar het station brengen?"
+  },
+  {
+    "word": "doen",
+    "form": "verb",
+    "forms": [
+      "deed",
+      "deden",
+      "gedaan",
+      "doe",
+      "doet"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-19T15:01:48.607Z",
+    "modifiedAt": "2025-11-19T15:21:12.814Z",
+    "example": "What doe je?"
+  },
+  {
+    "word": "haa",
+    "irregular": false,
+    "addedAt": "2025-11-19T15:27:36.700Z",
+    "modifiedAt": "2025-11-19T15:27:36.701Z"
+  }
+]

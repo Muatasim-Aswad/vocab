@@ -1,0 +1,21 @@
+{
+  "name": "vocab",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "bin": {
+    "vocab": "./dist/index.mjs"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "watch": "tsc --watch",
+    "start": "node --env-file=.env ./dist/index.mjs",
+    "dev": "npm run build && node --env-file=.env ./dist/index.mjs",
+    "clean": "rm -rf dist",
+    "postbuild": "chmod +x dist/index.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}
