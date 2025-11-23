@@ -247,6 +247,30 @@ export async function promptWordFields(
   }
 
   // ============================================================
+  // STEP 5: Prompt for related words
+  // ============================================================
+  if (fields.related) {
+    const defaultRelated = existingEntry?.related;
+
+    const input = await promptArrayField("Related words", defaultRelated, processArrayInput);
+    if (input !== undefined) {
+      result.related = input;
+    } else if (mode === "edit" && defaultRelated) {
+      result.related = defaultRelated;
+    }
+  }
+
+  // ============================================================
+  // STEP 6: Prompt for phrases
+  // ============================================================
+  if (fields.phrases) {
+    const input = await promptArrayField("Phrases", existingEntry?.phrases, processArrayInput);
+    if (input !== undefined) {
+      result.phrases = input;
+    }
+  }
+
+  // ============================================================
   // STEP 1: Deduce and verify word form (noun/verb/adjective)
   // ============================================================
   let verifiedForm: (keyof typeof wordTypes)[] | undefined;
@@ -457,38 +481,6 @@ export async function promptWordFields(
       } else if (!existingEntry && generatedForms) {
         result.forms = generatedForms;
       }
-    }
-  }
-
-  // ============================================================
-  // STEP 5: Prompt for related words
-  // ============================================================
-  if (fields.related) {
-    // Add base verb as first related word if it's a separable verb
-    const deducedRelated =
-      verifiedForm?.includes("verb") && separabilityInfo?.isSeparable && baseVerb
-        ? [baseVerb]
-        : undefined;
-
-    const defaultRelated = existingEntry?.related || deducedRelated;
-
-    const input = await promptArrayField("Related words", defaultRelated, processArrayInput);
-    if (input !== undefined) {
-      result.related = input;
-    } else if (mode === "edit" && defaultRelated) {
-      result.related = defaultRelated;
-    } else if (!existingEntry && deducedRelated) {
-      result.related = deducedRelated;
-    }
-  }
-
-  // ============================================================
-  // STEP 6: Prompt for phrases
-  // ============================================================
-  if (fields.phrases) {
-    const input = await promptArrayField("Phrases", existingEntry?.phrases, processArrayInput);
-    if (input !== undefined) {
-      result.phrases = input;
     }
   }
 

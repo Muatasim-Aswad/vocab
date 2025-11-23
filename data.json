@@ -7230,17 +7230,1499 @@
     "forms": [
       "verbied",
       "verbiedt",
-      "bood",
-      "boden",
-      "geboden"
+      "verbood",
+      "verboden"
     ],
     "irregular": true,
-    "addedAt": "2025-11-23T16:58:05.764Z",
-    "modifiedAt": "2025-11-23T16:58:05.765Z",
+    "addedAt": "2025-11-23T17:11:22.077Z",
+    "modifiedAt": "2025-11-23T17:11:22.077Z",
     "related": [
       "-toestaan",
       "het verbod"
     ],
     "example": "Roken is hier verboden."
+  },
+  {
+    "word": "de bloeddruk",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:12:55.639Z",
+    "modifiedAt": "2025-11-23T17:12:55.639Z",
+    "example": "De dokter meet mijn bloeddruk.",
+    "phrases": [
+      "hoge bloeddruk",
+      "lage bloeddruk"
+    ]
+  },
+  {
+    "word": "de calorie",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "calorieën"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:14:14.133Z",
+    "modifiedAt": "2025-11-23T17:14:14.133Z",
+    "related": [
+      "calorierijk",
+      "caloriearm"
+    ],
+    "example": "Dit koekje bevat veel calorieën."
+  },
+  {
+    "word": "de chocola",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:15:19.500Z",
+    "modifiedAt": "2025-11-23T17:15:19.500Z",
+    "related": [
+      "chocolade",
+      "melkchocola",
+      "pure chocola"
+    ],
+    "example": "Ik eet graag pure chocola."
+  },
+  {
+    "word": "daarnaast",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:15:53.801Z",
+    "modifiedAt": "2025-11-23T17:15:53.801Z",
+    "related": [
+      "bovendien"
+    ],
+    "example": "Ik werk fulltime en daarnaast studeer ik Nederlands."
+  },
+  {
+    "word": "de darm",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "darmen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:16:42.160Z",
+    "modifiedAt": "2025-11-23T17:16:42.160Z",
+    "related": [
+      "darmkanaal",
+      "dikke darm",
+      "dunne darm"
+    ],
+    "example": "Mijn darmen doen pijn."
+  },
+  {
+    "word": "het dieet",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "diëten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:17:26.686Z",
+    "modifiedAt": "2025-11-23T17:17:26.686Z",
+    "related": [
+      "eetpatroon"
+    ],
+    "example": "Hij volgt een streng dieet."
+  },
+  {
+    "word": "het etiket",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "etiketten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:17:55.886Z",
+    "modifiedAt": "2025-11-23T17:17:55.886Z",
+    "related": [
+      "prijskaartje"
+    ],
+    "example": "Lees het etiket voor de ingrediënten."
+  },
+  {
+    "word": "flauwvallen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:19:30.730Z",
+    "modifiedAt": "2025-11-23T17:19:30.730Z",
+    "related": [
+      "vallen"
+    ],
+    "example": "Ze viel flauw in de bus.",
+    "phrases": [
+      "bewusteloos raken"
+    ]
+  },
+  {
+    "word": "de hersenen",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "plural"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:20:24.040Z",
+    "modifiedAt": "2025-11-23T17:20:24.040Z",
+    "related": [
+      "hersenfunctie",
+      "hersenschade"
+    ],
+    "example": "Je hersenen hebben zuurstof nodig."
+  },
+  {
+    "word": "de hoeveelheid",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "hoeveelheden"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:20:54.519Z",
+    "modifiedAt": "2025-11-23T17:20:54.519Z",
+    "related": [
+      "kwantiteit"
+    ],
+    "example": "Let op de hoeveelheid suiker."
+  },
+  {
+    "word": "het lichaam",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "lichamen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:22:44.850Z",
+    "modifiedAt": "2025-11-23T17:23:33.289Z",
+    "related": [
+      "lichaamsdeel"
+    ],
+    "example": "Het lichaam heeft rust nodig."
+  },
+  {
+    "word": "opslaan",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "sla op",
+      "slaat op",
+      "slaan op",
+      "sloeg op",
+      "opgeslagen."
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T17:26:05.684Z",
+    "modifiedAt": "2025-11-23T17:26:05.684Z",
+    "related": [
+      "slaan"
+    ],
+    "example": "Het lichaam slaat vet op.",
+    "phrases": [
+      "opslag"
+    ]
+  },
+  {
+    "word": "het overgewicht",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:27:21.113Z",
+    "modifiedAt": "2025-11-23T17:27:21.113Z",
+    "related": [
+      "-ondergewicht"
+    ],
+    "example": "Overgewicht verhoogt risico’s."
+  },
+  {
+    "word": "de spier",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "spieren"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:28:00.423Z",
+    "modifiedAt": "2025-11-23T17:28:00.423Z",
+    "related": [
+      "spiermassa"
+    ],
+    "example": "Ik heb pijn in mijn spieren."
+  },
+  {
+    "word": "uitvallen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "val",
+      "valt",
+      "viel",
+      "vielen",
+      "uitgevallen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T17:29:10.805Z",
+    "modifiedAt": "2025-11-23T17:29:10.805Z",
+    "related": [
+      "vallen",
+      "stoppen"
+    ],
+    "example": "De stroom viel uit."
+  },
+  {
+    "word": "de uitzondering",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "uitzonderingen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:29:55.339Z",
+    "modifiedAt": "2025-11-23T17:29:55.339Z",
+    "related": [
+      "uitzonderlijk"
+    ],
+    "example": "Er is één uitzondering op de regel."
+  },
+  {
+    "word": "verbergen",
+    "form": [
+      "verb"
+    ],
+    "forms": [
+      "verberg",
+      "verbergt",
+      "verborg",
+      "verborgen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T17:30:45.201Z",
+    "modifiedAt": "2025-11-23T17:31:11.729Z",
+    "example": "Hij verbergt zijn telefoon.",
+    "related": [
+      "verstoppen",
+      "-tonen"
+    ]
+  },
+  {
+    "word": "het verlies",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "verliezen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:32:06.726Z",
+    "modifiedAt": "2025-11-23T17:32:06.726Z",
+    "related": [
+      "verliezen"
+    ],
+    "example": "Het verlies was groot."
+  },
+  {
+    "word": "vermijden",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "vermijd",
+      "vermijdt",
+      "vermeed",
+      "vermeden"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T17:32:57.564Z",
+    "modifiedAt": "2025-11-23T17:32:57.564Z",
+    "related": [
+      "ontwijken",
+      "vermijdbaar"
+    ],
+    "example": "Probeer stress te vermijden."
+  },
+  {
+    "word": "de vervanger",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "vervangers"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:33:48.827Z",
+    "modifiedAt": "2025-11-23T17:33:48.827Z",
+    "related": [
+      "vervangen"
+    ],
+    "example": "Haverdrink is een goede vervanger voor melk."
+  },
+  {
+    "word": "verwerken",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "verwerk",
+      "verwerkt",
+      "verwerkte",
+      "verwerkten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:35:22.911Z",
+    "modifiedAt": "2025-11-23T17:35:22.911Z",
+    "related": [
+      "verwerken",
+      "behandelen"
+    ],
+    "example": "Je lichaam verwerkt voedsel langzaam.",
+    "phrases": [
+      "informatie verwerken"
+    ]
+  },
+  {
+    "word": "de vezel",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "vezels"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:35:58.053Z",
+    "modifiedAt": "2025-11-23T17:35:58.053Z",
+    "related": [
+      "vezelrijk"
+    ],
+    "example": "Groenten bevatten veel vezels."
+  },
+  {
+    "word": "het vocht",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "vochten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:36:28.594Z",
+    "modifiedAt": "2025-11-23T17:36:28.594Z",
+    "related": [
+      "vloeistof"
+    ],
+    "example": "Je lichaam verliest veel vocht."
+  },
+  {
+    "word": "de voeding",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:37:16.225Z",
+    "modifiedAt": "2025-11-23T17:37:16.225Z",
+    "related": [
+      "voedsel",
+      "voedingsstoffen"
+    ],
+    "example": "Gezonde voeding is belangrijk."
+  },
+  {
+    "word": "aantonen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "toon",
+      "toont",
+      "toonde",
+      "toonden",
+      "aangetoond"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:38:06.790Z",
+    "modifiedAt": "2025-11-23T17:38:06.790Z",
+    "related": [
+      "tonen",
+      "bewijzen"
+    ],
+    "example": "Het onderzoek toont aan dat…."
+  },
+  {
+    "word": "andersom",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:38:48.660Z",
+    "modifiedAt": "2025-11-23T17:38:48.660Z",
+    "related": [
+      "omgekeerd"
+    ],
+    "example": "Je kunt het andersom doen."
+  },
+  {
+    "word": "doorkomen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "koom",
+      "koomt",
+      "kwam",
+      "kwamen",
+      "is doorgekomen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T17:39:49.954Z",
+    "modifiedAt": "2025-11-23T17:39:49.954Z",
+    "related": [
+      "komen"
+    ],
+    "example": "Ik kom de winter wel door."
+  },
+  {
+    "word": "het gebrek",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "gebreken"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:40:52.696Z",
+    "modifiedAt": "2025-11-23T17:40:52.696Z",
+    "related": [
+      "tekort"
+    ],
+    "example": "Er is een gebrek aan slaap."
+  },
+  {
+    "word": "oververmoeid",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:41:35.732Z",
+    "modifiedAt": "2025-11-23T17:41:35.732Z",
+    "example": "Hij is oververmoeid van het werk."
+  },
+  {
+    "word": "de verklaring",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "verklaringen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T17:42:35.139Z",
+    "modifiedAt": "2025-11-23T17:42:35.139Z",
+    "related": [
+      "verklaren",
+      "uitleg"
+    ],
+    "example": "Ik geef een korte verklaring."
+  },
+  {
+    "word": "de bestemming",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "bestemmingen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:07:10.813Z",
+    "modifiedAt": "2025-11-23T18:07:10.813Z",
+    "related": [
+      "het doel",
+      "eindpunt"
+    ],
+    "example": "Wat is jouw bestemming?"
+  },
+  {
+    "word": "juist",
+    "form": [
+      "adjective",
+      "adverb"
+    ],
+    "forms": [
+      "juist",
+      "juiste",
+      "juister",
+      "juistst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:08:29.897Z",
+    "modifiedAt": "2025-11-23T18:08:29.897Z",
+    "related": [
+      "correct",
+      "precies",
+      "exact",
+      "-fout",
+      "-verkeerd"
+    ],
+    "example": "Dat is juist!"
+  },
+  {
+    "word": "opbergen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "berg",
+      "bergt",
+      "borg",
+      "borgen",
+      "opgeborgen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T18:10:23.470Z",
+    "modifiedAt": "2025-11-23T18:10:23.470Z",
+    "example": "Kun je je spullen opbergen?"
+  },
+  {
+    "word": "optellen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "tel",
+      "telt",
+      "telde",
+      "telden",
+      "opgeteld"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:10:58.835Z",
+    "modifiedAt": "2025-11-23T18:10:58.835Z",
+    "example": "Kun je deze getallen optellen?"
+  },
+  {
+    "word": "de passagier",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "passagiers"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:11:54.434Z",
+    "modifiedAt": "2025-11-23T18:11:54.435Z",
+    "example": "De bus heeft veertig passagiers."
+  },
+  {
+    "word": "de regio",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "regio's"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:12:27.352Z",
+    "modifiedAt": "2025-11-23T18:12:27.352Z",
+    "example": "In deze regio regent het veel."
+  },
+  {
+    "word": "de vlucht",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "vluchten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:13:14.679Z",
+    "modifiedAt": "2025-11-23T18:13:14.679Z",
+    "example": "Mijn vlucht vertrekt om 9 uur."
+  },
+  {
+    "word": "aankleden",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable",
+      "reflexive"
+    ],
+    "forms": [
+      "kleed",
+      "kleedt",
+      "kleedde",
+      "kleedden",
+      "aangekleed"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:14:12.060Z",
+    "modifiedAt": "2025-11-23T18:14:12.060Z",
+    "example": "Ik kleed me aan."
+  },
+  {
+    "word": "de kou",
+    "form": [
+      "noun"
+    ],
+    "types": [],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:15:21.187Z",
+    "modifiedAt": "2025-11-23T18:15:21.187Z",
+    "example": "Ik hou niet van de kou."
+  },
+  {
+    "word": "nat",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "nat",
+      "natte",
+      "natter",
+      "natst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:15:47.626Z",
+    "modifiedAt": "2025-11-23T18:15:47.626Z",
+    "example": "Mijn jas is nat."
+  },
+  {
+    "word": "pardon",
+    "form": [
+      "interjection"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:16:20.761Z",
+    "modifiedAt": "2025-11-23T18:16:20.761Z",
+    "example": "Pardon, mag ik er langs?"
+  },
+  {
+    "word": "schaatsen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "schaats",
+      "schaatst",
+      "schaatste",
+      "schaatsten",
+      "geschaatst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:17:04.080Z",
+    "modifiedAt": "2025-11-23T18:17:04.080Z",
+    "example": "In de winter schaats ik graag."
+  },
+  {
+    "word": "wel eens",
+    "form": [],
+    "types": [
+      "phrase"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:17:51.149Z",
+    "modifiedAt": "2025-11-23T18:17:51.149Z",
+    "example": "Ga je wel eens naar België?"
+  },
+  {
+    "word": "aanleggen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "leg",
+      "legt",
+      "legde",
+      "legden",
+      "aangelegd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:18:18.739Z",
+    "modifiedAt": "2025-11-23T18:18:18.739Z",
+    "example": "Ze leggen een nieuwe weg aan."
+  },
+  {
+    "word": "de automobilist",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "automobilisten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:18:47.475Z",
+    "modifiedAt": "2025-11-23T18:18:47.475Z",
+    "example": "De automobilist stopt bij het stoplicht."
+  },
+  {
+    "word": "de beurt",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "beurten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:19:26.074Z",
+    "modifiedAt": "2025-11-23T18:19:26.074Z",
+    "example": "Ik ben aan de beurt."
+  },
+  {
+    "word": "de brommer",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "brommers"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:20:06.095Z",
+    "modifiedAt": "2025-11-23T18:20:06.095Z",
+    "example": "Hij rijdt op een brommer."
+  },
+  {
+    "word": "de fietsenmaker",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "fietsenmakers"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:20:48.216Z",
+    "modifiedAt": "2025-11-23T18:20:48.216Z",
+    "example": "Mijn fiets is kapot, dus ga ik naar de fietsenmaker."
+  },
+  {
+    "word": "graag",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:22:12.511Z",
+    "modifiedAt": "2025-11-23T18:22:12.511Z",
+    "example": "Ik drink graag koffie."
+  },
+  {
+    "word": "de ketting",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "kettingen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:22:59.443Z",
+    "modifiedAt": "2025-11-23T18:22:59.443Z",
+    "example": "De ketting van mijn fiets ligt eraf."
+  },
+  {
+    "word": "keuren",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "keur",
+      "keurt",
+      "keurde",
+      "keurden",
+      "gekeurd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:23:46.817Z",
+    "modifiedAt": "2025-11-23T18:23:46.817Z",
+    "example": "Ze keuren de auto APK."
+  },
+  {
+    "word": "de kracht",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "krachten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:24:25.679Z",
+    "modifiedAt": "2025-11-23T18:24:25.679Z",
+    "example": "Hij heeft veel kracht."
+  },
+  {
+    "word": "repareren",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "repareer",
+      "repareert",
+      "repareerde",
+      "repareerden",
+      "gerepareerd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:25:02.014Z",
+    "modifiedAt": "2025-11-23T18:25:02.014Z",
+    "example": "Hij repareert de fiets."
+  },
+  {
+    "word": "het onderdeel",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "onderdelen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:25:42.514Z",
+    "modifiedAt": "2025-11-23T18:25:42.514Z",
+    "example": "Dit onderdeel moet vervangen worden."
+  },
+  {
+    "word": "het onderhoud",
+    "form": [
+      "noun"
+    ],
+    "types": [],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:26:46.022Z",
+    "modifiedAt": "2025-11-23T18:26:46.022Z",
+    "example": "De fiets heeft onderhoud nodig."
+  },
+  {
+    "word": "overigens",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:27:33.141Z",
+    "modifiedAt": "2025-11-23T18:27:33.141Z",
+    "example": "Ik kom straks. Overigens, hoe gaat het?"
+  },
+  {
+    "word": "de garage",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "garages"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:28:58.313Z",
+    "modifiedAt": "2025-11-23T18:28:58.313Z",
+    "related": [
+      "autogarage",
+      "parkeerplaats"
+    ],
+    "example": "Mijn auto staat in de garage."
+  },
+  {
+    "word": "de pech",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "pechen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:32:05.138Z",
+    "modifiedAt": "2025-11-23T18:32:05.138Z",
+    "related": [
+      "ongelukje",
+      "autopech"
+    ],
+    "example": "Ik had pech met mijn auto op de snelweg."
+  },
+  {
+    "word": "prettig",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "prettig",
+      "prettige",
+      "prettiger",
+      "prettigst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:32:52.592Z",
+    "modifiedAt": "2025-11-23T18:32:52.592Z",
+    "related": [
+      "fijn",
+      "aangenaam",
+      "-vervelend"
+    ],
+    "example": "We hadden een prettige dag."
+  },
+  {
+    "word": "de reparatie",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "reparaties"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:34:03.510Z",
+    "modifiedAt": "2025-11-23T18:34:03.510Z",
+    "related": [
+      "hersteln",
+      "fixen",
+      "maken"
+    ],
+    "example": "De reparatie duurde twee uur."
+  },
+  {
+    "word": "de service",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "services"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:34:46.028Z",
+    "modifiedAt": "2025-11-23T18:34:46.028Z",
+    "related": [
+      "dienst",
+      "klantenservice"
+    ],
+    "example": "De service was uitstekend."
+  },
+  {
+    "word": "sowieso",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:35:35.082Z",
+    "modifiedAt": "2025-11-23T18:35:35.082Z",
+    "related": [
+      "in ieder geval",
+      "hoe dan ook"
+    ],
+    "example": "Ik ga sowieso naar de afspraak."
+  },
+  {
+    "word": "starten",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "start",
+      "startte",
+      "startten",
+      "gestart"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:36:41.064Z",
+    "modifiedAt": "2025-11-23T18:36:41.064Z",
+    "related": [
+      "beginnen",
+      "opstarten"
+    ],
+    "example": "De auto start niet."
+  },
+  {
+    "word": "super",
+    "form": [
+      "adjective",
+      "adverb"
+    ],
+    "types": [
+      "inf"
+    ],
+    "forms": [
+      "supere"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:37:48.333Z",
+    "modifiedAt": "2025-11-23T18:37:48.333Z",
+    "related": [
+      "geweldig",
+      "top"
+    ],
+    "example": "Dat is super!"
+  },
+  {
+    "word": "tegenkomen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "tegengekomen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:39:02.578Z",
+    "modifiedAt": "2025-11-23T18:41:02.334Z",
+    "related": [
+      "ontmoeten",
+      "aantreffen"
+    ],
+    "example": "Ik kwam een oude vriend tegen."
+  },
+  {
+    "word": "ter plekke",
+    "form": [],
+    "types": [
+      "adverbial phrase"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:42:56.074Z",
+    "modifiedAt": "2025-11-23T18:42:56.074Z",
+    "related": [
+      "direct",
+      "meteen daar",
+      "op locatie"
+    ],
+    "example": "De monteur repareerde het ter plekke."
+  },
+  {
+    "word": "uniek",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "uniek",
+      "unieke",
+      "unieker",
+      "uniekst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:43:37.488Z",
+    "modifiedAt": "2025-11-23T18:43:37.488Z",
+    "related": [
+      "bijzonder",
+      "speciaal"
+    ],
+    "example": "Dit uitzicht is uniek."
+  },
+  {
+    "word": "het voertuig",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "voertuigen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:44:21.102Z",
+    "modifiedAt": "2025-11-23T18:44:21.102Z",
+    "related": [
+      "de auto",
+      "transportmiddel"
+    ],
+    "example": "Het voertuig stond stil langs de weg."
+  },
+  {
+    "word": "de wegenwacht",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "wegenwachten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:45:21.946Z",
+    "modifiedAt": "2025-11-23T18:45:21.946Z",
+    "related": [
+      "pechhulp"
+    ],
+    "example": "De wegenwacht kwam snel."
+  },
+  {
+    "word": "de afstand",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "afstanden"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:47:25.414Z",
+    "modifiedAt": "2025-11-23T18:47:25.414Z",
+    "related": [
+      "de lengte",
+      "de ruimte"
+    ],
+    "example": "De afstand tussen mijn huis en het station is klein."
+  },
+  {
+    "word": "beloven",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "beloof",
+      "belooft",
+      "beloofde",
+      "beloofden",
+      "beloofd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:48:01.485Z",
+    "modifiedAt": "2025-11-23T18:48:01.485Z",
+    "related": [
+      "toezeggen"
+    ],
+    "example": "Ik beloof dat ik op tijd kom."
+  },
+  {
+    "word": "de bil",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "billen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:49:12.650Z",
+    "modifiedAt": "2025-11-23T18:49:12.650Z",
+    "related": [
+      "de kont",
+      "de achterwerk"
+    ],
+    "example": "Hij heeft pijn in zijn bil."
+  },
+  {
+    "word": "de blik",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "blikken"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:50:20.744Z",
+    "modifiedAt": "2025-11-23T18:50:20.744Z",
+    "related": [
+      "de kijk",
+      "de oogopslag"
+    ],
+    "example": "Ze gaf me een boze blik."
+  },
+  {
+    "word": "de ellende",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "uncountable"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:51:03.182Z",
+    "modifiedAt": "2025-11-23T18:51:26.853Z",
+    "example": "Wat een ellende na die regenstorm.",
+    "related": [
+      "de miserie",
+      "de narigheid"
+    ]
+  },
+  {
+    "word": "even",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:52:25.603Z",
+    "modifiedAt": "2025-11-23T18:52:25.603Z",
+    "related": [
+      "eventjes",
+      "effe"
+    ],
+    "example": "Wacht even!"
+  },
+  {
+    "word": "het gezeur",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "uncountable"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:53:16.274Z",
+    "modifiedAt": "2025-11-23T18:53:16.274Z",
+    "related": [
+      "het geklaag",
+      "het gejammer"
+    ],
+    "example": "Ik ben klaar met al dat gezeur."
+  },
+  {
+    "word": "herstellen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "herstel",
+      "herstelt",
+      "herstelde",
+      "herstelden",
+      "hersteld"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:54:17.368Z",
+    "modifiedAt": "2025-11-23T18:54:17.368Z",
+    "related": [
+      "genezen"
+    ],
+    "example": "Hij moet herstellen van zijn operatie."
+  },
+  {
+    "word": "liften",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "lift",
+      "liftte",
+      "liftten",
+      "gelift"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:55:26.396Z",
+    "modifiedAt": "2025-11-23T18:55:26.396Z",
+    "related": [
+      "meerijden"
+    ],
+    "example": "Ze liften naar Frankrijk."
+  },
+  {
+    "word": "teruggaan",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "zijn teruggegaan"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T18:56:32.468Z",
+    "modifiedAt": "2025-11-23T18:56:32.468Z",
+    "related": [
+      "terugkeren",
+      "teruglopen"
+    ],
+    "example": "Ik moet teruggaan naar huis."
+  },
+  {
+    "word": "de vervuiling",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "uncountable"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:57:38.586Z",
+    "modifiedAt": "2025-11-23T18:57:38.586Z",
+    "related": [
+      "de besmetting",
+      "de milieuvervuiling"
+    ],
+    "example": "De vervuiling in de stad neemt toe."
+  },
+  {
+    "word": "vreemd",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "vreemd",
+      "vreemde",
+      "vreemder",
+      "vreemdst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T18:58:46.952Z",
+    "modifiedAt": "2025-11-23T18:58:54.823Z",
+    "related": [
+      "raar",
+      "apart",
+      "-normaal"
+    ],
+    "example": "Dat is een vreemd idee."
   }
 ]

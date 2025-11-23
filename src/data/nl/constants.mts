@@ -23,6 +23,7 @@ export const SEPARABLE_PREFIXES = [
   "uit",
   "vast",
   "weg",
+  "tegen",
 ];
 
 // ambiguous separable/inseparable prefixes
