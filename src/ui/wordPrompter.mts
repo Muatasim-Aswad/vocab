@@ -326,6 +326,9 @@ export async function promptWordFields(
       const input = await promptArrayField(label, defaultForms, processArrayInput);
       if (input !== undefined) {
         result.forms = input;
+      } else if (mode === "edit" && defaultForms) {
+        // In edit mode, keep the default value shown to the user
+        result.forms = defaultForms;
       } else if (!existingEntry && deducedForms) {
         result.forms = deducedForms;
       }
@@ -347,6 +350,9 @@ export async function promptWordFields(
     const input = await promptArrayField("Related words", defaultRelated, processArrayInput);
     if (input !== undefined) {
       result.related = input;
+    } else if (mode === "edit" && defaultRelated) {
+      // In edit mode, keep the default value shown to the user
+      result.related = defaultRelated;
     } else if (!existingEntry && deducedRelated) {
       result.related = deducedRelated;
     }
@@ -372,6 +378,9 @@ export async function promptWordFields(
 
     if (input !== undefined) {
       result.types = input;
+    } else if (mode === "edit" && defaultTypes) {
+      // In edit mode, keep the default value shown to the user
+      result.types = defaultTypes;
     } else if (!existingEntry && defaultTypes) {
       // Use deduced types for new entries if no input
       result.types = defaultTypes;

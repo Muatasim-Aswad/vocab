@@ -140,8 +140,8 @@ export function deduceDutchWordInfo(word: string) {
     // Check if either the full verb or the base verb is irregular
     verbInfo.irregular =
       BASE_IRREGULAR_VERBS.includes(word) || BASE_IRREGULAR_VERBS.includes(result.baseVerb);
-    // * if regular get the verb forms (for the base verb)
-    if (!verbInfo.irregular) verbInfo.forms = conjugateDutchVerb(result.baseVerb);
+    // * if regular get the verb forms
+    if (!verbInfo.irregular) verbInfo.forms = conjugateDutchVerb(word);
   } else {
     // resort to adjective as default as it's more common than others
     form = "adjective";
