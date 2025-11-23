@@ -14,6 +14,10 @@ export interface Vocab {
 
   addedAt: string;
   modifiedAt: string;
+
+  // Study mode fields
+  memorizationStrength?: number; // 0-100
+  lastReviewed?: string; // ISO date string
 }
 
 export type CreateVocab = Pick<
@@ -21,7 +25,10 @@ export type CreateVocab = Pick<
   "word" | "related" | "example" | "phrases" | "form" | "types" | "forms" | "irregular"
 >;
 
-export type UpdateVocab = Partial<CreateVocab>;
+export type UpdateVocab = Partial<CreateVocab> & {
+  memorizationStrength?: number;
+  lastReviewed?: string;
+};
 
 export interface Result {
   success: boolean;
@@ -128,7 +135,18 @@ export class VocabRepository {
   }
 
   update(word: string, updateData: UpdateVocab): Result {
-    const { word: newWord, related, example, phrases, forms, irregular, form, types } = updateData;
+    const {
+      word: newWord,
+      related,
+      example,
+      phrases,
+      forms,
+      irregular,
+      form,
+      types,
+      memorizationStrength,
+      lastReviewed,
+    } = updateData;
     const index = this.findIndexByWord(word);
 
     if (index === -1) {
@@ -198,6 +216,15 @@ export class VocabRepository {
       } else {
         delete entry.phrases;
       }
+    }
+
+    // Handle study mode fields
+    if (memorizationStrength !== undefined) {
+      entry.memorizationStrength = memorizationStrength;
+    }
+
+    if (lastReviewed !== undefined) {
+      entry.lastReviewed = lastReviewed;
     }
 
     entry.modifiedAt = new Date().toISOString();

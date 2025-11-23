@@ -9,10 +9,12 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.158Z",
-    "modifiedAt": "2025-11-19T12:19:24.159Z",
+    "modifiedAt": "2025-11-23T16:21:35.968Z",
     "related": [
       "de slede"
-    ]
+    ],
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:21:35.966Z"
   },
   {
     "word": "de sneeuw",
@@ -23,7 +25,9 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-11-19T12:19:24.161Z"
+    "modifiedAt": "2025-11-23T16:21:38.836Z",
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:21:38.835Z"
   },
   {
     "word": "de beek",
@@ -35,7 +39,9 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-11-19T12:19:24.161Z"
+    "modifiedAt": "2025-11-23T16:22:24.603Z",
+    "memorizationStrength": 1,
+    "lastReviewed": "2025-11-23T16:22:24.603Z"
   },
   {
     "word": "de rivier",
@@ -46,10 +52,12 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-23T16:23:00.050Z",
     "related": [
       "de rivier is breed"
-    ]
+    ],
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:23:00.050Z"
   },
   {
     "word": "het gebied",
@@ -60,10 +68,12 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-23T16:23:05.432Z",
     "related": [
       "de streek"
-    ]
+    ],
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:23:05.432Z"
   },
   {
     "word": "de streek",
@@ -74,10 +84,12 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-23T16:23:07.001Z",
     "related": [
       "het gebied"
-    ]
+    ],
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:23:07.001Z"
   },
   {
     "word": "het bos",
@@ -88,10 +100,12 @@
       "plural"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-19T12:19:24.162Z",
+    "modifiedAt": "2025-11-23T16:23:09.576Z",
     "related": [
       "we wandelen in het bos"
-    ]
+    ],
+    "memorizationStrength": 3,
+    "lastReviewed": "2025-11-23T16:23:09.575Z"
   },
   {
     "word": "de heide",
@@ -6923,5 +6937,84 @@
       "ineens"
     ],
     "example": "Hij ging zomaar weg."
+  },
+  {
+    "word": "het beleid",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:12:36.441Z",
+    "modifiedAt": "2025-11-23T16:12:36.441Z",
+    "related": [
+      "de richtlijn",
+      "de strategie",
+      "overheidsbeleid"
+    ],
+    "example": "Het beleid van de overheid verandert dit jaar.",
+    "phrases": [
+      "beleid maken"
+    ]
+  },
+  {
+    "word": "het bezit",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:14:06.227Z",
+    "modifiedAt": "2025-11-23T16:14:06.227Z",
+    "related": [
+      "eigendom",
+      "-verlies",
+      "bezittingen",
+      "in bezit hebben"
+    ],
+    "example": "Dat huis is zijn bezit."
+  },
+  {
+    "word": "de criminaliteit",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:14:41.730Z",
+    "modifiedAt": "2025-11-23T16:14:41.730Z",
+    "related": [
+      "misdaad",
+      "overtredingen"
+    ],
+    "example": "De criminaliteit daalt in deze wijk."
+  },
+  {
+    "word": "de drank",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:16:59.884Z",
+    "modifiedAt": "2025-11-23T16:16:59.884Z",
+    "related": [
+      "alcohol",
+      "drankprobleem",
+      "sterke drank"
+    ],
+    "example": "Hij drinkt te veel drank."
   }
 ]

@@ -10,6 +10,12 @@ import { handleSearch } from "./commands/searchCommand.mjs";
 import { handleDelete } from "./commands/deleteCommand.mjs";
 import { handleEditInput } from "./commands/editCommand.mjs";
 import { handleList } from "./commands/listCommand.mjs";
+import {
+  startStudySession,
+  configureStudySession,
+  checkAndApplyOverdueDecay,
+} from "./modes/studyMode.mjs";
+import { DecayStore } from "./data/decayStore.mjs";
 
 // Get data file path from environment variable or use default
 const dataFilePath = process.env.VOCAB_DATA_PATH;
@@ -19,6 +25,7 @@ if (!dataFilePath) throw new Error("Environment variable VOCAB_DATA_PATH is not 
 // Initialize data store and repository
 const dataStore = new JsonDataStore(dataFilePath);
 const repo = new VocabRepository(dataStore);
+const decayStore = new DecayStore(dataFilePath);
 
 const modeHandlers = {
   fast: (input: string) => handleFastInput(input, repo),
@@ -55,6 +62,8 @@ const commandRegistry = {
   edit: async (argument: string) => await handleEditInput(argument, repo, currentMode),
   list: (argument: string) => handleList(argument, repo),
   clear: console.clear,
+  // study mode
+  study: async () => await configureStudySession(repo),
 };
 
 const commandHandlers = {
@@ -70,6 +79,8 @@ const commandHandlers = {
   d: commandRegistry.delete,
   e: commandRegistry.edit,
   ls: commandRegistry.list,
+  // study mode shortcuts
+  st: commandRegistry.study,
 };
 const availableCommands = Object.keys(commandHandlers);
 
@@ -100,6 +111,9 @@ async function promptUser(): Promise<void> {
 export async function main(): Promise<void> {
   console.clear();
 
+  // Check and apply any overdue decay silently on startup
+  checkAndApplyOverdueDecay(repo, decayStore, true);
+
   // Setup autocompleter with commands and repository
   setupCompleter(availableCommands, repo);
 
@@ -129,6 +143,10 @@ function displayHelp(currentMode: string): void {
     )} :Search for words (use -s for starts with, default: contains)`,
   );
 
+  view("\nStudy Mode:");
+  view(`${s.aH("st | study")} :Start a study session with spaced repetition`);
+
+  view("\nOther:");
   view(`${s.aH("help")} :Show this help`);
   view(`${s.aH("mode")} :Show current mode`);
   view(`${s.aH("q")} :Exit the application`);
