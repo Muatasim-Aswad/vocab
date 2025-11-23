@@ -6430,5 +6430,257 @@
       "direct",
       "-later"
     ]
+  },
+  {
+    "word": "fruiten",
+    "form": [
+      "verb"
+    ],
+    "forms": [
+      "fruit",
+      "fruit",
+      "fruiten",
+      "fruitte",
+      "fruitten",
+      "gefruit"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:40:40.711Z",
+    "modifiedAt": "2025-11-23T14:40:58.311Z",
+    "example": "Fruit de ui tot hij glazig is."
+  },
+  {
+    "word": "gaar",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "gaare",
+      "gaarder",
+      "gaarst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:42:38.457Z",
+    "modifiedAt": "2025-11-23T14:42:38.457Z",
+    "related": [
+      "klaar",
+      "doorbakken"
+    ],
+    "example": "Kook de pasta tot hij gaar is."
+  },
+  {
+    "word": "de lepel",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "lepel",
+      "lepels"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:44:43.114Z",
+    "modifiedAt": "2025-11-23T14:44:50.409Z",
+    "related": [
+      "opscheplepel",
+      "theelepel"
+    ],
+    "example": "Pak een lepel om de soep te eten."
+  },
+  {
+    "word": "loskloppen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "klop",
+      "klopt",
+      "klopte",
+      "klopten",
+      "losgeklopt"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:47:19.945Z",
+    "modifiedAt": "2025-11-23T14:47:19.946Z",
+    "related": [
+      "kloppen"
+    ],
+    "example": "Klop de eieren los in een kom.",
+    "phrases": [
+      "mixen",
+      "opkloppen"
+    ]
+  },
+  {
+    "word": "mengen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "meng",
+      "mengt",
+      "mengde",
+      "mengden",
+      "gemengd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:48:55.618Z",
+    "modifiedAt": "2025-11-23T14:48:55.618Z",
+    "related": [
+      "mixen",
+      "doorroeren",
+      "-scheiden"
+    ],
+    "example": "Meng de ingrediënten goed door elkaar."
+  },
+  {
+    "word": "de mie",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:49:30.193Z",
+    "modifiedAt": "2025-11-23T14:49:30.193Z",
+    "related": [
+      "noedels"
+    ],
+    "example": "Kook de mie drie minuten."
+  },
+  {
+    "word": "onvergelijkbaar",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:50:36.850Z",
+    "modifiedAt": "2025-11-23T14:50:36.850Z",
+    "related": [
+      "uniek",
+      "-vergelijkbaar"
+    ],
+    "example": "De smaak is onvergelijkbaar lekker."
+  },
+  {
+    "word": "oosters",
+    "form": [
+      "adjective",
+      "noun"
+    ],
+    "types": [
+      "plural"
+    ],
+    "forms": [
+      "het oosten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:51:50.137Z",
+    "modifiedAt": "2025-11-23T14:52:33.402Z",
+    "example": "Ik hou van oosters eten.",
+    "related": [
+      "westers"
+    ]
+  },
+  {
+    "word": "de paksoi",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:53:35.170Z",
+    "modifiedAt": "2025-11-23T14:53:35.170Z",
+    "related": [
+      "koolsoorten"
+    ],
+    "example": "Snijd de paksoi in repen."
+  },
+  {
+    "word": "de pan",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "pan",
+      "pannen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:54:01.426Z",
+    "modifiedAt": "2025-11-23T14:54:01.426Z",
+    "related": [
+      "koekenpan",
+      "steelpan"
+    ],
+    "example": "Zet de pan op het vuur."
+  },
+  {
+    "word": "roerbakken",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "roerbak",
+      "roerbakt",
+      "roerbakte",
+      "roerbakten",
+      "geroerbakt"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:54:34.482Z",
+    "modifiedAt": "2025-11-23T14:54:34.482Z",
+    "example": "Roerbak de groenten op hoog vuur."
+  },
+  {
+    "word": "roeren",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "roer",
+      "roert",
+      "roerde",
+      "roerden",
+      "geroerd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:55:45.258Z",
+    "modifiedAt": "2025-11-23T14:55:45.258Z",
+    "related": [
+      "mengen",
+      "dooroeren"
+    ],
+    "example": "Blijf roeren tot de saus dikker wordt."
+  },
+  {
+    "word": "rondom",
+    "form": [
+      "adverb",
+      "preposition"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T14:56:19.122Z",
+    "modifiedAt": "2025-11-23T14:56:19.122Z",
+    "related": [
+      "omheen"
+    ],
+    "example": "Er staan bomen rondom het huis."
   }
 ]

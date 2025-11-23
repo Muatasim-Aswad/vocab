@@ -1,6 +1,13 @@
 import { ask, s, view } from "./terminal.mjs";
 import {
-  deduceDutchWordInfo,
+  deduceWordForm,
+  deduceNounTypes,
+  deduceVerbTypes,
+  checkVerbSeparability,
+  isVerbIrregular,
+  generateVerifiedNounForms,
+  generateVerifiedVerbForms,
+  generateVerifiedAdjectiveForms,
   wordTypes,
   specialTypes,
 } from "../data/nl/utils/deduceDutchWordInfo.mjs";
@@ -197,6 +204,7 @@ function displayInstructions(word: string): void {
 /**
  * Unified word prompter for creating and editing vocabulary entries
  * Handles prompts, validations, and building the result object
+ * NEW: Step-by-step verification workflow
  */
 export async function promptWordFields(
   word: string,
@@ -218,9 +226,6 @@ export async function promptWordFields(
     phrases: include.phrases ?? false,
   };
 
-  // Deduce word info for defaults
-  const deduced = deduceDutchWordInfo(word);
-
   // Display instructions once at the beginning
   displayInstructions(word);
 
@@ -241,108 +246,197 @@ export async function promptWordFields(
     }
   }
 
-  // Prompt for form
+  // ============================================================
+  // STEP 1: Deduce and verify word form (noun/verb/adjective)
+  // ============================================================
+  let verifiedForm: (keyof typeof wordTypes)[] | undefined;
+
   if (fields.form) {
-    const defaultForm = existingEntry?.form || (deduced.form ? [deduced.form] : undefined);
+    const deducedForm =
+      existingEntry?.form || (deduceWordForm(word) ? [deduceWordForm(word)!] : undefined);
     const input = await promptArrayField(
-      "Word Type:",
-      defaultForm,
+      "Word Type",
+      deducedForm,
       processArrayInput,
       resolveFormInputs,
     );
 
     if (input !== undefined) {
+      verifiedForm = input;
       result.form = input;
-    } else if (!existingEntry && defaultForm) {
+    } else if (!existingEntry && deducedForm) {
       // Use deduced form for new entries if no input
-      result.form = defaultForm;
+      verifiedForm = deducedForm;
+      result.form = deducedForm;
+    } else if (existingEntry?.form) {
+      verifiedForm = existingEntry.form;
+      result.form = existingEntry.form;
     }
   } else if (mode === "create") {
     // Auto-set deduced form if not explicitly asking
-    if (deduced.form) {
-      result.form = [deduced.form];
+    const deducedForm = deduceWordForm(word);
+    if (deducedForm) {
+      verifiedForm = [deducedForm];
+      result.form = [deducedForm];
     }
+  } else if (existingEntry?.form) {
+    verifiedForm = existingEntry.form;
   }
 
-  // Prompt for irregular flag (ONLY for verbs)
-  if (
-    fields.irregular &&
-    (result.form?.includes("verb") || existingEntry?.form?.includes("verb"))
-  ) {
-    // Use deduced irregular status if verb form was agreed upon
-    const deducedIrregular =
-      (result.form?.includes("verb") || existingEntry?.form?.includes("verb")) &&
-      deduced.verbInfo?.irregular !== undefined
-        ? deduced.verbInfo.irregular
-        : undefined;
+  // ============================================================
+  // STEP 2: Based on verified form, deduce and verify types
+  // ============================================================
+  let verifiedTypes: string[] | undefined;
+  let isReflexive = false;
+  let cleanWord = word;
+  let separabilityInfo: ReturnType<typeof checkVerbSeparability> | undefined;
 
-    const currentIrregular = existingEntry?.irregular ?? deducedIrregular ?? false;
-    const currentValue = currentIrregular ? "y" : "n";
-    const irregularInput = await ask(`Irregular? (${s.alert(currentValue)}) [y/N]: `);
+  if (fields.types) {
+    let deducedTypes: string[] | undefined;
 
-    if (irregularInput.trim()) {
-      result.irregular = irregularInput.toLowerCase() === "y";
-    } else if (mode === "edit") {
-      result.irregular = currentIrregular;
-    } else if (deducedIrregular !== undefined) {
-      result.irregular = deducedIrregular;
+    // Deduce types based on verified form
+    if (verifiedForm?.includes("noun")) {
+      deducedTypes = existingEntry?.types || deduceNounTypes(word);
+    } else if (verifiedForm?.includes("verb")) {
+      const verbTypeInfo = deduceVerbTypes(word);
+      isReflexive = verbTypeInfo.isReflexive;
+      cleanWord = verbTypeInfo.cleanWord;
+
+      // Check separability
+      separabilityInfo = checkVerbSeparability(cleanWord);
+
+      deducedTypes = existingEntry?.types || [
+        ...verbTypeInfo.types,
+        ...(separabilityInfo.isSeparable ? ["separable"] : []),
+      ];
+    } else {
+      deducedTypes = existingEntry?.types;
     }
-  }
 
-  // Prompt for forms (conjugations/declensions) - ONLY for verbs, nouns, and adjectives
-  if (fields.forms) {
-    const wordForms = result.form || existingEntry?.form || (deduced.form ? [deduced.form] : []);
-
-    // Only show forms for verbs, nouns, and adjectives
-    const hasApplicableForm = wordForms.some(
-      (f) => f === "verb" || f === "noun" || f === "adjective",
+    const input = await promptArrayField(
+      "Other Categories/Types",
+      deducedTypes,
+      processArrayInput,
+      resolveTypeInputs,
     );
 
-    if (hasApplicableForm) {
-      let label: string;
-      let deducedForms: string[] | undefined = undefined;
+    if (input !== undefined) {
+      verifiedTypes = input;
+      result.types = input;
+    } else if (mode === "edit" && deducedTypes) {
+      verifiedTypes = deducedTypes;
+      result.types = deducedTypes;
+    } else if (!existingEntry && deducedTypes) {
+      verifiedTypes = deducedTypes;
+      result.types = deducedTypes;
+    }
+  } else if (mode === "create") {
+    // Auto-set deduced types if not explicitly asking
+    if (verifiedForm?.includes("noun")) {
+      verifiedTypes = deduceNounTypes(word);
+      result.types = verifiedTypes;
+    } else if (verifiedForm?.includes("verb")) {
+      const verbTypeInfo = deduceVerbTypes(word);
+      isReflexive = verbTypeInfo.isReflexive;
+      cleanWord = verbTypeInfo.cleanWord;
 
-      if (wordForms.includes("verb")) {
-        label = "Verb forms";
-        // Use deduced verb forms if it's a regular verb and form was agreed upon
-        deducedForms =
-          !result.irregular && !existingEntry?.irregular && deduced.verbInfo?.forms
-            ? deduced.verbInfo.forms
-            : undefined;
-      } else if (wordForms.includes("noun")) {
-        label = "Noun forms (singular, plural)";
-        // Use deduced noun forms
-        deducedForms = deduced.nounInfo?.forms;
-      } else if (wordForms.includes("adjective")) {
-        label = "Adjective forms (base, inflected, comparative, superlative)";
-        // Use deduced adjective forms
-        deducedForms = deduced.adjectiveInfo?.forms;
-      } else {
-        label = "Forms";
+      separabilityInfo = checkVerbSeparability(cleanWord);
+
+      verifiedTypes = [
+        ...verbTypeInfo.types,
+        ...(separabilityInfo.isSeparable ? ["separable"] : []),
+      ];
+      result.types = verifiedTypes;
+    }
+  }
+
+  // ============================================================
+  // STEP 3: If verb, verify irregularity (only if not certain)
+  // ============================================================
+  let verifiedIrregular: boolean | undefined;
+  let baseVerb: string | undefined;
+
+  if (verifiedForm?.includes("verb")) {
+    // Get separability info if not already obtained
+    if (!separabilityInfo) {
+      const verbTypeInfo = deduceVerbTypes(word);
+      cleanWord = verbTypeInfo.cleanWord;
+      separabilityInfo = checkVerbSeparability(cleanWord);
+    }
+
+    baseVerb = separabilityInfo.baseVerb;
+
+    if (fields.irregular) {
+      // Deduce irregularity
+      const deducedIrregular = isVerbIrregular(cleanWord, baseVerb);
+
+      const currentIrregular = existingEntry?.irregular ?? deducedIrregular ?? false;
+      const currentValue = currentIrregular ? "y" : "n";
+      const irregularInput = await ask(`Irregular? (${s.alert(currentValue)}) [y/N]: `);
+
+      if (irregularInput.trim()) {
+        verifiedIrregular = irregularInput.toLowerCase() === "y";
+        result.irregular = verifiedIrregular;
+      } else if (mode === "edit") {
+        verifiedIrregular = currentIrregular;
+        result.irregular = currentIrregular;
+      } else if (deducedIrregular !== undefined) {
+        verifiedIrregular = deducedIrregular;
+        result.irregular = deducedIrregular;
       }
+    } else {
+      // Auto-deduce irregularity
+      verifiedIrregular = existingEntry?.irregular ?? isVerbIrregular(cleanWord, baseVerb);
+      result.irregular = verifiedIrregular;
+    }
+  }
 
-      const defaultForms = existingEntry?.forms || deducedForms;
+  // ============================================================
+  // STEP 4: Based on verified info, generate forms with reliable input
+  // ============================================================
+  if (fields.forms) {
+    let generatedForms: string[] | undefined;
+    let formLabel = "Forms";
 
-      const input = await promptArrayField(label, defaultForms, processArrayInput);
+    if (verifiedForm?.includes("verb")) {
+      formLabel = "Verb forms";
+
+      // Generate verb forms based on verified irregularity and separability
+      generatedForms = generateVerifiedVerbForms(
+        cleanWord,
+        verifiedIrregular || false,
+        separabilityInfo,
+      );
+    } else if (verifiedForm?.includes("noun")) {
+      formLabel = "Noun forms (singular, plural)";
+      generatedForms = generateVerifiedNounForms(word);
+    } else if (verifiedForm?.includes("adjective")) {
+      formLabel = "Adjective forms (base, inflected, comparative, superlative)";
+      generatedForms = generateVerifiedAdjectiveForms(word);
+    }
+
+    const defaultForms = existingEntry?.forms || generatedForms;
+
+    if (verifiedForm?.some((f) => f === "verb" || f === "noun" || f === "adjective")) {
+      const input = await promptArrayField(formLabel, defaultForms, processArrayInput);
       if (input !== undefined) {
         result.forms = input;
       } else if (mode === "edit" && defaultForms) {
-        // In edit mode, keep the default value shown to the user
         result.forms = defaultForms;
-      } else if (!existingEntry && deducedForms) {
-        result.forms = deducedForms;
+      } else if (!existingEntry && generatedForms) {
+        result.forms = generatedForms;
       }
     }
   }
 
-  // Prompt for related words
+  // ============================================================
+  // STEP 5: Prompt for related words
+  // ============================================================
   if (fields.related) {
     // Add base verb as first related word if it's a separable verb
     const deducedRelated =
-      (result.form?.includes("verb") || existingEntry?.form?.includes("verb")) &&
-      deduced.verbInfo?.isSeparable &&
-      deduced.verbInfo.prefix
-        ? [deduced.verbInfo.baseVerb]
+      verifiedForm?.includes("verb") && separabilityInfo?.isSeparable && baseVerb
+        ? [baseVerb]
         : undefined;
 
     const defaultRelated = existingEntry?.related || deducedRelated;
@@ -351,44 +445,19 @@ export async function promptWordFields(
     if (input !== undefined) {
       result.related = input;
     } else if (mode === "edit" && defaultRelated) {
-      // In edit mode, keep the default value shown to the user
       result.related = defaultRelated;
     } else if (!existingEntry && deducedRelated) {
       result.related = deducedRelated;
     }
   }
 
-  // Prompt for phrases
+  // ============================================================
+  // STEP 6: Prompt for phrases
+  // ============================================================
   if (fields.phrases) {
     const input = await promptArrayField("Phrases", existingEntry?.phrases, processArrayInput);
     if (input !== undefined) {
       result.phrases = input;
-    }
-  }
-
-  // Prompt for types
-  if (fields.types) {
-    const defaultTypes = existingEntry?.types || deduced.types;
-    const input = await promptArrayField(
-      "Other Categories/Types",
-      defaultTypes,
-      processArrayInput,
-      resolveTypeInputs,
-    );
-
-    if (input !== undefined) {
-      result.types = input;
-    } else if (mode === "edit" && defaultTypes) {
-      // In edit mode, keep the default value shown to the user
-      result.types = defaultTypes;
-    } else if (!existingEntry && defaultTypes) {
-      // Use deduced types for new entries if no input
-      result.types = defaultTypes;
-    }
-  } else if (mode === "create") {
-    // Auto-set deduced types if not explicitly asking
-    if (deduced.types) {
-      result.types = deduced.types;
     }
   }
 

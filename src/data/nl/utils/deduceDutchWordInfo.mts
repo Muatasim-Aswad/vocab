@@ -1,4 +1,4 @@
-import { BASE_IRREGULAR_VERBS } from "../baseIrregularVerbs.mjs";
+import { BASE_IRREGULAR_VERBS, BASE_IRREGULAR_VERBS_VALUES } from "../baseIrregularVerbs.mjs";
 import { COMMON_PLURAL_S_ENDINGS } from "../constants.mjs";
 import { checkSeparability } from "./checkSeparability.mjs";
 import { conjugateDutchVerb } from "./conjugateDutchVerbs.mjs";
@@ -77,8 +77,158 @@ export const specialTypes = [
 ];
 
 /**
- * Deduce Dutch word form based on heuristics
- * (*) means less certain
+ * Deduce Dutch word form based on heuristics only
+ * This is the first step - form identification without assumptions
+ */
+export function deduceWordForm(word: string): keyof typeof wordTypes | undefined {
+  const normalized = word.toLowerCase();
+
+  // * noun - identified by article
+  if (normalized.startsWith("de ") || normalized.startsWith("het ")) {
+    return "noun";
+  }
+
+  // * verb - identified by infinitive endings
+  if (normalized.endsWith("en") || normalized.endsWith("aan") || normalized.endsWith("ën")) {
+    return "verb";
+  }
+
+  // Default to adjective as it's most common for other patterns
+  return "adjective";
+}
+
+/**
+ * Deduce types for a noun based on the word
+ */
+export function deduceNounTypes(word: string): string[] {
+  const types: string[] = [];
+  const normalized = word.toLowerCase();
+
+  // Remove article if present
+  const nounWithoutArticle =
+    normalized.startsWith("de ") || normalized.startsWith("het ")
+      ? normalized.substring(normalized.indexOf(" ") + 1)
+      : normalized;
+
+  // Check for plural indicators
+  const isCommonPluralS = COMMON_PLURAL_S_ENDINGS.some(
+    (pattern) => nounWithoutArticle === pattern || nounWithoutArticle === pattern.replace("'", ""),
+  );
+
+  if (
+    nounWithoutArticle.endsWith("en") ||
+    nounWithoutArticle.endsWith("ën") ||
+    nounWithoutArticle.endsWith("'s") ||
+    isCommonPluralS
+  ) {
+    types.push("plural");
+  } else {
+    types.push("singular");
+  }
+
+  return types;
+}
+
+/**
+ * Deduce types for a verb based on the word
+ */
+export function deduceVerbTypes(word: string): {
+  types: string[];
+  isReflexive: boolean;
+  cleanWord: string;
+} {
+  const types: string[] = [];
+  let normalized = word.toLowerCase();
+  let isReflexive = false;
+
+  // Check for reflexive verb
+  if (normalized.startsWith("zich ")) {
+    types.push("reflexive");
+    isReflexive = true;
+    normalized = normalized.split(" ")[1];
+  }
+
+  return { types, isReflexive, cleanWord: normalized };
+}
+
+/**
+ * Check verb separability with detailed information
+ */
+export function checkVerbSeparability(verb: string): ReturnType<typeof checkSeparability> {
+  return checkSeparability(verb);
+}
+
+/**
+ * Check if verb is irregular based on base verb
+ */
+export function isVerbIrregular(verb: string, baseVerb?: string): boolean {
+  return (
+    BASE_IRREGULAR_VERBS.includes(verb) ||
+    (baseVerb ? BASE_IRREGULAR_VERBS.includes(baseVerb) : false)
+  );
+}
+
+/**
+ * Generate noun forms with verified input
+ */
+export function generateVerifiedNounForms(word: string): string[] | undefined {
+  try {
+    // Remove article if present
+    const nounWithoutArticle =
+      word.toLowerCase().startsWith("de ") || word.toLowerCase().startsWith("het ")
+        ? word.substring(word.indexOf(" ") + 1)
+        : word;
+
+    const nounForms = generateDutchNounForms(nounWithoutArticle);
+    // Only include plural if it exists (not null for uncountable nouns)
+    return nounForms.plural ? [nounForms.singular, nounForms.plural] : [nounForms.singular];
+  } catch (error) {
+    return undefined;
+  }
+}
+
+/**
+ * Generate verb forms with verified input
+ */
+export function generateVerifiedVerbForms(
+  verb: string,
+  isIrregular: boolean,
+  separabilityInfo?: ReturnType<typeof checkSeparability>,
+): string[] | undefined {
+  // Use conjugation with separability and irregularity info
+  // The conjugator will handle fetching from dictionary if irregular
+  try {
+    return conjugateDutchVerb(verb, {
+      isSeparable: separabilityInfo?.isSeparable,
+      prefix: separabilityInfo?.prefix,
+      baseVerb: separabilityInfo?.baseVerb,
+      isIrregular,
+    });
+  } catch (error) {
+    return undefined;
+  }
+}
+
+/**
+ * Generate adjective forms with verified input
+ */
+export function generateVerifiedAdjectiveForms(adjective: string): string[] | undefined {
+  try {
+    const adjectiveForms = generateDutchAdjectiveForms(adjective);
+    return [
+      adjectiveForms.base,
+      adjectiveForms.inflected,
+      adjectiveForms.comparative,
+      adjectiveForms.superlative,
+    ];
+  } catch (error) {
+    return undefined;
+  }
+}
+
+/**
+ * Legacy function for backward compatibility
+ * @deprecated Use the new step-by-step functions instead
  */
 export function deduceDutchWordInfo(word: string) {
   word = word.toLowerCase();
@@ -94,72 +244,37 @@ export function deduceDutchWordInfo(word: string) {
   let nounInfo: { forms?: string[] } | undefined = undefined;
   let adjectiveInfo: { forms?: string[] } | undefined = undefined;
 
-  // * noun
-  if (word.startsWith("de ") || word.startsWith("het ")) {
-    form = "noun";
+  form = deduceWordForm(word);
 
-    // * plural or singular (*)
-    // Note: This is heuristic-based and may not be 100% accurate
-    // Plural indicators: -en, -ën, -'s, and common plural -s patterns (loan words)
-    const nounWithoutArticle = word.substring(word.indexOf(" ") + 1);
-    const isCommonPluralS = COMMON_PLURAL_S_ENDINGS.some(
-      (pattern) =>
-        nounWithoutArticle === pattern || nounWithoutArticle === pattern.replace("'", ""),
-    );
-
-    types.push(
-      word.endsWith("en") || word.endsWith("ën") || word.endsWith("'s") || isCommonPluralS
-        ? "plural"
-        : "singular",
-    );
-
-    // Generate noun forms (singular and plural)
-    try {
-      const nounForms = generateDutchNounForms(nounWithoutArticle);
-      // Only include plural if it exists (not null for uncountable nouns)
-      nounInfo = {
-        forms: nounForms.plural ? [nounForms.singular, nounForms.plural] : [nounForms.singular], // Uncountable nouns have only singular form
-      };
-    } catch (error) {
-      // If generation fails, leave nounInfo undefined
-      nounInfo = undefined;
+  if (form === "noun") {
+    types = deduceNounTypes(word);
+    // Only generate forms for singular nouns (not for plural nouns that end in -en, etc.)
+    if (types.includes("singular") && !types.includes("plural")) {
+      const forms = generateVerifiedNounForms(word);
+      if (forms) {
+        nounInfo = { forms };
+      }
     }
-    // * verb
-  } else if (word.endsWith("en") || word.endsWith("aan") || word.endsWith("ën")) {
-    form = "verb";
-    // * reflexive verb
-    if (word.startsWith("zich ")) {
-      types.push("reflexive");
-      word = word.split(" ")[1];
-    }
-    // * separable verb
-    const result = checkSeparability(word);
-    if (result.isSeparable) types.push("separable");
-    verbInfo = { ...result };
-    // * irregular verb
-    // Check if either the full verb or the base verb is irregular
-    verbInfo.irregular =
-      BASE_IRREGULAR_VERBS.includes(word) || BASE_IRREGULAR_VERBS.includes(result.baseVerb);
-    // * if regular get the verb forms
-    if (!verbInfo.irregular) verbInfo.forms = conjugateDutchVerb(word);
-  } else {
-    // resort to adjective as default as it's more common than others
-    form = "adjective";
+  } else if (form === "verb") {
+    const verbTypeInfo = deduceVerbTypes(word);
+    types = verbTypeInfo.types;
+    const cleanWord = verbTypeInfo.cleanWord;
 
-    // Generate adjective forms (base, inflected, comparative, superlative)
-    try {
-      const adjectiveForms = generateDutchAdjectiveForms(word);
-      adjectiveInfo = {
-        forms: [
-          adjectiveForms.base,
-          adjectiveForms.inflected,
-          adjectiveForms.comparative,
-          adjectiveForms.superlative,
-        ],
-      };
-    } catch (error) {
-      // If generation fails, leave adjectiveInfo undefined
-      adjectiveInfo = undefined;
+    const separabilityInfo = checkVerbSeparability(cleanWord);
+    if (separabilityInfo.isSeparable) {
+      types.push("separable");
+    }
+
+    verbInfo = { ...separabilityInfo };
+    verbInfo.irregular = isVerbIrregular(cleanWord, separabilityInfo.baseVerb);
+
+    if (!verbInfo.irregular) {
+      verbInfo.forms = generateVerifiedVerbForms(cleanWord, false, separabilityInfo);
+    }
+  } else if (form === "adjective") {
+    const forms = generateVerifiedAdjectiveForms(word);
+    if (forms) {
+      adjectiveInfo = { forms };
     }
   }
 
