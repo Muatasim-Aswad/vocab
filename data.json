@@ -7016,5 +7016,231 @@
       "sterke drank"
     ],
     "example": "Hij drinkt te veel drank."
+  },
+  {
+    "word": "het effect",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:49:47.823Z",
+    "modifiedAt": "2025-11-23T16:49:47.824Z",
+    "related": [
+      "gevolg",
+      "impact",
+      "-oorzaak"
+    ],
+    "example": "Het effect van de maatregel is duidelijk."
+  },
+  {
+    "word": "gedogen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "gedoog",
+      "gedoogt",
+      "gedoogde",
+      "gedoogden",
+      "gedoogd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:50:39.991Z",
+    "modifiedAt": "2025-11-23T16:50:39.991Z",
+    "related": [
+      "het gedoogbeleid"
+    ],
+    "example": "Softdrugs worden in Nederland soms gedoogd."
+  },
+  {
+    "word": "het genotmiddel",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:51:57.156Z",
+    "modifiedAt": "2025-11-23T16:51:57.156Z",
+    "related": [
+      "recreatieve stof"
+    ],
+    "example": "Alcohol is een legaal genotmiddel."
+  },
+  {
+    "word": "de legalisering",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:52:27.482Z",
+    "modifiedAt": "2025-11-23T16:52:27.483Z",
+    "related": [
+      "legaliseren"
+    ],
+    "example": "De legalisering van cannabis is een politiek debat."
+  },
+  {
+    "word": "lichamelijk",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:53:14.848Z",
+    "modifiedAt": "2025-11-23T16:53:14.848Z",
+    "related": [
+      "lichaam",
+      "fysiek",
+      "-mentaal"
+    ],
+    "example": "Hij voelt zich lichamelijk sterk."
+  },
+  {
+    "word": "de plant",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "planten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:53:48.872Z",
+    "modifiedAt": "2025-11-23T16:53:48.872Z",
+    "related": [
+      "plantsoen",
+      "planten"
+    ],
+    "example": "De plant heeft water nodig."
+  },
+  {
+    "word": "produceren",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "produceer",
+      "produceert",
+      "produceerde",
+      "produceerden",
+      "geproduceerd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:54:29.110Z",
+    "modifiedAt": "2025-11-23T16:54:29.110Z",
+    "related": [
+      "productie"
+    ],
+    "example": "De fabriek produceert kleding."
+  },
+  {
+    "word": "slap",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "slap",
+      "slappe",
+      "slapper",
+      "slapst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:54:59.796Z",
+    "modifiedAt": "2025-11-23T16:54:59.796Z",
+    "related": [
+      "zwak",
+      "-sterk"
+    ],
+    "example": "De koffie is slap."
+  },
+  {
+    "word": "sloom",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "sloom",
+      "slome",
+      "slomer",
+      "sloomst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:55:39.211Z",
+    "modifiedAt": "2025-11-23T16:55:39.211Z",
+    "related": [
+      "traag",
+      "-energiek"
+    ],
+    "example": "Ik voel me vandaag sloom."
+  },
+  {
+    "word": "tijdelijk",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:56:16.665Z",
+    "modifiedAt": "2025-11-23T16:56:16.665Z",
+    "related": [
+      "-permanent"
+    ],
+    "example": "Dit is een tijdelijke oplossing."
+  },
+  {
+    "word": "tolerant",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "tolerant",
+      "tolerante",
+      "toleranter",
+      "tolerantst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T16:56:50.177Z",
+    "modifiedAt": "2025-11-23T16:56:50.177Z",
+    "related": [
+      "verdraagzaam"
+    ],
+    "example": "Ze is tolerant tegenover anderen."
+  },
+  {
+    "word": "verbieden",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "verbied",
+      "verbiedt",
+      "bood",
+      "boden",
+      "geboden"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T16:58:05.764Z",
+    "modifiedAt": "2025-11-23T16:58:05.765Z",
+    "related": [
+      "-toestaan",
+      "het verbod"
+    ],
+    "example": "Roken is hier verboden."
   }
 ]

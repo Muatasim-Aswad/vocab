@@ -153,21 +153,47 @@ export function conjugateDutchVerb(
         BASE_IRREGULAR_VERBS_VALUES[lookupVerb as keyof typeof BASE_IRREGULAR_VERBS_VALUES];
       const [pastSingular, pastPlural, pastParticiple] = irregularForms;
 
-      // Build past participle with prefix if separable
-      let finalPastParticiple: string;
-      if (isSeparable && prefix && pastParticiple) {
+      // Check if the full infinitive has an inseparable prefix
+      // For irregular verbs with inseparable prefixes: infinitive has the prefix, but baseVerb doesn't
+      // Example: infinitive="verbieden", baseVerb="bieden", prefix should be "ver"
+      const hasInseparablePrefix =
+        !isSeparable &&
+        infinitive !== lookupVerb &&
+        INSEPARABLE_PREFIXES.some((pre) => infinitive.startsWith(pre));
+
+      const inseparablePrefix = hasInseparablePrefix
+        ? INSEPARABLE_PREFIXES.find((pre) => infinitive.startsWith(pre)) || ""
+        : "";
+
+      // Build past tense forms with inseparable prefix if needed
+      let finalPastSingular = pastSingular;
+      let finalPastPlural = pastPlural;
+      let finalPastParticiple = pastParticiple || "";
+
+      if (hasInseparablePrefix && inseparablePrefix) {
+        // For irregular verbs with inseparable prefixes (e.g., verbieden from bieden)
+        // Add the prefix to all past forms: ver + bood = verbood, ver + boden = verboden
+        finalPastSingular = inseparablePrefix + pastSingular;
+        finalPastPlural = inseparablePrefix + pastPlural;
+        // For past participle, the base form already has "ge" (geboden), replace with prefix
+        // Remove "ge" from the base irregular form and add the inseparable prefix
+        if (pastParticiple) {
+          const participleStem = pastParticiple.startsWith("ge")
+            ? pastParticiple.slice(2)
+            : pastParticiple;
+          finalPastParticiple = inseparablePrefix + participleStem;
+        }
+      } else if (isSeparable && prefix && pastParticiple) {
         // For separable irregular verbs, prepend the prefix (e.g., op + gekomen = opgekomen)
         finalPastParticiple = prefix + pastParticiple;
-      } else {
-        finalPastParticiple = pastParticiple || "";
       }
 
       // Build forms array for irregular verbs
       const forms = [
         presentFirstPerson,
         presentSecondPerson,
-        pastSingular,
-        pastPlural,
+        finalPastSingular,
+        finalPastPlural,
         finalPastParticiple,
       ].filter((form): form is string => form !== null && form !== "");
 

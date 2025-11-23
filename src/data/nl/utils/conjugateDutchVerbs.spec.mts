@@ -108,6 +108,27 @@ testConjugation(
   "gebeuren (to happen) - inseparable prefix 'ge-', 'eu' digraph preserved",
 );
 
+// Test 6b: Irregular verb with inseparable prefix
+console.log("\n=== Irregular verbs with inseparable prefixes ===");
+
+const verbiedenResult = conjugateDutchVerb("verbieden", {
+  isSeparable: false,
+  prefix: null,
+  baseVerb: "bieden",
+  isIrregular: true,
+});
+
+assert.deepStrictEqual(
+  verbiedenResult,
+  ["verbied", "verbiedt", "verbood", "verboden"],
+  `verbieden (to forbid) - irregular verb with inseparable prefix 'ver-', prefix added to all past forms\nExpected: ${JSON.stringify(
+    ["verbied", "verbiedt", "verbood", "verboden"],
+  )}\nGot: ${JSON.stringify(verbiedenResult)}`,
+);
+console.log(
+  `✓ verbieden (to forbid) - irregular verb with inseparable prefix 'ver-', prefix added to all past forms`,
+);
+
 // Test 7: 't kofschip rule - various endings
 testConjugation(
   "werken",
