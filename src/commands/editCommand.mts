@@ -7,7 +7,7 @@ import { promptWordFields } from "../ui/wordPrompter.mjs";
 export async function handleEditInput(
   input: string,
   repo: VocabRepository,
-  mode: "fast" | "normal" | "detail" = "normal",
+  mode: "fast" | "normal" | "detail" | "search" = "normal",
 ): Promise<boolean> {
   let word = input;
   let entry = null;
@@ -79,7 +79,7 @@ export async function handleEditInput(
   }
 
   // Normal mode: edit word, related, and example
-  if (mode === "normal") {
+  else if (mode === "normal") {
     const promptedData = await promptWordFields(
       word,
       {
@@ -111,7 +111,7 @@ export async function handleEditInput(
   }
 
   // Detail mode: edit all fields
-  if (mode === "detail") {
+  else {
     const promptedData = await promptWordFields(
       word,
       {
@@ -147,6 +147,4 @@ export async function handleEditInput(
 
     return true;
   }
-
-  return false;
 }

@@ -6,6 +6,7 @@ import { JsonDataStore } from "./data/dataStore.mjs";
 import { handleFastInput } from "./modes/addFastMode.mjs";
 import { handleNormalInput } from "./modes/addNormalMode.mjs";
 import { handleDetailInput } from "./modes/addDetailMode.mjs";
+import { handleSearchInput } from "./modes/searchMode.mjs";
 import { handleSearch } from "./commands/searchCommand.mjs";
 import { handleDelete } from "./commands/deleteCommand.mjs";
 import { handleEditInput } from "./commands/editCommand.mjs";
@@ -31,6 +32,7 @@ const modeHandlers = {
   fast: (input: string) => handleFastInput(input, repo),
   normal: (input: string) => handleNormalInput(input, repo),
   detail: (input: string) => handleDetailInput(input, repo),
+  search: (input: string) => handleSearchInput(input, repo),
 };
 
 let currentMode: keyof typeof modeHandlers = "normal";
@@ -56,10 +58,16 @@ const commandRegistry = {
     currentMode = "detail";
     view("Switched to DETAIL INPUT mode.");
   },
+  searchmode: () => {
+    currentMode = "search";
+    view("Switched to SEARCH mode.");
+  },
   // actions
   search: (argument: string) => handleSearch(argument, repo),
   delete: (argument: string) => handleDelete(argument, repo),
-  edit: async (argument: string) => await handleEditInput(argument, repo, currentMode),
+  edit: async (argument: string) => {
+    await handleEditInput(argument, repo, currentMode);
+  },
   list: (argument: string) => handleList(argument, repo),
   clear: console.clear,
   // study mode
@@ -74,6 +82,7 @@ const commandHandlers = {
   n: commandRegistry.normal,
   f: commandRegistry.fast,
   dt: commandRegistry.detail,
+  sm: commandRegistry.searchmode,
   // actions
   s: commandRegistry.search,
   d: commandRegistry.delete,
@@ -132,6 +141,7 @@ function displayHelp(currentMode: string): void {
   view(`${s.aH("f | fast")} :Switch to Fast Input Mode (just enter words)`);
   view(`${s.aH("n | normal")} :Switch to Normal Input Mode (word with optional fields)`);
   view(`${s.aH("dt | detail")} :Switch to Detail Input Mode (all fields with auto-defaults)`);
+  view(`${s.aH("sm | searchmode")} :Switch to Search Mode (interactive search)`);
 
   view("\nCommands:");
   view(`${s.aH("d | delete <word>")} :Delete a specific word (or last word if no argument)`);
