@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { ask, s, view } from "./ui/terminal.mjs";
+import { ask, s, view, setupCompleter } from "./ui/terminal.mjs";
 import { VocabRepository } from "./data/repository.mjs";
 import { JsonDataStore } from "./data/dataStore.mjs";
 import { handleFastInput } from "./modes/addFastMode.mjs";
@@ -54,6 +54,7 @@ const commandRegistry = {
   delete: (argument: string) => handleDelete(argument, repo),
   edit: async (argument: string) => await handleEditInput(argument, repo, currentMode),
   list: (argument: string) => handleList(argument, repo),
+  clear: console.clear,
 };
 
 const commandHandlers = {
@@ -89,7 +90,7 @@ async function processInput(unTrimmedInput: string): Promise<void> {
 async function promptUser(): Promise<void> {
   const modeIndicator = currentMode.toUpperCase();
 
-  const answer = await ask(`\n[${modeIndicator}] > `);
+  const answer = await ask(`\n[${modeIndicator}] > `, true);
 
   await processInput(answer);
   promptUser();
@@ -98,6 +99,10 @@ async function promptUser(): Promise<void> {
 // Main function
 export async function main(): Promise<void> {
   console.clear();
+
+  // Setup autocompleter with commands and repository
+  setupCompleter(availableCommands, repo);
+
   view(s.aH("=== Dutch Vocabulary App ==="));
   view("Type 'help' for available commands.\n");
 

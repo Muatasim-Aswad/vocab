@@ -1,12 +1,13 @@
 import { IDataStore } from "./dataStore.mjs";
-import { deduceDutchWordInfo, wordTypes } from "./nl.mjs";
+import { wordTypes } from "./nl/utils/deduceDutchWordInfo.mjs";
 
 export interface Vocab {
   word: string;
   related?: string[];
   example?: string;
+  phrases?: string[];
 
-  form?: keyof typeof wordTypes;
+  form?: (keyof typeof wordTypes)[];
   types?: string[];
   forms?: string[];
   irregular?: boolean;
@@ -17,7 +18,7 @@ export interface Vocab {
 
 export type CreateVocab = Pick<
   Vocab,
-  "word" | "related" | "example" | "form" | "types" | "forms" | "irregular"
+  "word" | "related" | "example" | "phrases" | "form" | "types" | "forms" | "irregular"
 >;
 
 export type UpdateVocab = Partial<CreateVocab>;
@@ -34,16 +35,19 @@ export interface Result {
 export class VocabRepository {
   private dataStore: IDataStore;
   private cache: Vocab[];
+  public words: string[];
 
   constructor(dataStore: IDataStore) {
     this.dataStore = dataStore;
     this.cache = this.dataStore.get();
+    this.words = this.cache.map((entry) => entry.word);
   }
 
   save(data: Vocab[]): boolean {
     const success = this.dataStore.save(data);
     if (success) {
       this.cache = data;
+      this.words = this.cache.map((entry) => entry.word);
     }
     return success;
   }
@@ -95,25 +99,26 @@ export class VocabRepository {
   }
 
   create(data: CreateVocab): Result {
-    const { word, related, example, forms, irregular, form, types } = data;
-    const processed = this.processWord(word);
+    const { word, related, example, phrases, forms, irregular, form, types } = data;
+    const processedWord = word.trim().toLowerCase();
 
     // Check if word already exists
-    const exists = this.cache.find((entry) => entry.word === processed.word);
+    const exists = this.cache.find((entry) => entry.word === processedWord);
     if (exists) {
       return { success: false, found: true, entry: exists };
     }
 
     const entry: Vocab = {
-      word: processed.word,
-      form: form || processed.form,
-      types: types || processed.types,
+      word: processedWord,
+      form: form,
+      types: types,
       forms,
       irregular: irregular ?? false,
       addedAt: new Date().toISOString(),
       modifiedAt: new Date().toISOString(),
       ...(related && related.length > 0 ? { related } : {}),
       ...(example ? { example: this.processExample(example) } : {}),
+      ...(phrases && phrases.length > 0 ? { phrases } : {}),
     };
 
     this.cache.push(entry);
@@ -123,7 +128,7 @@ export class VocabRepository {
   }
 
   update(word: string, updateData: UpdateVocab): Result {
-    const { word: newWord, related, example, forms, irregular, form, types } = updateData;
+    const { word: newWord, related, example, phrases, forms, irregular, form, types } = updateData;
     const index = this.findIndexByWord(word);
 
     if (index === -1) {
@@ -134,16 +139,66 @@ export class VocabRepository {
 
     // Update fields
     if (newWord !== undefined) {
-      const processed = this.processWord(newWord);
-      entry.word = processed.word;
-      entry.form = form || processed.form;
-      entry.types = types || processed.types;
+      const processedWord = newWord.trim().toLowerCase();
+      entry.word = processedWord;
     }
 
-    if (related && related.length > 0) entry.related = related;
-    if (example) entry.example = this.processExample(example);
-    if (forms !== undefined) entry.forms = forms;
+    // Handle form: delete if empty array, set if has items, keep if undefined
+    if (form !== undefined) {
+      if (form && form.length > 0) {
+        entry.form = form;
+      } else {
+        delete entry.form;
+      }
+    }
+
+    // Handle types: delete if empty array, set if has items, keep if undefined
+    if (types !== undefined) {
+      if (types.length > 0) {
+        entry.types = types;
+      } else {
+        delete entry.types;
+      }
+    }
+
+    // Handle related: delete if empty array, set if has items, keep if undefined
+    if (related !== undefined) {
+      if (related.length > 0) {
+        entry.related = related;
+      } else {
+        delete entry.related;
+      }
+    }
+
+    // Handle example: delete if empty string, process if has content, keep if undefined
+    if (example !== undefined) {
+      if (example.trim()) {
+        entry.example = this.processExample(example);
+      } else {
+        delete entry.example;
+      }
+    }
+
+    // Handle forms: delete if empty array, set if has items, keep if undefined
+    if (forms !== undefined) {
+      if (forms.length > 0) {
+        entry.forms = forms;
+      } else {
+        delete entry.forms;
+      }
+    }
+
+    // Handle irregular: set if defined, keep if undefined
     if (irregular !== undefined) entry.irregular = irregular;
+
+    // Handle phrases: delete if empty array, set if has items, keep if undefined
+    if (phrases !== undefined) {
+      if (phrases.length > 0) {
+        entry.phrases = phrases;
+      } else {
+        delete entry.phrases;
+      }
+    }
 
     entry.modifiedAt = new Date().toISOString();
 
@@ -171,6 +226,24 @@ export class VocabRepository {
     return this.cache.length;
   }
 
+  findByIndex(index: number): Vocab | null {
+    // Handle negative indices (from the end)
+    if (index < 0) {
+      const actualIndex = this.cache.length + index;
+      if (actualIndex < 0 || actualIndex >= this.cache.length) {
+        return null;
+      }
+      return this.cache[actualIndex];
+    }
+
+    // Handle positive indices (1-based)
+    const actualIndex = index - 1;
+    if (actualIndex < 0 || actualIndex >= this.cache.length) {
+      return null;
+    }
+    return this.cache[actualIndex];
+  }
+
   exists(word: string): boolean {
     return this.findByWord(word) !== null;
   }
@@ -194,18 +267,6 @@ export class VocabRepository {
     });
 
     return sorted;
-  }
-
-  private processWord(input: string) {
-    const word = input.trim().toLowerCase();
-
-    const deduced = deduceDutchWordInfo(word);
-
-    return {
-      word,
-      form: deduced.form,
-      types: deduced.types,
-    };
   }
 
   private processExample(example: string): string {

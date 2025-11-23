@@ -12,7 +12,8 @@
     "start": "node --env-file=.env ./dist/index.mjs",
     "dev": "npm run build && node --env-file=.env ./dist/index.mjs",
     "clean": "rm -rf dist",
-    "postbuild": "chmod +x dist/index.mjs"
+    "postbuild": "chmod +x dist/index.mjs",
+    "test": "npm run build && node dist/test-runner.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

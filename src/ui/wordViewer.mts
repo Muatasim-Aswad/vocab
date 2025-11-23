@@ -1,12 +1,13 @@
 import { view, s } from "./terminal.mjs";
 import { Vocab } from "../data/repository.mjs";
-import { wordTypes } from "../data/nl.mjs";
+import { wordTypes } from "../data/nl/utils/deduceDutchWordInfo.mjs";
 import { setEngine } from "crypto";
 
 export interface DisplayWordOptions {
   showPosition?: boolean;
   showRelated?: boolean;
   showExample?: boolean;
+  showPhrases?: boolean;
   showDates?: boolean;
 }
 
@@ -24,17 +25,21 @@ export function displayWord(
     showPosition = true,
     showRelated = true,
     showExample = true,
+    showPhrases = true,
     showDates = false,
   } = options;
 
   const position = showPosition && index !== null ? `${index}. ` : "";
   const indent = " ".repeat(position.length);
 
-  const code = entry.form ? wordTypes[entry.form].code : ""; // word form code
-  const types = entry.types ? `[${entry.types.reduce((acc, t) => (acc += " ," + t))}]` : "";
+  const codes = entry.form ? entry.form.map((f) => wordTypes[f].code).join(", ") : ""; // word form codes
+  const types =
+    entry.types && entry.types.length > 0
+      ? `[${entry.types.reduce((acc, t) => (acc += " ," + t), "")}]`
+      : "";
 
   // Display the main word
-  view(`${position}${s.w(entry.word)} ${code} ${types} ${entry.irregular ? "irregular" : ""}`);
+  view(`${position}${s.w(entry.word)} ${codes} ${types} ${entry.irregular ? "irregular" : ""}`);
 
   // Display forms if available
   if (entry.forms && entry.forms.length > 0) {
@@ -50,6 +55,13 @@ export function displayWord(
 
   // Display example if available
   if (showExample && entry.example) view(`${indent}${s.e(entry.example)} (e)`);
+
+  // Display phrases if available
+  if (showPhrases && entry.phrases && entry.phrases.length > 0) {
+    entry.phrases.forEach((phrase) => {
+      view(`${indent}${s.e(phrase)} (p)`);
+    });
+  }
 
   // Display dates if requested
   if (showDates) {

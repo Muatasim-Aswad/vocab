@@ -13,6 +13,7 @@ export function handleSearch(input: string, repo: VocabRepository): void {
 
   // Parse arguments
   let startsWithMode = false;
+  let exactMode = false;
   let query = trimmedInput.toLowerCase();
 
   const argParts = trimmedInput.split(/\s+/);
@@ -26,6 +27,17 @@ export function handleSearch(input: string, repo: VocabRepository): void {
     query = argParts.join(" ").toLowerCase();
   }
 
+  // Check for -e flag (exact - preserves space after word)
+  const exactFlagIndex = argParts.indexOf("-e");
+  if (exactFlagIndex !== -1) {
+    exactMode = true;
+    // Remove the -e flag from the query
+    argParts.splice(exactFlagIndex, 1);
+    query = argParts.join(" ").toLowerCase();
+    // Add trailing space for exact matching
+    query += " ";
+  }
+
   if (!query) {
     view("Please enter a search term.");
     return;
@@ -34,13 +46,23 @@ export function handleSearch(input: string, repo: VocabRepository): void {
   const results = repo.search(query, { startsWith: startsWithMode });
 
   if (results.length === 0) {
-    const searchType = startsWithMode ? "starting with" : "containing";
-    view(`No words found ${searchType} "${query}".`);
+    const searchType = startsWithMode
+      ? "starting with"
+      : exactMode
+      ? "exactly matching"
+      : "containing";
+    const displayQuery = exactMode ? query.trimEnd() : query;
+    view(`No words found ${searchType} "${displayQuery}".`);
     return;
   }
 
-  const searchType = startsWithMode ? "starting with" : "containing";
-  view(s.aH(`\n=== Words ${searchType} "${query}" (${results.length} found) ===`));
+  const searchType = startsWithMode
+    ? "starting with"
+    : exactMode
+    ? "exactly matching"
+    : "containing";
+  const displayQuery = exactMode ? query.trimEnd() : query;
+  view(s.aH(`\n=== Words ${searchType} "${displayQuery}" (${results.length} found) ===`));
 
   displayWords(results);
 

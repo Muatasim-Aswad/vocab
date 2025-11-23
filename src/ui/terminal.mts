@@ -1,5 +1,6 @@
 import readline from "readline";
 import { ansi } from "./ansi.mjs";
+import type { VocabRepository } from "../data/repository.mjs";
 
 const theme = {
   reset: ansi.reset, // Reset
@@ -49,9 +50,23 @@ export const view = (message: string): void => {
   console.log(s.a(message));
 };
 
+let availableCommands: string[] = [];
+let repo: VocabRepository | null = null;
+let isCompleterEnabled = true;
+
+function completer(line: string): [string[], string] {
+  if (!isCompleterEnabled) {
+    return [[], line];
+  }
+  const allCompletions = [...availableCommands, ...(repo?.words || [])];
+  const hits = allCompletions.filter((c) => c.startsWith(line));
+  return [hits.length ? hits : allCompletions, line];
+}
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
+  completer,
 });
 
 // Handle Ctrl+C
@@ -61,8 +76,14 @@ rl.on("SIGINT", () => {
   process.exit(0);
 });
 
-export const ask = (question: string): Promise<string> => {
+export function setupCompleter(commands: string[], repository: VocabRepository): void {
+  availableCommands = commands;
+  repo = repository;
+}
+
+export const ask = (question: string, isAutoComplete: boolean = false): Promise<string> => {
   return new Promise((resolve) => {
+    isCompleterEnabled = isAutoComplete;
     rl.question(s.a(question), (answer) => {
       resolve(answer);
     });

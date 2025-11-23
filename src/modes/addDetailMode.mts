@@ -34,6 +34,7 @@ export async function handleDetailInput(word: string, repo: VocabRepository): Pr
         forms: true,
         irregular: true,
         related: true,
+        phrases: true,
       },
       mode: "create",
     },

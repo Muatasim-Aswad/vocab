@@ -10,6 +10,7 @@ export async function handleEditInput(
   mode: "fast" | "normal" | "detail" = "normal",
 ): Promise<boolean> {
   let word = input;
+  let entry = null;
 
   if (!word) {
     const last = repo.findLast();
@@ -18,11 +19,28 @@ export async function handleEditInput(
       return false;
     }
     word = last.word;
+    entry = last;
+  } else {
+    // Check if input is a number (index)
+    const indexMatch = input.match(/^(-?\d+)$/);
+    if (indexMatch) {
+      const index = parseInt(indexMatch[1], 10);
+      entry = repo.findByIndex(index);
+
+      if (!entry) {
+        view(`No word found at index ${index}.`);
+        return false;
+      }
+
+      word = entry.word;
+      view(`Found word at index ${index}: "${word}"`);
+    } else {
+      // Find the word in data by word string
+      entry = repo.findByWord(word);
+    }
   }
 
-  // Find the word in data
-  const entry = repo.findByWord(word);
-
+  // Check if entry was found
   if (!entry) {
     view(`Word "${word}" not found in the database.`);
     return false;
@@ -36,7 +54,7 @@ export async function handleEditInput(
       word,
       {
         include: {
-          word: true,
+          phrases: true,
         },
         existingEntry: entry,
         mode: "edit",
@@ -44,11 +62,12 @@ export async function handleEditInput(
       (input, existing) => repo.processArrayInput(input, existing),
     );
 
-    if (promptedData.word) {
+    // Only update if there are changes
+    if (Object.keys(promptedData).length > 0) {
       const result = repo.update(word, promptedData);
 
       if (result.success && result.entry) {
-        const index = repo.findIndexByWord(promptedData.word);
+        const index = repo.findIndexByWord(promptedData.word || word);
         view("\n✓ Updated successfully!");
         displayWord(result.entry, index + 1, { showDates: false });
       }
@@ -104,6 +123,7 @@ export async function handleEditInput(
           irregular: true,
           related: true,
           example: true,
+          phrases: true,
         },
         existingEntry: entry,
         mode: "edit",
@@ -111,6 +131,7 @@ export async function handleEditInput(
       (input, existing) => repo.processArrayInput(input, existing),
     );
 
+    console.clear();
     // Only update if there are changes
     if (Object.keys(promptedData).length > 0) {
       const result = repo.update(word, promptedData);
