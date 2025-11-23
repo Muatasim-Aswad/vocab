@@ -60,14 +60,20 @@ testConjugation(
 // Test 4: Devoicing (v → f, z → s)
 testConjugation(
   "leven",
-  ["leef", "leeft", "leefte", "leeften", "geleeft"],
-  "leven (to live) - v becomes f, then 't kofschip applies",
+  ["leef", "leeft", "leefde", "leefden", "geleefd"],
+  "leven (to live) - v becomes f in writing, but past tense uses -d (voiced v)",
 );
 
 testConjugation(
   "reizen",
-  ["reis", "reist", "reiste", "reisten", "gereist"],
-  "reizen (to travel) - z becomes s, then 't kofschip applies",
+  ["reis", "reist", "reisde", "reisden", "gereisd"],
+  "reizen (to travel) - z becomes s in writing, but past tense uses -d (voiced z)",
+);
+
+testConjugation(
+  "stoven",
+  ["stoof", "stooft", "stoofde", "stoofden", "gestoofd"],
+  "stoven (to stew) - v becomes f in writing, but past tense uses -d (voiced v)",
 );
 
 // Test 5: Long vowel preservation (note: these tests show regular conjugations, not irregular forms)
@@ -154,7 +160,52 @@ testConjugation(
   "ontmoeten (to meet) - inseparable prefix 'ont-', stem ending in 't', past participle avoids double 't'",
 );
 
-// Test 11: Error cases
+// Test 11: Separable verbs with options
+console.log("\n=== Separable verbs ===");
+
+// Helper to test separable verbs
+function testSeparableConjugation(
+  baseVerb: string,
+  prefix: string,
+  expected: string[],
+  description: string,
+) {
+  const result = conjugateDutchVerb(baseVerb, {
+    isSeparable: true,
+    prefix: prefix,
+    baseVerb: baseVerb,
+    isIrregular: false,
+  });
+  assert.deepStrictEqual(
+    result,
+    expected,
+    `${description}\nExpected: ${JSON.stringify(expected)}\nGot: ${JSON.stringify(result)}`,
+  );
+  console.log(`✓ ${description}`);
+}
+
+testSeparableConjugation(
+  "halen",
+  "op",
+  ["haal", "haalt", "haalde", "haalden", "opgehaald"],
+  "ophalen (to pick up) - separable verb with regular base, ge- between prefix and stem",
+);
+
+testSeparableConjugation(
+  "verwarmen",
+  "voor",
+  ["verwarm", "verwarmt", "verwarmde", "verwarmden", "voorverwarmd"],
+  "voorverwarmen (to preheat) - separable verb with inseparable base 'verwarmen', no ge- added",
+);
+
+testSeparableConjugation(
+  "bereiden",
+  "voor",
+  ["bereid", "bereidt", "bereidde", "bereidden", "voorbereid"],
+  "voorbereiden (to prepare) - separable verb with inseparable base 'bereiden', no ge- added",
+);
+
+// Test 12: Error cases
 console.log("\nTesting error cases:");
 
 try {

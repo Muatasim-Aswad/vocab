@@ -323,6 +323,19 @@ export async function promptWordFields(
     if (input !== undefined) {
       verifiedTypes = input;
       result.types = input;
+
+      // Update separability info if user manually changed separable status
+      if (verifiedForm?.includes("verb") && separabilityInfo) {
+        const userWantsSeparable = input.includes("separable");
+        if (userWantsSeparable !== separabilityInfo.isSeparable) {
+          // User overrode the automatic detection
+          separabilityInfo = {
+            ...separabilityInfo,
+            isSeparable: userWantsSeparable,
+            confidence: "Database-Verified", // Mark as verified since user confirmed
+          };
+        }
+      }
     } else if (mode === "edit" && deducedTypes) {
       verifiedTypes = deducedTypes;
       result.types = deducedTypes;
@@ -347,6 +360,24 @@ export async function promptWordFields(
         ...(separabilityInfo.isSeparable ? ["separable"] : []),
       ];
       result.types = verifiedTypes;
+    }
+  } else if (existingEntry?.types && verifiedForm?.includes("verb")) {
+    // In edit mode with existing types, check if separable was manually set
+    verifiedTypes = existingEntry.types;
+    if (!separabilityInfo) {
+      const verbTypeInfo = deduceVerbTypes(word);
+      cleanWord = verbTypeInfo.cleanWord;
+      separabilityInfo = checkVerbSeparability(cleanWord);
+
+      // Override separability if user had manually set it differently
+      const userWantsSeparable = existingEntry.types.includes("separable");
+      if (userWantsSeparable !== separabilityInfo.isSeparable) {
+        separabilityInfo = {
+          ...separabilityInfo,
+          isSeparable: userWantsSeparable,
+          confidence: "Database-Verified",
+        };
+      }
     }
   }
 

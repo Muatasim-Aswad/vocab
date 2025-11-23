@@ -21,7 +21,6 @@
 import { VOWELS, DIGRAPHS } from "../constants.mjs";
 
 export interface DutchNounForms {
-  singular: string;
   plural: string | null; // null for uncountable nouns
 }
 
@@ -51,7 +50,6 @@ export function generateDutchNounForms(singular: string): DutchNounForms {
 
   if (isUncountable) {
     return {
-      singular: singular.trim(),
       plural: null, // No plural form for uncountable nouns
     };
   }
@@ -93,7 +91,6 @@ export function generateDutchNounForms(singular: string): DutchNounForms {
   }
 
   return {
-    singular: singular.trim(),
     plural,
   };
 }

@@ -35,7 +35,7 @@ export function displayWord(
   const codes = entry.form ? entry.form.map((f) => wordTypes[f].code).join(", ") : ""; // word form codes
   const types =
     entry.types && entry.types.length > 0
-      ? `[${entry.types.reduce((acc, t) => (acc += " ," + t), "")}]`
+      ? `[${entry.types.reduce((acc, t) => (acc += " ," + t), "").slice(2)}]`
       : "";
 
   // Display the main word

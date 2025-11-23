@@ -1494,7 +1494,23 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.203Z",
-    "modifiedAt": "2025-11-19T12:19:24.203Z"
+    "modifiedAt": "2025-11-23T15:45:28.833Z",
+    "related": [
+      "de vlam",
+      "hitte",
+      "-kou",
+      "-koelte"
+    ],
+    "example": "Zet het vuur wat lager, anders verbrandt het eten.",
+    "forms": [
+      "vuren",
+      "vuurtje"
+    ],
+    "phrases": [
+      "het vuur hoger/lager zetten",
+      "in vuur en vlam staan",
+      "vuur geven"
+    ]
   },
   {
     "word": "trots",
@@ -6682,5 +6698,230 @@
       "omheen"
     ],
     "example": "Er staan bomen rondom het huis."
+  },
+  {
+    "word": "scheppen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "schep",
+      "schept",
+      "schiep",
+      "schiepen",
+      "geschapen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-11-23T15:14:54.126Z",
+    "modifiedAt": "2025-11-23T15:14:54.128Z",
+    "related": [
+      "opscheppen",
+      "uitscheppen"
+    ],
+    "example": "Schep de rijst op je bord."
+  },
+  {
+    "word": "schillen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "schil",
+      "schilt",
+      "schilde",
+      "schilden",
+      "geschild"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:15:28.814Z",
+    "modifiedAt": "2025-11-23T15:15:28.814Z",
+    "related": [
+      "pellen"
+    ],
+    "example": "Schil de aardappels eerst."
+  },
+  {
+    "word": "snipperen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "snipper",
+      "snippert",
+      "snipperen; snipperde; gesnipperd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:16:43.845Z",
+    "modifiedAt": "2025-11-23T15:16:43.845Z",
+    "related": [
+      "hakken",
+      "fijnsnijden"
+    ],
+    "example": "Snipper de ui zo fijn mogelijk."
+  },
+  {
+    "word": "speciaal",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "speciaal",
+      "speciale",
+      "specialer",
+      "speciaalst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:17:36.909Z",
+    "modifiedAt": "2025-11-23T15:17:51.133Z",
+    "related": [
+      "bijzonder",
+      "-gewoon"
+    ],
+    "example": "Dit is een speciaal recept."
+  },
+  {
+    "word": "de specialiteit",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "specialiteiten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:20:07.595Z",
+    "modifiedAt": "2025-11-23T15:20:07.595Z",
+    "related": [
+      "vakmanschap"
+    ],
+    "example": "Curry is mijn specialiteit."
+  },
+  {
+    "word": "stoven",
+    "form": [
+      "verb"
+    ],
+    "forms": [
+      "stoof",
+      "stooft",
+      "stoofde",
+      "stoofden",
+      "gestoofd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:26:42.624Z",
+    "modifiedAt": "2025-11-23T15:27:37.552Z",
+    "example": "Stoof het vlees twee uur op laag vuur.",
+    "related": [
+      "sudderen",
+      "smoren"
+    ]
+  },
+  {
+    "word": "toevoegen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "voeg",
+      "voegt",
+      "voegde",
+      "voegden",
+      "toegevoegd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:28:33.663Z",
+    "modifiedAt": "2025-11-23T15:28:33.663Z",
+    "related": [
+      "voegen"
+    ],
+    "example": "Voeg het zout toe aan het water.",
+    "phrases": [
+      "erbij doen"
+    ]
+  },
+  {
+    "word": "verhitten",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "verhit",
+      "verhitte",
+      "verhitten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:29:36.663Z",
+    "modifiedAt": "2025-11-23T15:29:36.663Z",
+    "related": [
+      "warm maken"
+    ],
+    "example": "Verhit de olie in een pan."
+  },
+  {
+    "word": "verkruimelen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "verkruimel",
+      "verkruimelt",
+      "verkruimelde",
+      "verkruimeld"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:31:28.746Z",
+    "modifiedAt": "2025-11-23T15:31:28.746Z",
+    "related": [
+      "brokkelen"
+    ],
+    "example": "Verkruimel de feta over de salade."
+  },
+  {
+    "word": "voorverwarmen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "verwarm",
+      "verwarmt",
+      "verwarmde",
+      "verwarmden",
+      "voorverwarmd"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:42:27.462Z",
+    "modifiedAt": "2025-11-23T15:42:27.463Z",
+    "related": [
+      "verwarmen"
+    ],
+    "example": "Verwarm de oven voor op 200 graden."
+  },
+  {
+    "word": "zomaar",
+    "form": [
+      "adverb"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T15:43:00.213Z",
+    "modifiedAt": "2025-11-23T15:43:00.213Z",
+    "related": [
+      "plotseling",
+      "ineens"
+    ],
+    "example": "Hij ging zomaar weg."
   }
 ]

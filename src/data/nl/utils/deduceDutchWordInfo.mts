@@ -181,7 +181,7 @@ export function generateVerifiedNounForms(word: string): string[] | undefined {
 
     const nounForms = generateDutchNounForms(nounWithoutArticle);
     // Only include plural if it exists (not null for uncountable nouns)
-    return nounForms.plural ? [nounForms.singular, nounForms.plural] : [nounForms.singular];
+    return nounForms.plural ? [nounForms.plural] : [];
   } catch (error) {
     return undefined;
   }

@@ -105,9 +105,12 @@ export function conjugateDutchVerb(
   };
 
   // Get past tense suffix based on 't kofschip rule
-  const tORd = (stem: string): "t" | "d" => {
-    const lastChar = stem[stem.length - 1];
-    const lastTwoChars = stem.slice(-2);
+  // IMPORTANT: Check the original stem BEFORE devoicing (v→f, z→s)
+  const tORd = (infinitive: string): "t" | "d" => {
+    // Get original stem before devoicing
+    const originalStem = infinitive.slice(0, -2); // Remove -en
+    const lastChar = originalStem[originalStem.length - 1];
+    const lastTwoChars = originalStem.slice(-2);
 
     return TKOFSHIP_ENDINGS.includes(lastChar) || TKOFSHIP_ENDINGS.includes(lastTwoChars)
       ? "t"
@@ -119,10 +122,18 @@ export function conjugateDutchVerb(
     infinitive: string,
     isSeparable: boolean,
     prefix: string | null,
+    baseVerb: string,
   ): string => {
-    // If separable, ge- goes between prefix and stem
+    // If separable, check if the BASE VERB has an inseparable prefix
     if (isSeparable && prefix) {
-      return prefix + "ge";
+      // Check if base verb starts with inseparable prefix (e.g., "verwarmen" in "voorverwarmen")
+      const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) => baseVerb.startsWith(pre));
+      if (baseHasInseparablePrefix) {
+        // Base verb doesn't get "ge", so separable verb gets: prefix + (no ge) + stem
+        // This is handled in the main logic by checking this return value
+        return prefix; // Just return prefix, no "ge"
+      }
+      return prefix + "ge"; // Normal separable: prefix + ge + stem
     }
 
     // If inseparable prefix, no ge-
@@ -175,8 +186,8 @@ export function conjugateDutchVerb(
   }
 
   // Regular verb conjugation
-  const pastSuffix = tORd(presentFirstPerson);
-  const pastParticiplePrefix = getPastParticiplePrefix(infinitive, isSeparable, prefix);
+  const pastSuffix = tORd(stemVerb);
+  const pastParticiplePrefix = getPastParticiplePrefix(infinitive, isSeparable, prefix, baseVerb);
 
   // Fix Bug 3: Avoid double 't' or 'd' in past participle
   const pastParticipleSuffix =
@@ -188,8 +199,15 @@ export function conjugateDutchVerb(
   // Build past participle correctly for separable verbs
   let pastParticiple: string;
   if (isSeparable && prefix) {
-    // For separable verbs: prefix + ge + stem + suffix (e.g., opgenomen)
-    pastParticiple = prefix + "ge" + presentFirstPerson + pastParticipleSuffix;
+    // For separable verbs: check if we should add "ge"
+    const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) => baseVerb.startsWith(pre));
+    if (baseHasInseparablePrefix) {
+      // Base verb like "verwarmen" doesn't get "ge", so: voor + verwarmd
+      pastParticiple = prefix + presentFirstPerson + pastParticipleSuffix;
+    } else {
+      // Normal separable: prefix + ge + stem + suffix (e.g., op + ge + haald = opgehaald)
+      pastParticiple = prefix + "ge" + presentFirstPerson + pastParticipleSuffix;
+    }
   } else {
     // For regular/inseparable verbs: prefix + stem + suffix
     pastParticiple = pastParticiplePrefix + presentFirstPerson + pastParticipleSuffix;

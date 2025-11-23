@@ -18,7 +18,6 @@ function testNounForms(singular: string, expectedPlural: string, description: st
     expectedPlural,
     `${description}\nExpected plural: ${expectedPlural}\nGot: ${result.plural}`,
   );
-  assert.strictEqual(result.singular, singular);
   console.log(`✓ ${description}`);
 }
 
@@ -70,7 +69,6 @@ function testUncountableNoun(singular: string, description: string) {
     null,
     `${description}\nExpected plural: null (uncountable)\nGot: ${result.plural}`,
   );
-  assert.strictEqual(result.singular, singular);
   console.log(`✓ ${description}`);
 }
 
