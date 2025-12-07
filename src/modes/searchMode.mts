@@ -80,6 +80,6 @@ export function handleSearchInput(input: string, repo: VocabRepository): void {
     return;
   }
 
-  view(s.aH(`\n=== Words ${searchType} "${displayQuery}" (${results.length} found) ===`));
+  view(`\n=== Words ${searchType} "${displayQuery}" (${results.length} found) ===`);
   displayWords(results);
 }

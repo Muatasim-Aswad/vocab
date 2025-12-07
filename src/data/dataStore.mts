@@ -1,5 +1,5 @@
-import fs from "fs";
-import { Vocab } from "./repository.mjs";
+import fs from 'fs';
+import { Vocab } from './repository.mjs';
 
 /**
  * Interface for data storage operations
@@ -39,13 +39,8 @@ export class JsonDataStore implements IDataStore {
    * @throws Error if file reading or parsing fails
    */
   get(): Vocab[] {
-    try {
-      const data = fs.readFileSync(this.filePath, "utf8");
-      return JSON.parse(data);
-    } catch (error) {
-      console.error("Error loading data:", (error as Error).message);
-      return [];
-    }
+    const data = fs.readFileSync(this.filePath, 'utf8');
+    return JSON.parse(data);
   }
 
   /**
@@ -55,10 +50,10 @@ export class JsonDataStore implements IDataStore {
    */
   save(data: Vocab[]): boolean {
     try {
-      fs.writeFileSync(this.filePath, JSON.stringify(data, null, 2), "utf8");
+      fs.writeFileSync(this.filePath, JSON.stringify(data, null, 2), 'utf8');
       return true;
     } catch (error) {
-      console.error("Error saving data:", (error as Error).message);
+      console.error('Error saving data:', (error as Error).message);
       return false;
     }
   }

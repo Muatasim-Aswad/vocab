@@ -1,5 +1,9 @@
-import assert from "node:assert";
-import { deduceDutchWordInfo, wordTypes, specialTypes } from "./deduceDutchWordInfo.mjs";
+import assert from 'node:assert';
+import {
+  deduceDutchWordInfo,
+  wordTypes,
+  specialTypes,
+} from './deduceDutchWordInfo.mjs';
 
 /**
  * Test suite for deduceDutchWordInfo function
@@ -19,49 +23,49 @@ function testWordInfo(
   assert.deepStrictEqual(
     result,
     expected,
-    `${description}\nExpected: ${JSON.stringify(expected, null, 2)}\nGot: ${JSON.stringify(
-      result,
+    `${description}\nExpected: ${JSON.stringify(
+      expected,
       null,
       2,
-    )}`,
+    )}\nGot: ${JSON.stringify(result, null, 2)}`,
   );
-  const symbol = isKnownLimitation ? "⚠" : "✓";
+  const symbol = isKnownLimitation ? '⚠' : '✓';
   console.log(`${symbol} ${description}`);
 }
 
-console.log("Testing Dutch Word Info Deduction\n");
+console.log('Testing Dutch Word Info Deduction\n');
 
-console.log("=== NOUNS (with articles) ===");
+console.log('=== NOUNS (with articles) ===');
 
 testWordInfo(
-  "de hond",
+  'de hond',
   {
-    form: "noun",
-    types: ["singular"],
+    form: 'noun',
+    types: ['singular'],
     verbInfo: undefined,
-    nounInfo: { forms: ["honden"] },
+    nounInfo: { forms: ['honden'] },
     adjectiveInfo: undefined,
   },
   "de hond - singular noun with 'de' article",
 );
 
 testWordInfo(
-  "het huis",
+  'het huis',
   {
-    form: "noun",
-    types: ["singular"],
+    form: 'noun',
+    types: ['singular'],
     verbInfo: undefined,
-    nounInfo: { forms: ["huizen"] },
+    nounInfo: { forms: ['huizen'] },
     adjectiveInfo: undefined,
   },
   "het huis - singular noun with 'het' article",
 );
 
 testWordInfo(
-  "de huizen",
+  'de huizen',
   {
-    form: "noun",
-    types: ["plural"],
+    form: 'noun',
+    types: ['plural'],
     verbInfo: undefined,
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -72,8 +76,8 @@ testWordInfo(
 testWordInfo(
   "de auto's",
   {
-    form: "noun",
-    types: ["plural"],
+    form: 'noun',
+    types: ['plural'],
     verbInfo: undefined,
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -82,10 +86,10 @@ testWordInfo(
 );
 
 testWordInfo(
-  "de kinderen",
+  'de kinderen',
   {
-    form: "noun",
-    types: ["plural"],
+    form: 'noun',
+    types: ['plural'],
     verbInfo: undefined,
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -94,34 +98,34 @@ testWordInfo(
 );
 
 testWordInfo(
-  "het boek",
+  'het boek',
   {
-    form: "noun",
-    types: ["singular"],
+    form: 'noun',
+    types: ['singular'],
     verbInfo: undefined,
-    nounInfo: { forms: ["boeken"] },
+    nounInfo: { forms: ['boeken'] },
     adjectiveInfo: undefined,
   },
-  "het boek - singular noun (no plural ending)",
+  'het boek - singular noun (no plural ending)',
 );
 
 testWordInfo(
-  "de hond",
+  'de hond',
   {
-    form: "noun",
-    types: ["singular"],
+    form: 'noun',
+    types: ['singular'],
     verbInfo: undefined,
-    nounInfo: { forms: ["honden"] },
+    nounInfo: { forms: ['honden'] },
     adjectiveInfo: undefined,
   },
-  "de hond - singular noun ending in consonant",
+  'de hond - singular noun ending in consonant',
 );
 
 testWordInfo(
-  "de autos",
+  'de autos',
   {
-    form: "noun",
-    types: ["plural"],
+    form: 'noun',
+    types: ['plural'],
     verbInfo: undefined,
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -129,234 +133,240 @@ testWordInfo(
   "de autos - plural ending in plain '-s' (loan word, detected via dictionary)",
 );
 
-console.log("\n=== VERBS (regular) ===");
+console.log('\n=== VERBS (regular) ===');
 
 testWordInfo(
-  "maken",
+  'maken',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "maken",
-      confidence: "Base Verb",
+      baseVerb: 'maken',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["maak", "maakt", "maakte", "maakten", "gemaakt"],
+      forms: ['maak', 'maakt', 'maakte', 'maakten', 'gemaakt'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "maken - regular base verb",
+  'maken - regular base verb',
 );
 
 testWordInfo(
-  "werken",
+  'werken',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "werken",
-      confidence: "Base Verb",
+      baseVerb: 'werken',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["werk", "werkt", "werkte", "werkten", "gewerkt"],
+      forms: ['werk', 'werkt', 'werkte', 'werkten', 'gewerkt'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "werken - regular base verb",
+  'werken - regular base verb',
 );
 
 testWordInfo(
-  "horen",
+  'horen',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "horen",
-      confidence: "Base Verb",
+      baseVerb: 'horen',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["hoor", "hoort", "hoorde", "hoorden", "gehoord"],
+      forms: ['hoor', 'hoort', 'hoorde', 'hoorden', 'gehoord'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "horen - regular base verb with -d ending",
+  'horen - regular base verb with -d ending',
 );
 
-console.log("\n=== VERBS (irregular) ===");
+console.log('\n=== VERBS (irregular) ===');
 
 testWordInfo(
-  "lopen",
+  'lopen',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "lopen",
-      confidence: "Base Verb",
+      baseVerb: 'lopen',
+      confidence: 'Base Verb',
       irregular: true,
       // forms not generated for irregular verbs
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "lopen - irregular verb (no forms generated)",
+  'lopen - irregular verb (no forms generated)',
 );
 
 testWordInfo(
-  "hebben",
+  'hebben',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "hebben",
-      confidence: "Base Verb",
+      baseVerb: 'hebben',
+      confidence: 'Base Verb',
       irregular: true,
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "hebben - irregular auxiliary verb",
+  'hebben - irregular auxiliary verb',
 );
 
 testWordInfo(
-  "gaan",
+  'gaan',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "gaan",
-      confidence: "Base Verb",
+      baseVerb: 'gaan',
+      confidence: 'Base Verb',
       irregular: true,
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "gaan - irregular verb",
+  'gaan - irregular verb',
 );
 
-console.log("\n=== VERBS (separable) ===");
+console.log('\n=== VERBS (separable) ===');
 
 testWordInfo(
-  "aankomen",
+  'aankomen',
   {
-    form: "verb",
-    types: ["separable"],
+    form: 'verb',
+    types: ['separable'],
     verbInfo: {
       isSeparable: true,
-      prefix: "aan",
-      baseVerb: "komen",
-      confidence: "High",
+      prefix: 'aan',
+      baseVerb: 'komen',
+      confidence: 'High',
       irregular: true, // 'komen' is irregular
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "aankomen - separable verb with irregular base",
+  'aankomen - separable verb with irregular base',
 );
 
 testWordInfo(
-  "ophalen",
+  'ophalen',
   {
-    form: "verb",
-    types: ["separable"],
+    form: 'verb',
+    types: ['separable'],
     verbInfo: {
       isSeparable: true,
-      prefix: "op",
-      baseVerb: "halen",
-      confidence: "High",
+      prefix: 'op',
+      baseVerb: 'halen',
+      confidence: 'High',
       irregular: false,
-      forms: ["haal", "haalt", "haalde", "haalden", "opgehaald"],
+      forms: ['haal op', 'haalt op', 'haalde op', 'haalden op', 'opgehaald'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "ophalen - separable verb with regular base",
+  'ophalen - separable verb with regular base',
 );
 
 testWordInfo(
-  "uitgaan",
+  'uitgaan',
   {
-    form: "verb",
-    types: ["separable"],
+    form: 'verb',
+    types: ['separable'],
     verbInfo: {
       isSeparable: true,
-      prefix: "uit",
-      baseVerb: "gaan",
-      confidence: "High",
+      prefix: 'uit',
+      baseVerb: 'gaan',
+      confidence: 'High',
       irregular: true, // 'gaan' is irregular
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "uitgaan - separable verb with irregular base",
+  'uitgaan - separable verb with irregular base',
 );
 
-console.log("\n=== VERBS (reflexive) ===");
+console.log('\n=== VERBS (reflexive) ===');
 
 testWordInfo(
-  "zich vergissen",
+  'zich vergissen',
   {
-    form: "verb",
-    types: ["reflexive"],
+    form: 'verb',
+    types: ['reflexive'],
     verbInfo: {
       isSeparable: false,
-      prefix: "ver",
-      baseVerb: "gissen",
-      confidence: "High",
+      prefix: 'ver',
+      baseVerb: 'gissen',
+      confidence: 'High',
       irregular: false,
-      forms: ["vergis", "vergist", "vergiste", "vergisten"],
+      forms: ['vergis', 'vergist', 'vergiste', 'vergisten'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "zich vergissen - reflexive verb",
+  'zich vergissen - reflexive verb',
 );
 
 testWordInfo(
-  "zich herinneren",
+  'zich herinneren',
   {
-    form: "verb",
-    types: ["reflexive"],
+    form: 'verb',
+    types: ['reflexive'],
     verbInfo: {
       isSeparable: false,
-      prefix: "her",
-      baseVerb: "inneren",
-      confidence: "High",
+      prefix: 'her',
+      baseVerb: 'inneren',
+      confidence: 'High',
       irregular: false,
-      forms: ["herinneer", "herinneert", "herinneerde", "herinneerden", "herinneerd"],
+      forms: [
+        'herinneer',
+        'herinneert',
+        'herinneerde',
+        'herinneerden',
+        'herinneerd',
+      ],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "zich herinneren - reflexive verb with inseparable prefix",
+  'zich herinneren - reflexive verb with inseparable prefix',
   true, // Note: actual verb is irregular, conjugation here is hypothetical regular form
 );
 
-console.log("\n=== VERBS (with inseparable prefixes) ===");
+console.log('\n=== VERBS (with inseparable prefixes) ===');
 
 testWordInfo(
-  "betalen",
+  'betalen',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
-      prefix: "be",
-      baseVerb: "talen",
-      confidence: "High",
+      prefix: 'be',
+      baseVerb: 'talen',
+      confidence: 'High',
       irregular: false,
-      forms: ["betaal", "betaalt", "betaalde", "betaalden", "betaald"],
+      forms: ['betaal', 'betaalt', 'betaalde', 'betaalden', 'betaald'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -365,53 +375,53 @@ testWordInfo(
 );
 
 testWordInfo(
-  "vergeten",
+  'vergeten',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
-      prefix: "ver",
-      baseVerb: "geten",
-      confidence: "High",
+      prefix: 'ver',
+      baseVerb: 'geten',
+      confidence: 'High',
       irregular: true, // 'vergeten' is in irregular list
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "vergeten - irregular verb with inseparable prefix",
+  'vergeten - irregular verb with inseparable prefix',
 );
 
-console.log("\n=== VERBS (ending variations) ===");
+console.log('\n=== VERBS (ending variations) ===');
 
 testWordInfo(
-  "opzeggen",
+  'opzeggen',
   {
-    form: "verb",
-    types: ["separable"],
+    form: 'verb',
+    types: ['separable'],
     verbInfo: {
       isSeparable: true,
-      prefix: "op",
-      baseVerb: "zeggen",
-      confidence: "High",
+      prefix: 'op',
+      baseVerb: 'zeggen',
+      confidence: 'High',
       irregular: true, // 'zeggen' is in irregular list
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "opzeggen - verb with separable prefix and irregular base",
+  'opzeggen - verb with separable prefix and irregular base',
 );
 
 testWordInfo(
-  "inslaan",
+  'inslaan',
   {
-    form: "verb",
-    types: ["separable"],
+    form: 'verb',
+    types: ['separable'],
     verbInfo: {
       isSeparable: true,
-      prefix: "in",
-      baseVerb: "slaan",
-      confidence: "High",
+      prefix: 'in',
+      baseVerb: 'slaan',
+      confidence: 'High',
       irregular: true, // 'slaan' is irregular
     },
     nounInfo: undefined,
@@ -420,89 +430,89 @@ testWordInfo(
   "inslaan - separable verb ending in '-aan'",
 );
 
-console.log("\n=== ADJECTIVES (default fallback) ===");
+console.log('\n=== ADJECTIVES (default fallback) ===');
 
 testWordInfo(
-  "groot",
+  'groot',
   {
-    form: "adjective",
+    form: 'adjective',
     types: undefined,
     verbInfo: undefined,
     nounInfo: undefined,
-    adjectiveInfo: { forms: ["groot", "grote", "groter", "grootst"] },
+    adjectiveInfo: { forms: ['groot', 'grote', 'groter', 'grootst'] },
   },
-  "groot - adjective (default for words not matching other patterns)",
+  'groot - adjective (default for words not matching other patterns)',
 );
 
 testWordInfo(
-  "mooi",
+  'mooi',
   {
-    form: "adjective",
+    form: 'adjective',
     types: undefined,
     verbInfo: undefined,
     nounInfo: undefined,
-    adjectiveInfo: { forms: ["mooi", "mooie", "mooier", "mooist"] },
+    adjectiveInfo: { forms: ['mooi', 'mooie', 'mooier', 'mooist'] },
   },
-  "mooi - adjective",
+  'mooi - adjective',
 );
 
 testWordInfo(
-  "goed",
+  'goed',
   {
-    form: "adjective",
+    form: 'adjective',
     types: undefined,
     verbInfo: undefined,
     nounInfo: undefined,
-    adjectiveInfo: { forms: ["goed", "goede", "goeder", "goedst"] },
+    adjectiveInfo: { forms: ['goed', 'goede', 'goeder', 'goedst'] },
   },
-  "goed - adjective",
+  'goed - adjective',
 );
 
 testWordInfo(
-  "snel",
+  'snel',
   {
-    form: "adjective",
+    form: 'adjective',
     types: undefined,
     verbInfo: undefined,
     nounInfo: undefined,
-    adjectiveInfo: { forms: ["snel", "snelle", "sneller", "snelst"] },
+    adjectiveInfo: { forms: ['snel', 'snelle', 'sneller', 'snelst'] },
   },
-  "snel - adjective",
+  'snel - adjective',
 );
 
-console.log("\n=== KNOWN LIMITATIONS (ambiguous cases) ===");
+console.log('\n=== KNOWN LIMITATIONS (ambiguous cases) ===');
 
 testWordInfo(
-  "doen",
+  'doen',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "doen",
-      confidence: "Base Verb",
+      baseVerb: 'doen',
+      confidence: 'Base Verb',
       irregular: true,
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "doen - irregular verb (short form)",
+  'doen - irregular verb (short form)',
   true, // Ends in 'en' so detected as verb (correct)
 );
 
 testWordInfo(
-  "leven",
+  'leven',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "leven",
-      confidence: "Base Verb",
+      baseVerb: 'leven',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["leef", "leeft", "leefde", "leefden", "geleefd"],
+      forms: ['leef', 'leeft', 'leefde', 'leefden', 'geleefd'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -512,17 +522,17 @@ testWordInfo(
 );
 
 testWordInfo(
-  "open",
+  'open',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "open",
-      confidence: "Base Verb",
+      baseVerb: 'open',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["oop", "oopt", "oopte", "oopten", "geoopt"],
+      forms: ['oop', 'oopt', 'oopte', 'oopten', 'geoopt'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -532,15 +542,15 @@ testWordInfo(
 );
 
 testWordInfo(
-  "eten",
+  'eten',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "eten",
-      confidence: "Base Verb",
+      baseVerb: 'eten',
+      confidence: 'Base Verb',
       irregular: true,
     },
     nounInfo: undefined,
@@ -551,17 +561,17 @@ testWordInfo(
 );
 
 testWordInfo(
-  "kinderen",
+  'kinderen',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "kinderen",
-      confidence: "Base Verb",
+      baseVerb: 'kinderen',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["kindeer", "kindeert", "kindeerde", "kindeerden", "gekindeerd"],
+      forms: ['kindeer', 'kindeert', 'kindeerde', 'kindeerden', 'gekindeerd'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
@@ -571,24 +581,26 @@ testWordInfo(
 );
 
 testWordInfo(
-  "boeken",
+  'boeken',
   {
-    form: "verb",
+    form: 'verb',
     types: undefined,
     verbInfo: {
       isSeparable: false,
       prefix: null,
-      baseVerb: "boeken",
-      confidence: "Base Verb",
+      baseVerb: 'boeken',
+      confidence: 'Base Verb',
       irregular: false,
-      forms: ["boek", "boekt", "boekte", "boekten", "geboekt"],
+      forms: ['boek', 'boekt', 'boekte', 'boekten', 'geboekt'],
     },
     nounInfo: undefined,
     adjectiveInfo: undefined,
   },
-  "boeken - can be verb (to book) or plural noun (books), detected as verb",
+  'boeken - can be verb (to book) or plural noun (books), detected as verb',
   true, // Ambiguous: context needed
 );
 
-console.log("\n✅ All tests passed!");
-console.log("⚠ = Known limitation (heuristic-based, may require context or article)");
+console.log('\n✅ All tests passed!');
+console.log(
+  '⚠ = Known limitation (heuristic-based, may require context or article)',
+);

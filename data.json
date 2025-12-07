@@ -9,11 +9,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.158Z",
-    "modifiedAt": "2025-11-23T16:21:35.968Z",
+    "modifiedAt": "2025-12-07T11:59:11.252Z",
     "related": [
       "de slede"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:21:35.966Z"
   },
   {
@@ -25,8 +25,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-11-23T16:21:38.836Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-07T11:59:11.258Z",
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:21:38.835Z"
   },
   {
@@ -39,8 +39,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-11-23T16:22:24.603Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-07T11:59:11.259Z",
+    "memorizationStrength": 0,
     "lastReviewed": "2025-11-23T16:22:24.603Z"
   },
   {
@@ -52,11 +52,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-23T16:23:00.050Z",
+    "modifiedAt": "2025-12-07T11:59:11.262Z",
     "related": [
       "de rivier is breed"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:23:00.050Z"
   },
   {
@@ -68,11 +68,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-23T16:23:05.432Z",
+    "modifiedAt": "2025-12-07T11:59:11.263Z",
     "related": [
       "de streek"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:23:05.432Z"
   },
   {
@@ -84,11 +84,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-23T16:23:07.001Z",
+    "modifiedAt": "2025-12-07T11:59:11.265Z",
     "related": [
       "het gebied"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:23:07.001Z"
   },
   {
@@ -100,11 +100,11 @@
       "plural"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-11-23T16:23:09.576Z",
+    "modifiedAt": "2025-12-07T11:59:11.266Z",
     "related": [
       "we wandelen in het bos"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": 2,
     "lastReviewed": "2025-11-23T16:23:09.575Z"
   },
   {
@@ -116,9 +116,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-11-22T19:55:31.142Z",
+    "modifiedAt": "2025-12-07T11:59:11.267Z",
     "example": "We wandelen graag over de heide.",
-    "irregular": false
+    "irregular": false,
+    "memorizationStrength": 2,
+    "lastReviewed": "2025-11-23T20:18:59.958Z"
   },
   {
     "word": "de dijk",
@@ -708,9 +710,12 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.183Z",
-    "modifiedAt": "2025-11-23T19:43:48.372Z",
+    "modifiedAt": "2025-11-23T20:19:24.382Z",
     "related": [
       "sleutel"
+    ],
+    "forms": [
+      "sloten"
     ]
   },
   {
@@ -1463,22 +1468,6 @@
   },
   {
     "word": "kant-en-klaarmaaltijd",
-    "addedAt": "2025-11-19T12:19:24.202Z",
-    "modifiedAt": "2025-11-19T12:19:24.202Z"
-  },
-  {
-    "word": "de planken",
-    "form": [
-      "noun"
-    ],
-    "types": [
-      "plural"
-    ],
-    "addedAt": "2025-11-19T12:19:24.202Z",
-    "modifiedAt": "2025-11-19T12:19:24.202Z"
-  },
-  {
-    "word": "ingewikkelde",
     "addedAt": "2025-11-19T12:19:24.202Z",
     "modifiedAt": "2025-11-19T12:19:24.202Z"
   },
@@ -5971,14 +5960,13 @@
     "form": [
       "verb"
     ],
-    "forms": [],
     "irregular": false,
     "addedAt": "2025-11-23T13:14:16.749Z",
-    "modifiedAt": "2025-11-23T13:14:16.749Z",
+    "modifiedAt": "2025-11-24T19:36:07.839Z",
     "related": [
       "investeren"
     ],
-    "example": "Hij belegt in aandelen."
+    "example": "Ik beleg mijn brood met kaas. Hij belegt in aandelen."
   },
   {
     "word": "bereiden",
@@ -8234,11 +8222,11 @@
   {
     "word": "overigens",
     "form": [
-      "adverb"
+      "conjunction"
     ],
     "irregular": false,
     "addedAt": "2025-11-23T18:27:33.141Z",
-    "modifiedAt": "2025-11-23T18:27:33.141Z",
+    "modifiedAt": "2025-11-24T22:19:06.168Z",
     "example": "Ik kom straks. Overigens, hoe gaat het?"
   },
   {
@@ -8724,5 +8712,647 @@
       "-normaal"
     ],
     "example": "Dat is een vreemd idee."
+  },
+  {
+    "word": "bekendmaken",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "bekendgemaakt"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T21:28:40.243Z",
+    "modifiedAt": "2025-11-23T21:29:09.506Z",
+    "related": [
+      "aankondigen",
+      "openbaar maken"
+    ],
+    "example": "De overheid maakte het nieuwe plan gisteren bekend."
+  },
+  {
+    "word": "gewend",
+    "form": [
+      "adjective"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T22:49:28.453Z",
+    "modifiedAt": "2025-11-23T22:50:24.058Z",
+    "example": "Ik ben aan het koude weer gewend.",
+    "phrases": [
+      "gewoon zijn aan",
+      "wennen aan",
+      "aangepast"
+    ]
+  },
+  {
+    "word": "verrast",
+    "form": [
+      "adjective"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T22:54:09.328Z",
+    "modifiedAt": "2025-11-23T22:54:36.167Z",
+    "related": [
+      "verbaasd"
+    ],
+    "example": "Ik was verrast toen hij ineens voor de deur stond.",
+    "phrases": [
+      "onverwacht getroffen",
+      "tot mijn verrassing"
+    ]
+  },
+  {
+    "word": "verheugd",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-23T22:58:30.876Z",
+    "modifiedAt": "2025-11-23T22:58:30.876Z",
+    "related": [
+      "blij"
+    ],
+    "example": "Ik ben verheugd met uw beslissing."
+  },
+  {
+    "word": "opgelucht",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "opgelucht",
+      "opgeluchte"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T22:59:32.986Z",
+    "modifiedAt": "2025-11-23T22:59:32.986Z",
+    "example": "Ik ben opgelucht dat het examen voorbij is."
+  },
+  {
+    "word": "eenzaam",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "eenzaam",
+      "eenzame",
+      "eenzamer",
+      "eenzaamst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T23:02:34.593Z",
+    "modifiedAt": "2025-11-23T23:02:34.593Z",
+    "example": "Hij voelt zich eenzaam sinds hij verhuisd is."
+  },
+  {
+    "word": "van de kaart",
+    "form": [],
+    "types": [
+      "idiom"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-23T23:04:36.686Z",
+    "modifiedAt": "2025-11-23T23:04:36.686Z",
+    "example": "Hij was helemaal van de kaart na het slechte nieuws."
+  },
+  {
+    "word": "de staart",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "staarten"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T19:40:18.019Z",
+    "modifiedAt": "2025-11-24T19:40:18.019Z",
+    "related": [
+      "kwispelen"
+    ],
+    "example": "De hond kwispelt met zijn staart.",
+    "phrases": [
+      "ergens een staartje aan krijgen"
+    ]
+  },
+  {
+    "word": "de aflevering",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "afleveringen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T20:28:28.400Z",
+    "modifiedAt": "2025-11-24T20:28:53.334Z",
+    "related": [
+      "episode",
+      "deel",
+      "seizoen",
+      "reeks",
+      "serie"
+    ],
+    "example": "Ik heb de eerste aflevering van die serie gekeken."
+  },
+  {
+    "word": "leren kennen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-24T20:58:35.516Z",
+    "modifiedAt": "2025-11-24T20:58:35.517Z",
+    "example": "Ik wil haar beter leren kennen."
+  },
+  {
+    "word": "zo to horen",
+    "types": [
+      "phrase"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T20:59:46.066Z",
+    "modifiedAt": "2025-11-24T20:59:59.913Z",
+    "related": [
+      "blijkbaar",
+      "kennelijk"
+    ],
+    "example": "Zo te horen gaat het goed met je."
+  },
+  {
+    "word": "de behoefte",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "behoeften"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:01:10.099Z",
+    "modifiedAt": "2025-11-24T21:01:23.066Z",
+    "example": "Ik heb behoefte aan rust."
+  },
+  {
+    "word": "alles bij elkaar",
+    "form": [],
+    "types": [
+      "phrase"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:02:30.009Z",
+    "modifiedAt": "2025-11-24T21:02:30.009Z",
+    "related": [
+      "samengevat",
+      "in totaal"
+    ],
+    "example": "Alles bij elkaar was het een goede dag."
+  },
+  {
+    "word": "heleboel",
+    "form": [],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:03:12.975Z",
+    "modifiedAt": "2025-11-24T21:03:12.975Z",
+    "related": [
+      "veel",
+      "massa"
+    ],
+    "example": "We hebben een heleboel werk."
+  },
+  {
+    "word": "apart",
+    "form": [
+      "adjective"
+    ],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:04:01.462Z",
+    "modifiedAt": "2025-11-24T21:04:01.462Z",
+    "example": "We betalen apart. / Hij is een beetje apart."
+  },
+  {
+    "word": "de schaal",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "schalen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:05:17.884Z",
+    "modifiedAt": "2025-11-24T21:05:17.884Z",
+    "related": [
+      "bord"
+    ],
+    "example": "Zet de schalen op tafel."
+  },
+  {
+    "word": "is mijn ervaring",
+    "form": [],
+    "types": [
+      "phrase"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:06:26.121Z",
+    "modifiedAt": "2025-11-24T21:06:26.121Z",
+    "related": [
+      "naar mijn ervaring",
+      "volgens mij"
+    ],
+    "example": "Dat werkt beter, is mijn ervaring."
+  },
+  {
+    "word": "bewust",
+    "form": [
+      "adjective",
+      "adverb"
+    ],
+    "forms": [
+      "bewust",
+      "bewuste",
+      "bewuster",
+      "bewustst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:07:31.209Z",
+    "modifiedAt": "2025-11-24T21:07:31.209Z",
+    "example": "Ik deed het bewust."
+  },
+  {
+    "word": "geheim",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "geheim",
+      "geheime",
+      "geheimer",
+      "geheimst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T21:19:36.864Z",
+    "modifiedAt": "2025-11-24T21:19:36.864Z",
+    "example": "En dan, mijn geheime wapen: dat is oestersaus."
+  },
+  {
+    "word": "de bron",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "bronnen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T22:17:12.747Z",
+    "modifiedAt": "2025-11-24T22:17:12.747Z",
+    "related": [
+      "oorsprong",
+      "herkomst",
+      "source"
+    ],
+    "example": "Wat is de bron van dit nieuws?"
+  },
+  {
+    "word": "trouwens",
+    "form": [
+      "conjunction"
+    ],
+    "irregular": false,
+    "addedAt": "2025-11-24T22:18:24.080Z",
+    "modifiedAt": "2025-11-24T22:18:24.080Z",
+    "related": [
+      "overigens",
+      "bovendien"
+    ],
+    "example": "Ik kom morgen. Trouwens, hoe gaat het met je project?"
+  },
+  {
+    "word": "de bagage",
+    "form": [
+      "noun"
+    ],
+    "types": [],
+    "forms": [],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:34:05.847Z",
+    "modifiedAt": "2025-12-07T13:34:05.851Z",
+    "related": [
+      "\"koffers\"",
+      "\"tassen\""
+    ],
+    "example": "Ik heb mijn bagage op de luchthaven ingecheckt."
+  },
+  {
+    "word": "bezorgd",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "bezorgd",
+      "bezorgde",
+      "bezorgder",
+      "bezorgdst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:43:35.003Z",
+    "modifiedAt": "2025-12-07T13:43:59.770Z",
+    "related": [
+      "+zorgelijk",
+      "+onrustig",
+      "-zorgeloos"
+    ],
+    "example": "Ze was bezorgd over de uitslag van het examen.",
+    "phrases": [
+      "bezorgd zijn over",
+      "een bezorgde blik"
+    ]
+  },
+  {
+    "word": "de bom",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "bommen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:46:13.374Z",
+    "modifiedAt": "2025-12-07T13:46:13.374Z",
+    "related": [
+      "+explosief",
+      "+granaat",
+      "-veilig"
+    ],
+    "example": "De bom werd veilig afgevoerd door de experts.",
+    "phrases": [
+      "de bom ontploffen",
+      "een bom leggen"
+    ]
+  },
+  {
+    "word": "de brand",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "branden"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:48:59.905Z",
+    "modifiedAt": "2025-12-07T13:48:59.905Z",
+    "related": [
+      "+vuur",
+      "+conflagratie",
+      "-water",
+      "-veiligheid"
+    ],
+    "example": "De brand in het huis werd snel geblust door de brandweer.",
+    "phrases": [
+      "uit de brand helpen",
+      "brand blussen",
+      "brandalarm"
+    ]
+  },
+  {
+    "word": "de chauffeur",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "chauffeurs"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:50:41.887Z",
+    "modifiedAt": "2025-12-07T13:50:41.887Z",
+    "related": [
+      "+bestuurder",
+      "+taxichauffeur",
+      "-passagier"
+    ],
+    "example": "De chauffeur bracht ons veilig naar het vliegveld.",
+    "phrases": [
+      "professionele chauffeur",
+      "privéchauffeur",
+      "de chauffeur van de bus"
+    ]
+  },
+  {
+    "word": "de conducteur",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "conducteurs"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:51:54.844Z",
+    "modifiedAt": "2025-12-07T13:51:54.844Z",
+    "related": [
+      "+controleur",
+      "+ticketinspecteur",
+      "-passagier"
+    ],
+    "example": "De conducteur controleerde de treinkaartjes van alle passagiers.",
+    "phrases": [
+      "treinconducteur",
+      "busconducteur",
+      "de conducteur komt langs"
+    ]
+  },
+  {
+    "word": "de hoek",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "hoeken"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:53:02.386Z",
+    "modifiedAt": "2025-12-07T13:53:02.386Z",
+    "related": [
+      "+kruispunt",
+      "+bocht",
+      "-midden"
+    ],
+    "example": "Het café ligt om de hoek van de straat.",
+    "phrases": [
+      "om de hoek",
+      "een scherpe hoek",
+      "de hoek om gaan"
+    ]
+  },
+  {
+    "word": "de klap",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "klappen"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:54:34.999Z",
+    "modifiedAt": "2025-12-07T13:54:34.999Z",
+    "related": [
+      "+slag",
+      "+stoot",
+      "-streling"
+    ],
+    "example": "Hij kreeg een klap op zijn arm tijdens het spel.",
+    "phrases": [
+      "een klap krijgen",
+      "een harde klap",
+      "de klap van de waarheid"
+    ]
+  },
+  {
+    "word": "landen",
+    "form": [
+      "verb"
+    ],
+    "types": [],
+    "forms": [
+      "land",
+      "landt",
+      "landde",
+      "landden",
+      "geland"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:56:43.668Z",
+    "modifiedAt": "2025-12-07T13:56:43.668Z",
+    "related": [
+      "+aankomen",
+      "+neerstrijken",
+      "-opstijgen"
+    ],
+    "example": "Het vliegtuig zal over vijf minuten landen op Schiphol.",
+    "phrases": [
+      "veilig landen",
+      "een vliegtuig landen",
+      "landen op de luchthaven"
+    ]
+  },
+  {
+    "word": "leeg",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "leeg",
+      "lege",
+      "leger",
+      "leegst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T13:57:56.202Z",
+    "modifiedAt": "2025-12-07T13:57:56.202Z",
+    "related": [
+      "+hol",
+      "+vrij",
+      "-vol"
+    ],
+    "example": "De fles is helemaal leeg.",
+    "phrases": [
+      "een lege kamer",
+      "leeggelopen",
+      "leegmaken"
+    ]
+  },
+  {
+    "word": "de motor",
+    "form": [
+      "noun"
+    ],
+    "types": [
+      "singular"
+    ],
+    "forms": [
+      "motoren"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-07T14:00:48.708Z",
+    "modifiedAt": "2025-12-07T14:00:48.708Z",
+    "related": [
+      "+motorfiets",
+      "+machine",
+      "+verbrandingsmotor",
+      "-rem"
+    ],
+    "example": "De motor van de auto startte niet vanochtend.",
+    "phrases": [
+      "motor starten",
+      "motor onderhouden",
+      "motorvermogen"
+    ]
+  },
+  {
+    "word": "omroepen",
+    "form": [
+      "verb"
+    ],
+    "types": [
+      "separable"
+    ],
+    "forms": [
+      "roep",
+      "roept",
+      "riep",
+      "riepen",
+      "omgeroepen"
+    ],
+    "irregular": true,
+    "addedAt": "2025-12-07T14:03:33.384Z",
+    "modifiedAt": "2025-12-07T14:03:33.384Z",
+    "related": [
+      "+aankondigen",
+      "+uitroepen",
+      "-stilhouden"
+    ],
+    "example": "De conducteur riep de volgende halte om.",
+    "phrases": [
+      "de winnaar omroepen",
+      "het nieuws omroepen",
+      "omroepen via de microfoon"
+    ]
   }
 ]

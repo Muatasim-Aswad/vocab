@@ -4,8 +4,8 @@ import {
   VOWELS,
   DIGRAPHS,
   SEPARABLE_PREFIXES,
-} from "../constants.mjs";
-import { BASE_IRREGULAR_VERBS_VALUES } from "../baseIrregularVerbs.mjs";
+} from '../constants.mjs';
+import { BASE_IRREGULAR_VERBS_VALUES } from '../baseIrregularVerbs.mjs';
 
 /**
  * Conjugate a Dutch verb with optional separability and irregularity info
@@ -22,7 +22,7 @@ export function conjugateDutchVerb(
     isIrregular?: boolean;
   },
 ): string[] {
-  if (!infinitive.endsWith("en") || infinitive.length < 3) {
+  if (!infinitive.endsWith('en') || infinitive.length < 3) {
     throw new Error("Input must be a Dutch infinitive ending in 'en'");
   }
 
@@ -43,8 +43,8 @@ export function conjugateDutchVerb(
     // ---------------------------------------------------------
     // Rule A: v → f, z → s   (Dutch devoicing in final position)
     // ---------------------------------------------------------
-    if (lastChar === "v") stem = stem.slice(0, -1) + "f";
-    else if (lastChar === "z") stem = stem.slice(0, -1) + "s";
+    if (lastChar === 'v') stem = stem.slice(0, -1) + 'f';
+    else if (lastChar === 'z') stem = stem.slice(0, -1) + 's';
 
     // Recompute after modification
     lastChar = stem[stem.length - 1];
@@ -56,7 +56,11 @@ export function conjugateDutchVerb(
     // bellen → bell → bel
     // ---------------------------------------------------------
     let hadDoubleConsonant = false;
-    if (stem.length >= 3 && lastChar === secondLastChar && !VOWELS.includes(lastChar)) {
+    if (
+      stem.length >= 3 &&
+      lastChar === secondLastChar &&
+      !VOWELS.includes(lastChar)
+    ) {
       stem = stem.slice(0, -1);
       hadDoubleConsonant = true; // Track that we had a double consonant (indicates short vowel)
     }
@@ -86,10 +90,11 @@ export function conjugateDutchVerb(
 
       // Check if the vowel is part of a digraph
       const possibleDigraph = thirdLastChar + vowel;
-      const isDigraph = DIGRAPHS.includes(possibleDigraph) || DIGRAPHS.includes(vowel);
+      const isDigraph =
+        DIGRAPHS.includes(possibleDigraph) || DIGRAPHS.includes(vowel);
 
       // If vowel is not already long (not a digraph), double it
-      if (!isDigraph && vowel !== "i") {
+      if (!isDigraph && vowel !== 'i') {
         stem = stem.slice(0, -1) + vowel + lastChar;
       }
     }
@@ -100,21 +105,22 @@ export function conjugateDutchVerb(
   // Helper function for jij/hij/zij/het form (add -t)
   const getPresentSecondPerson = (stem: string): string => {
     // Don't add -t if stem already ends in -t
-    if (stem.endsWith("t")) return stem;
-    return stem + "t";
+    if (stem.endsWith('t')) return stem;
+    return stem + 't';
   };
 
   // Get past tense suffix based on 't kofschip rule
   // IMPORTANT: Check the original stem BEFORE devoicing (v→f, z→s)
-  const tORd = (infinitive: string): "t" | "d" => {
+  const tORd = (infinitive: string): 't' | 'd' => {
     // Get original stem before devoicing
     const originalStem = infinitive.slice(0, -2); // Remove -en
     const lastChar = originalStem[originalStem.length - 1];
     const lastTwoChars = originalStem.slice(-2);
 
-    return TKOFSHIP_ENDINGS.includes(lastChar) || TKOFSHIP_ENDINGS.includes(lastTwoChars)
-      ? "t"
-      : "d";
+    return TKOFSHIP_ENDINGS.includes(lastChar) ||
+      TKOFSHIP_ENDINGS.includes(lastTwoChars)
+      ? 't'
+      : 'd';
   };
 
   // Get past participle prefix (ge- or not)
@@ -127,17 +133,21 @@ export function conjugateDutchVerb(
     // If separable, check if the BASE VERB has an inseparable prefix
     if (isSeparable && prefix) {
       // Check if base verb starts with inseparable prefix (e.g., "verwarmen" in "voorverwarmen")
-      const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) => baseVerb.startsWith(pre));
+      const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) =>
+        baseVerb.startsWith(pre),
+      );
       if (baseHasInseparablePrefix) {
         // Base verb doesn't get "ge", so separable verb gets: prefix + (no ge) + stem
         // This is handled in the main logic by checking this return value
         return prefix; // Just return prefix, no "ge"
       }
-      return prefix + "ge"; // Normal separable: prefix + ge + stem
+      return prefix + 'ge'; // Normal separable: prefix + ge + stem
     }
 
     // If inseparable prefix, no ge-
-    return INSEPARABLE_PREFIXES.some((pre) => infinitive.startsWith(pre)) ? "" : "ge";
+    return INSEPARABLE_PREFIXES.some((pre) => infinitive.startsWith(pre))
+      ? ''
+      : 'ge';
   };
 
   // Get the stem with proper spelling rules applied
@@ -150,7 +160,9 @@ export function conjugateDutchVerb(
     const lookupVerb = baseVerb || infinitive;
     if (lookupVerb in BASE_IRREGULAR_VERBS_VALUES) {
       const irregularForms =
-        BASE_IRREGULAR_VERBS_VALUES[lookupVerb as keyof typeof BASE_IRREGULAR_VERBS_VALUES];
+        BASE_IRREGULAR_VERBS_VALUES[
+          lookupVerb as keyof typeof BASE_IRREGULAR_VERBS_VALUES
+        ];
       const [pastSingular, pastPlural, pastParticiple] = irregularForms;
 
       // Check if the full infinitive has an inseparable prefix
@@ -162,13 +174,13 @@ export function conjugateDutchVerb(
         INSEPARABLE_PREFIXES.some((pre) => infinitive.startsWith(pre));
 
       const inseparablePrefix = hasInseparablePrefix
-        ? INSEPARABLE_PREFIXES.find((pre) => infinitive.startsWith(pre)) || ""
-        : "";
+        ? INSEPARABLE_PREFIXES.find((pre) => infinitive.startsWith(pre)) || ''
+        : '';
 
       // Build past tense forms with inseparable prefix if needed
       let finalPastSingular = pastSingular;
       let finalPastPlural = pastPlural;
-      let finalPastParticiple = pastParticiple || "";
+      let finalPastParticiple = pastParticiple || '';
 
       if (hasInseparablePrefix && inseparablePrefix) {
         // For irregular verbs with inseparable prefixes (e.g., verbieden from bieden)
@@ -178,7 +190,7 @@ export function conjugateDutchVerb(
         // For past participle, the base form already has "ge" (geboden), replace with prefix
         // Remove "ge" from the base irregular form and add the inseparable prefix
         if (pastParticiple) {
-          const participleStem = pastParticiple.startsWith("ge")
+          const participleStem = pastParticiple.startsWith('ge')
             ? pastParticiple.slice(2)
             : pastParticiple;
           finalPastParticiple = inseparablePrefix + participleStem;
@@ -189,13 +201,24 @@ export function conjugateDutchVerb(
       }
 
       // Build forms array for irregular verbs
-      const forms = [
-        presentFirstPerson,
-        presentSecondPerson,
-        finalPastSingular,
-        finalPastPlural,
-        finalPastParticiple,
-      ].filter((form): form is string => form !== null && form !== "");
+      // For separable verbs, add the separated prefix to finite forms
+      const forms = (
+        isSeparable && prefix
+          ? [
+              presentFirstPerson + ' ' + prefix,
+              presentSecondPerson + ' ' + prefix,
+              finalPastSingular + ' ' + prefix,
+              finalPastPlural + ' ' + prefix,
+              finalPastParticiple,
+            ]
+          : [
+              presentFirstPerson,
+              presentSecondPerson,
+              finalPastSingular,
+              finalPastPlural,
+              finalPastParticiple,
+            ]
+      ).filter((form): form is string => form !== null && form !== '');
 
       // Remove duplicates while preserving order
       const seen = new Set<string>();
@@ -213,40 +236,59 @@ export function conjugateDutchVerb(
 
   // Regular verb conjugation
   const pastSuffix = tORd(stemVerb);
-  const pastParticiplePrefix = getPastParticiplePrefix(infinitive, isSeparable, prefix, baseVerb);
+  const pastParticiplePrefix = getPastParticiplePrefix(
+    infinitive,
+    isSeparable,
+    prefix,
+    baseVerb,
+  );
 
   // Fix Bug 3: Avoid double 't' or 'd' in past participle
   const pastParticipleSuffix =
-    (presentFirstPerson.endsWith("t") && pastSuffix === "t") ||
-    (presentFirstPerson.endsWith("d") && pastSuffix === "d")
-      ? ""
+    (presentFirstPerson.endsWith('t') && pastSuffix === 't') ||
+    (presentFirstPerson.endsWith('d') && pastSuffix === 'd')
+      ? ''
       : pastSuffix;
 
   // Build past participle correctly for separable verbs
   let pastParticiple: string;
   if (isSeparable && prefix) {
     // For separable verbs: check if we should add "ge"
-    const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) => baseVerb.startsWith(pre));
+    const baseHasInseparablePrefix = INSEPARABLE_PREFIXES.some((pre) =>
+      baseVerb.startsWith(pre),
+    );
     if (baseHasInseparablePrefix) {
       // Base verb like "verwarmen" doesn't get "ge", so: voor + verwarmd
       pastParticiple = prefix + presentFirstPerson + pastParticipleSuffix;
     } else {
       // Normal separable: prefix + ge + stem + suffix (e.g., op + ge + haald = opgehaald)
-      pastParticiple = prefix + "ge" + presentFirstPerson + pastParticipleSuffix;
+      pastParticiple =
+        prefix + 'ge' + presentFirstPerson + pastParticipleSuffix;
     }
   } else {
     // For regular/inseparable verbs: prefix + stem + suffix
-    pastParticiple = pastParticiplePrefix + presentFirstPerson + pastParticipleSuffix;
+    pastParticiple =
+      pastParticiplePrefix + presentFirstPerson + pastParticipleSuffix;
   }
 
   // Build the forms array (excluding infinitive)
-  const forms = [
-    presentFirstPerson,
-    presentSecondPerson,
-    presentFirstPerson + pastSuffix + "e",
-    presentFirstPerson + pastSuffix + "en",
-    pastParticiple,
-  ];
+  // For separable verbs, add the separated prefix to finite forms
+  const forms =
+    isSeparable && prefix
+      ? [
+          presentFirstPerson + ' ' + prefix,
+          presentSecondPerson + ' ' + prefix,
+          presentFirstPerson + pastSuffix + 'e' + ' ' + prefix,
+          presentFirstPerson + pastSuffix + 'en' + ' ' + prefix,
+          pastParticiple,
+        ]
+      : [
+          presentFirstPerson,
+          presentSecondPerson,
+          presentFirstPerson + pastSuffix + 'e',
+          presentFirstPerson + pastSuffix + 'en',
+          pastParticiple,
+        ];
 
   // Remove duplicates while preserving order
   const seen = new Set<string>();
