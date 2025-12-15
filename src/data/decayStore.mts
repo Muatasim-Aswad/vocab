@@ -70,10 +70,11 @@ export class DecayStore {
       return null;
     }
 
-    const lastDecayDate = new Date(lastDecay);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    lastDecayDate.setHours(0, 0, 0, 0);
+    // Parse dates consistently with fixed UTC time (00:00:00)
+    const lastDecayDate = new Date(lastDecay + "T00:00:00Z");
+    const today = new Date(
+      new Date().toISOString().split("T")[0] + "T00:00:00Z",
+    );
 
     const diffTime = today.getTime() - lastDecayDate.getTime();
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
