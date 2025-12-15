@@ -1,7 +1,7 @@
-import { view, s } from "./terminal.mjs";
-import { Vocab } from "../data/repository.mjs";
-import { wordTypes } from "../data/nl/utils/deduceDutchWordInfo.mjs";
-import { setEngine } from "crypto";
+import { view, s } from './terminal.mjs';
+import { Vocab } from '../data/repository.mjs';
+import { wordTypes } from '../data/nl/utils/deduceDutchWordInfo.mjs';
+import { setEngine } from 'crypto';
 
 export interface DisplayWordOptions {
   showPosition?: boolean;
@@ -29,32 +29,38 @@ export function displayWord(
     showDates = false,
   } = options;
 
-  const position = showPosition && index !== null ? `${index}. ` : "";
-  const indent = " ".repeat(position.length);
+  const position = showPosition && index !== null ? `${index}. ` : '';
+  const indent = ' '.repeat(position.length);
 
-  const codes = entry.form ? entry.form.map((f) => wordTypes[f].code).join(", ") : ""; // word form codes
+  const codes = entry.form
+    ? entry.form.map((f) => wordTypes[f].code).join(', ')
+    : ''; // word form codes
   const types =
     entry.types && entry.types.length > 0
-      ? `[${entry.types.reduce((acc, t) => (acc += " ," + t), "").slice(2)}]`
-      : "";
+      ? `[${entry.types.reduce((acc, t) => (acc += ' ,' + t), '').slice(2)}]`
+      : '';
 
   // Display the main word
-  view(`${position}${s.w(entry.word)} ${codes} ${types} ${entry.irregular ? "irregular" : ""}`);
+  view(
+    `${position}${s.w(entry.word)} ${codes} ${types} ${
+      entry.irregular ? 'irregular' : ''
+    }`,
+  );
 
   // Display forms if available
   if (entry.forms && entry.forms.length > 0) {
-    const formsText = entry.forms.join(", ");
+    const formsText = entry.forms.join(', ');
     view(`${indent}${formsText} (forms)`);
-  }
-
-  // Display related word if available
-  if (showRelated && entry.related && entry.related.length > 0) {
-    const relatedText = entry.related.join(", ");
-    view(`${indent}${s.r(relatedText)} (r)`);
   }
 
   // Display example if available
   if (showExample && entry.example) view(`${indent}${s.e(entry.example)} (e)`);
+
+  // Display related word if available
+  if (showRelated && entry.related && entry.related.length > 0) {
+    const relatedText = entry.related.join(', ');
+    view(`${indent}${s.r(relatedText)} (r)`);
+  }
 
   // Display phrases if available
   if (showPhrases && entry.phrases && entry.phrases.length > 0) {
@@ -65,12 +71,17 @@ export function displayWord(
 
   // Display dates if requested
   if (showDates) {
-    if (entry.addedAt) view(`${indent}${new Date(entry.addedAt).toLocaleString()}`);
-    if (entry.modifiedAt) view(`${indent}${new Date(entry.modifiedAt).toLocaleString()}`);
+    if (entry.addedAt)
+      view(`${indent}${new Date(entry.addedAt).toLocaleString()}`);
+    if (entry.modifiedAt)
+      view(`${indent}${new Date(entry.modifiedAt).toLocaleString()}`);
   }
 }
 
-export function displayWords(entries: Vocab[], options: DisplayWordsOptions = {}): void {
+export function displayWords(
+  entries: Vocab[],
+  options: DisplayWordsOptions = {},
+): void {
   const { startIndex = 0, spacing = true } = options;
 
   entries.forEach((entry, i) => {
@@ -79,7 +90,7 @@ export function displayWords(entries: Vocab[], options: DisplayWordsOptions = {}
 
     // Add spacing between entries if requested
     if (spacing && i < entries.length - 1) {
-      view("");
+      view('');
     }
   });
 }
