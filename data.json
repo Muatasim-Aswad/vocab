@@ -9,11 +9,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.158Z",
-    "modifiedAt": "2025-12-07T11:59:11.252Z",
+    "modifiedAt": "2025-12-15T21:19:23.800Z",
     "related": [
       "de slede"
     ],
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:21:35.966Z"
   },
   {
@@ -25,8 +25,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-12-07T11:59:11.258Z",
-    "memorizationStrength": 2,
+    "modifiedAt": "2025-12-15T21:19:23.802Z",
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:21:38.835Z"
   },
   {
@@ -52,11 +52,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-07T11:59:11.262Z",
+    "modifiedAt": "2025-12-15T21:19:23.803Z",
     "related": [
       "de rivier is breed"
     ],
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:23:00.050Z"
   },
   {
@@ -68,11 +68,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-07T11:59:11.263Z",
+    "modifiedAt": "2025-12-15T21:19:23.805Z",
     "related": [
       "de streek"
     ],
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:23:05.432Z"
   },
   {
@@ -84,11 +84,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-07T11:59:11.265Z",
+    "modifiedAt": "2025-12-15T21:19:23.806Z",
     "related": [
       "het gebied"
     ],
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:23:07.001Z"
   },
   {
@@ -100,11 +100,11 @@
       "plural"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-07T11:59:11.266Z",
+    "modifiedAt": "2025-12-15T21:19:23.807Z",
     "related": [
       "we wandelen in het bos"
     ],
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T16:23:09.575Z"
   },
   {
@@ -116,10 +116,10 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-12-07T11:59:11.267Z",
+    "modifiedAt": "2025-12-15T21:19:23.808Z",
     "example": "We wandelen graag over de heide.",
     "irregular": false,
-    "memorizationStrength": 2,
+    "memorizationStrength": 1,
     "lastReviewed": "2025-11-23T20:18:59.958Z"
   },
   {
@@ -9353,6 +9353,33 @@
       "de winnaar omroepen",
       "het nieuws omroepen",
       "omroepen via de microfoon"
+    ]
+  },
+  {
+    "word": "bruisend",
+    "form": [
+      "adjective"
+    ],
+    "forms": [
+      "bruisend",
+      "bruisende",
+      "bruisender",
+      "bruisendst"
+    ],
+    "irregular": false,
+    "addedAt": "2025-12-15T21:23:17.952Z",
+    "modifiedAt": "2025-12-15T21:23:17.952Z",
+    "related": [
+      "schuimend",
+      "+spetterend",
+      "-stil",
+      "-vlak"
+    ],
+    "example": "Het bruisende water in de fontein trok veel kinderen aan.",
+    "phrases": [
+      "bruisend water",
+      "bruisende stad",
+      "bruisend feest"
     ]
   }
 ]
