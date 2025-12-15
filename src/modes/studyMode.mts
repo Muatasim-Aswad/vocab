@@ -36,7 +36,8 @@ function calculatePriority(word: Vocab, beta: number): number {
   }
 
   const now = new Date();
-  const daysSince = (now.getTime() - lastReviewed.getTime()) / (1000 * 60 * 60 * 24);
+  const daysSince =
+    (now.getTime() - lastReviewed.getTime()) / (1000 * 60 * 60 * 24);
 
   // Lower priority = needs more review
   return strength - beta * daysSince;
@@ -106,7 +107,8 @@ function displayWordForStudy(word: Vocab, index: number, total: number): void {
   // Display current strength
   const strength = word.memorizationStrength ?? 0;
   const strengthBar =
-    "█".repeat(Math.floor(strength / 5)) + "░".repeat(20 - Math.floor(strength / 5));
+    "█".repeat(Math.floor(strength / 5)) +
+    "░".repeat(20 - Math.floor(strength / 5));
   view(`\nStrength: [${strengthBar}] ${strength}/100`);
 }
 
@@ -148,7 +150,11 @@ function displayRelatedClue(word: Vocab): void {
 /**
  * Review a single word
  */
-async function reviewWord(word: Vocab, index: number, total: number): Promise<RecallScore> {
+async function reviewWord(
+  word: Vocab,
+  index: number,
+  total: number,
+): Promise<RecallScore> {
   let clueLevel = 0; // 0 = no clue, 1 = example, 2 = related
 
   while (true) {
@@ -218,6 +224,8 @@ function displayStats(stats: StudyStats): void {
 export async function startStudySession(
   repo: VocabRepository,
   maxWords: number = 20,
+  startIndex?: number,
+  endIndex?: number,
 ): Promise<void> {
   const allWords = repo.getAll();
 
@@ -226,9 +234,27 @@ export async function startStudySession(
     return;
   }
 
-  // Sort by priority and take the specified number of words
+  // Sort by priority
   const sortedWords = sortByPriority(allWords, BETA);
-  const sessionWords = sortedWords.slice(0, Math.min(maxWords, sortedWords.length));
+
+  // Select words based on range or max words
+  let sessionWords: WordWithPriority[];
+  if (startIndex !== undefined) {
+    const start = Math.max(0, startIndex - 1); // Convert to 0-based index
+    const end = endIndex !== undefined ? endIndex : sortedWords.length; // Default to last word
+    sessionWords = sortedWords.slice(start, end);
+
+    if (sessionWords.length === 0) {
+      view(
+        s.e(
+          `Invalid range: words ${startIndex} to ${end}. Total words available: ${sortedWords.length}`,
+        ),
+      );
+      return;
+    }
+  } else {
+    sessionWords = sortedWords.slice(0, Math.min(maxWords, sortedWords.length));
+  }
 
   const stats: StudyStats = {
     totalWords: sessionWords.length,
@@ -288,13 +314,21 @@ export async function startStudySession(
  * @param silent - If true, don't display output messages
  * @returns Number of words that were decayed
  */
-export function applyDailyDecay(repo: VocabRepository, silent: boolean = false): number {
+export function applyDailyDecay(
+  repo: VocabRepository,
+  silent: boolean = false,
+): number {
   const allWords = repo.getAll();
   let decayedCount = 0;
 
   for (const word of allWords) {
-    if (word.memorizationStrength !== undefined && word.memorizationStrength > 0) {
-      const newStrength = Math.floor(word.memorizationStrength * DAILY_DECAY_RATE);
+    if (
+      word.memorizationStrength !== undefined &&
+      word.memorizationStrength > 0
+    ) {
+      const newStrength = Math.floor(
+        word.memorizationStrength * DAILY_DECAY_RATE,
+      );
       if (newStrength !== word.memorizationStrength) {
         repo.update(word.word, {
           memorizationStrength: newStrength,
@@ -327,8 +361,13 @@ export function applyMultipleDaysDecay(
   let decayedCount = 0;
 
   for (const word of allWords) {
-    if (word.memorizationStrength !== undefined && word.memorizationStrength > 0) {
-      const newStrength = Math.floor(word.memorizationStrength * Math.pow(DAILY_DECAY_RATE, days));
+    if (
+      word.memorizationStrength !== undefined &&
+      word.memorizationStrength > 0
+    ) {
+      const newStrength = Math.floor(
+        word.memorizationStrength * Math.pow(DAILY_DECAY_RATE, days),
+      );
       if (newStrength !== word.memorizationStrength) {
         repo.update(word.word, {
           memorizationStrength: newStrength,
@@ -379,16 +418,53 @@ export function checkAndApplyOverdueDecay(
 /**
  * Configure study session parameters
  */
-export async function configureStudySession(repo: VocabRepository): Promise<void> {
+export async function configureStudySession(
+  repo: VocabRepository,
+): Promise<void> {
   view(s.aH("\n📚 Study Session Configuration"));
 
-  const maxWordsStr = await ask("How many words do you want to study? (default: 20): ");
-  const maxWords = maxWordsStr.trim() ? parseInt(maxWordsStr.trim(), 10) : 20;
+  const allWords = repo.getAll();
+  const sortedWords = sortByPriority(allWords, BETA);
+  view(`Total words available (sorted by priority): ${sortedWords.length}\n`);
 
-  if (isNaN(maxWords) || maxWords <= 0) {
-    view(s.e("Invalid number. Using default: 20"));
-    await startStudySession(repo, 20);
+  view("Study by:");
+  view("  1 - Number of words (from highest priority)");
+  view("  2 - Specific word range (by position number)");
+
+  const modeChoice = await ask("\nYour choice (default: 1): ");
+  const mode = modeChoice.trim() || "1";
+
+  if (mode === "2") {
+    // Range-based selection
+    const startStr = await ask("Start position (1-based, e.g., 5): ");
+    const startIndex = parseInt(startStr.trim(), 10);
+
+    if (isNaN(startIndex) || startIndex <= 0) {
+      view(s.e("Invalid start position. Cancelled."));
+      return;
+    }
+
+    const endStr = await ask(`End position (default: ${sortedWords.length}): `);
+    const endIndex = endStr.trim() ? parseInt(endStr.trim(), 10) : undefined;
+
+    if (endIndex !== undefined && (isNaN(endIndex) || endIndex < startIndex)) {
+      view(s.e("Invalid end position. Cancelled."));
+      return;
+    }
+
+    await startStudySession(repo, 20, startIndex, endIndex);
   } else {
-    await startStudySession(repo, maxWords);
+    // Max words selection (default)
+    const maxWordsStr = await ask(
+      "How many words do you want to study? (default: 20): ",
+    );
+    const maxWords = maxWordsStr.trim() ? parseInt(maxWordsStr.trim(), 10) : 20;
+
+    if (isNaN(maxWords) || maxWords <= 0) {
+      view(s.e("Invalid number. Using default: 20"));
+      await startStudySession(repo, 20);
+    } else {
+      await startStudySession(repo, maxWords);
+    }
   }
 }
