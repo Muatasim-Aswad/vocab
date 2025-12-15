@@ -3,7 +3,13 @@ import { VocabRepository, Vocab } from "../data/repository.mjs";
 import { DecayStore } from "../data/decayStore.mjs";
 
 const BETA = 0.1; // Decay factor for priority calculation
-const DAILY_DECAY_RATE = 0.98;
+const DAILY_DECAY_AMOUNT = 0.5; // Amount subtracted from strength each day
+
+enum RecallScore {
+  DONT_KNOW = 0,
+  CLUE_USED = 1,
+  KNOW = 2,
+}
 
 export interface StudyStats {
   totalWords: number;
@@ -11,12 +17,6 @@ export interface StudyStats {
   knowCount: number;
   dontKnowCount: number;
   clueCount: number;
-}
-
-enum RecallScore {
-  DONT_KNOW = 0,
-  CLUE_USED = 1,
-  KNOW = 2,
 }
 
 interface WordWithPriority extends Vocab {
@@ -73,8 +73,8 @@ function updateStrength(word: Vocab, recallScore: RecallScore): number {
       break;
   }
 
-  // Clamp between 0 and 100
-  return Math.max(0, Math.min(100, strength));
+  // Only clamp upper bound at 100, allow negative values
+  return Math.min(100, strength);
 }
 
 /**
@@ -309,43 +309,6 @@ export async function startStudySession(
 }
 
 /**
- * Apply daily decay to all words
- * @param repo - The vocabulary repository
- * @param silent - If true, don't display output messages
- * @returns Number of words that were decayed
- */
-export function applyDailyDecay(
-  repo: VocabRepository,
-  silent: boolean = false,
-): number {
-  const allWords = repo.getAll();
-  let decayedCount = 0;
-
-  for (const word of allWords) {
-    if (
-      word.memorizationStrength !== undefined &&
-      word.memorizationStrength > 0
-    ) {
-      const newStrength = Math.floor(
-        word.memorizationStrength * DAILY_DECAY_RATE,
-      );
-      if (newStrength !== word.memorizationStrength) {
-        repo.update(word.word, {
-          memorizationStrength: newStrength,
-        });
-        decayedCount++;
-      }
-    }
-  }
-
-  if (!silent) {
-    view(s.aH(`\n✓ Daily decay applied to ${decayedCount} words.`));
-  }
-
-  return decayedCount;
-}
-
-/**
  * Apply multiple days of decay to all words
  * @param repo - The vocabulary repository
  * @param days - Number of days of decay to apply
@@ -361,13 +324,8 @@ export function applyMultipleDaysDecay(
   let decayedCount = 0;
 
   for (const word of allWords) {
-    if (
-      word.memorizationStrength !== undefined &&
-      word.memorizationStrength > 0
-    ) {
-      const newStrength = Math.floor(
-        word.memorizationStrength * Math.pow(DAILY_DECAY_RATE, days),
-      );
+    if (word.memorizationStrength !== undefined) {
+      const newStrength = word.memorizationStrength - DAILY_DECAY_AMOUNT * days;
       if (newStrength !== word.memorizationStrength) {
         repo.update(word.word, {
           memorizationStrength: newStrength,
