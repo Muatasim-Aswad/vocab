@@ -311,9 +311,8 @@ export async function configureStudySession(
 ): Promise<void> {
   view(s.aH("\n📚 Study Session Configuration"));
 
-  const allWords = repo.getAll();
-  const sortedWords = sortByPriority(allWords);
-  view(`Total words available (sorted by priority): ${sortedWords.length}\n`);
+  const allWords = repo.count();
+  view(`Total words available: ${allWords}\n`);
 
   view("Study by:");
   view("  1 - Number of words (from highest priority)");
@@ -332,7 +331,7 @@ export async function configureStudySession(
       return;
     }
 
-    const endStr = await ask(`End position (default: ${sortedWords.length}): `);
+    const endStr = await ask(`End position (default: ${allWords}): `);
     const endIndex = endStr.trim() ? parseInt(endStr.trim(), 10) : undefined;
 
     if (endIndex !== undefined && (isNaN(endIndex) || endIndex < startIndex)) {
