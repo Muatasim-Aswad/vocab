@@ -2,6 +2,7 @@
 
 import fs from "fs";
 import path from "path";
+import { pathToFileURL } from "url";
 import { DEFAULT_DIFFICULTY, DEFAULT_STRENGTH } from "./data/memory/memory.mjs";
 
 type AnyRecord = Record<string, unknown>;
@@ -16,7 +17,7 @@ Writes: overwrites the JSON file (after creating a timestamped backup)
 Changes per entry:
 - removes: memorizationStrength, lastReviewed
 - sets: memoryStrength=${DEFAULT_STRENGTH}, memoryDifficulty=${DEFAULT_DIFFICULTY}, memoryStreak=0
-- removes: memoryLastReviewed (so all items start as "never reviewed" by default)
+- sets: memoryLastReviewed = lastReviewed ?? memoryLastReviewed ?? addedAt
 
 Usage:
   VOCAB_DATA_PATH=./data.json node dist/migrateMemoryState.mjs
@@ -29,17 +30,6 @@ const dataFilePath = process.env.VOCAB_DATA_PATH;
 const args = new Set(process.argv.slice(2));
 const dryRun = args.has("--dry-run");
 const keepLastReviewed = args.has("--keep-last-reviewed");
-
-if (!dataFilePath) {
-  console.error("Error: Environment variable VOCAB_DATA_PATH is not set.");
-  usage();
-  process.exit(1);
-}
-
-if (args.has("--help") || args.has("-h")) {
-  usage();
-  process.exit(0);
-}
 
 function timestampForFilename(now = new Date()) {
   const pad = (n: number) => String(n).padStart(2, "0");
@@ -58,19 +48,16 @@ function isArrayOfObjects(x: unknown): x is AnyRecord[] {
   return Array.isArray(x) && x.every((v) => v && typeof v === "object");
 }
 
-try {
-  const raw = fs.readFileSync(dataFilePath, "utf8");
-  const parsed: unknown = JSON.parse(raw);
+export function migrateVocabEntries(
+  entries: AnyRecord[],
+  options?: { keepLastReviewed?: boolean; nowIso?: string },
+) {
+  const nowIso = options?.nowIso ?? new Date().toISOString();
+  const keepLastReviewed = options?.keepLastReviewed ?? false;
 
-  if (!isArrayOfObjects(parsed)) {
-    console.error("Error: expected the data file to be a JSON array of objects.");
-    process.exit(1);
-  }
-
-  const nowIso = new Date().toISOString();
   let changed = 0;
 
-  const migrated = parsed.map((entry) => {
+  const migrated = entries.map((entry) => {
     const next: AnyRecord = { ...entry };
 
     const hadOldFields =
@@ -85,18 +72,61 @@ try {
     next.memoryDifficulty = DEFAULT_DIFFICULTY;
     next.memoryStreak = 0;
 
-    // Start from defaults as "never reviewed" unless explicitly preserved.
-    if (keepLastReviewed && typeof oldLastReviewed === "string") {
+    const createdAt =
+      typeof next.addedAt === "string" && next.addedAt.trim()
+        ? next.addedAt
+        : nowIso;
+
+    const existingMemoryLastReviewed =
+      typeof next.memoryLastReviewed === "string" && next.memoryLastReviewed.trim()
+        ? next.memoryLastReviewed
+        : undefined;
+
+    if (keepLastReviewed && typeof oldLastReviewed === "string" && oldLastReviewed.trim()) {
       next.memoryLastReviewed = oldLastReviewed;
     } else {
-      delete next.memoryLastReviewed;
+      next.memoryLastReviewed = existingMemoryLastReviewed ?? createdAt;
     }
 
-    // Mark schema change
     next.modifiedAt = nowIso;
 
     if (hadOldFields) changed++;
     return next;
+  });
+
+  return { migrated, changed };
+}
+
+function isMain() {
+  const argvHref = process.argv[1]
+    ? pathToFileURL(process.argv[1]).href
+    : undefined;
+  return argvHref === import.meta.url;
+}
+
+if (isMain()) {
+  try {
+    if (!dataFilePath) {
+      console.error("Error: Environment variable VOCAB_DATA_PATH is not set.");
+      usage();
+      process.exit(1);
+    }
+
+    if (args.has("--help") || args.has("-h")) {
+      usage();
+      process.exit(0);
+    }
+
+  const raw = fs.readFileSync(dataFilePath, "utf8");
+  const parsed: unknown = JSON.parse(raw);
+
+  if (!isArrayOfObjects(parsed)) {
+    console.error("Error: expected the data file to be a JSON array of objects.");
+    process.exit(1);
+  }
+
+  const { migrated, changed } = migrateVocabEntries(parsed, {
+    keepLastReviewed,
   });
 
   const backupPath = path.join(
@@ -119,7 +149,8 @@ try {
     `Migrated ${migrated.length} entries (${changed} had old study fields).`,
   );
   console.log(`Backup written to: ${backupPath}`);
-} catch (error) {
-  console.error("Migration failed:", error);
-  process.exit(1);
+  } catch (error) {
+    console.error("Migration failed:", error);
+    process.exit(1);
+  }
 }
