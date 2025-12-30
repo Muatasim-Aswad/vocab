@@ -11,12 +11,7 @@ import { handleSearch } from "./commands/searchCommand.mjs";
 import { handleDelete } from "./commands/deleteCommand.mjs";
 import { handleEditInput } from "./commands/editCommand.mjs";
 import { handleList } from "./commands/listCommand.mjs";
-import {
-  startStudySession,
-  configureStudySession,
-  checkAndApplyOverdueDecay,
-} from "./modes/studyMode.mjs";
-import { DecayStore } from "./data/decayStore.mjs";
+import { configureStudySession } from "./modes/studyMode.mjs";
 
 // Get data file path from environment variable or use default
 const dataFilePath = process.env.VOCAB_DATA_PATH;
@@ -26,7 +21,6 @@ if (!dataFilePath) throw new Error("Environment variable VOCAB_DATA_PATH is not 
 // Initialize data store and repository
 const dataStore = new JsonDataStore(dataFilePath);
 const repo = new VocabRepository(dataStore);
-const decayStore = new DecayStore(dataFilePath);
 
 const modeHandlers = {
   fast: (input: string) => handleFastInput(input, repo),
@@ -119,9 +113,6 @@ async function promptUser(): Promise<void> {
 // Main function
 export async function main(): Promise<void> {
   console.clear();
-
-  // Check and apply any overdue decay silently on startup
-  checkAndApplyOverdueDecay(repo, decayStore, true);
 
   // Setup autocompleter with commands and repository
   setupCompleter(availableCommands, repo);

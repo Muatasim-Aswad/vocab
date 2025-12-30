@@ -15,9 +15,11 @@ export interface Vocab {
   addedAt: string;
   modifiedAt: string;
 
-  // Study mode fields
-  memorizationStrength?: number; // 0-100
-  lastReviewed?: string; // ISO date string
+  // Memory model fields
+  memoryStrength?: number; // strength in days
+  memoryDifficulty?: number; // 1-10
+  memoryStreak?: number; // consecutive correct recalls
+  memoryLastReviewed?: string; // ISO date string
 }
 
 export type CreateVocab = Pick<
@@ -26,8 +28,10 @@ export type CreateVocab = Pick<
 >;
 
 export type UpdateVocab = Partial<CreateVocab> & {
-  memorizationStrength?: number;
-  lastReviewed?: string;
+  memoryStrength?: number;
+  memoryDifficulty?: number;
+  memoryStreak?: number;
+  memoryLastReviewed?: string;
 };
 
 export interface Result {
@@ -144,8 +148,10 @@ export class VocabRepository {
       irregular,
       form,
       types,
-      memorizationStrength,
-      lastReviewed,
+      memoryStrength,
+      memoryDifficulty,
+      memoryStreak,
+      memoryLastReviewed,
     } = updateData;
     const index = this.findIndexByWord(word);
 
@@ -218,14 +224,11 @@ export class VocabRepository {
       }
     }
 
-    // Handle study mode fields
-    if (memorizationStrength !== undefined) {
-      entry.memorizationStrength = memorizationStrength;
-    }
-
-    if (lastReviewed !== undefined) {
-      entry.lastReviewed = lastReviewed;
-    }
+    // Handle memory model fields
+    if (memoryStrength !== undefined) entry.memoryStrength = memoryStrength;
+    if (memoryDifficulty !== undefined) entry.memoryDifficulty = memoryDifficulty;
+    if (memoryStreak !== undefined) entry.memoryStreak = memoryStreak;
+    if (memoryLastReviewed !== undefined) entry.memoryLastReviewed = memoryLastReviewed;
 
     entry.modifiedAt = new Date().toISOString();
 

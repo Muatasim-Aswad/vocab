@@ -1,9 +1,13 @@
 import { ask, s, view } from "../ui/terminal.mjs";
 import { VocabRepository, Vocab } from "../data/repository.mjs";
-import { DecayStore } from "../data/decayStore.mjs";
-
-const BETA = 0.1; // Decay factor for priority calculation
-const DAILY_DECAY_AMOUNT = 0.5; // Amount subtracted from strength each day
+import {
+  AnswerScore,
+  DEFAULT_DIFFICULTY,
+  DEFAULT_STRENGTH,
+  MS_IN_DAY,
+  getForgetProbability,
+  getNewStateWithDefaults,
+} from "../data/memory/memory.mjs";
 
 enum RecallScore {
   DONT_KNOW = 0,
@@ -24,57 +28,36 @@ interface WordWithPriority extends Vocab {
 }
 
 /**
- * Calculate priority for each word based on strength and time since last review
+ * Calculate priority for each word based on current forget probability.
+ * Higher values mean higher priority.
  */
-function calculatePriority(word: Vocab, beta: number): number {
-  const strength = word.memorizationStrength ?? 0;
-  const lastReviewed = word.lastReviewed ? new Date(word.lastReviewed) : null;
+function calculatePriority(word: Vocab): number {
+  const lastReviewedMs = word.memoryLastReviewed
+    ? new Date(word.memoryLastReviewed).getTime()
+    : null;
 
-  if (!lastReviewed) {
-    // Never reviewed - high priority
-    return -1000;
-  }
+  if (!lastReviewedMs) return 2;
 
-  const now = new Date();
-  const daysSince =
-    (now.getTime() - lastReviewed.getTime()) / (1000 * 60 * 60 * 24);
+  const msSinceLastReview = Math.max(0, Date.now() - lastReviewedMs);
+  const daysSinceLastReview = msSinceLastReview / MS_IN_DAY;
 
-  // Lower priority = needs more review
-  return strength - beta * daysSince;
+  return getForgetProbability({
+    strength: word.memoryStrength ?? DEFAULT_STRENGTH,
+    difficulty: word.memoryDifficulty ?? DEFAULT_DIFFICULTY,
+    daysSinceLastReview,
+  });
 }
 
 /**
- * Sort words by priority (ascending - lowest priority first)
+ * Sort words by priority (descending - highest priority first)
  */
-function sortByPriority(words: Vocab[], beta: number): WordWithPriority[] {
+function sortByPriority(words: Vocab[]): WordWithPriority[] {
   const wordsWithPriority = words.map((word) => ({
     ...word,
-    priority: calculatePriority(word, beta),
+    priority: calculatePriority(word),
   }));
 
-  return wordsWithPriority.sort((a, b) => a.priority - b.priority);
-}
-
-/**
- * Update word strength based on recall score
- */
-function updateStrength(word: Vocab, recallScore: RecallScore): number {
-  let strength = word.memorizationStrength ?? 0;
-
-  switch (recallScore) {
-    case RecallScore.KNOW:
-      strength += 3;
-      break;
-    case RecallScore.CLUE_USED:
-      strength += 1;
-      break;
-    case RecallScore.DONT_KNOW:
-      strength -= 1;
-      break;
-  }
-
-  // Only clamp upper bound at 100, allow negative values
-  return Math.min(100, strength);
+  return wordsWithPriority.sort((a, b) => b.priority - a.priority);
 }
 
 /**
@@ -104,12 +87,15 @@ function displayWordForStudy(word: Vocab, index: number, total: number): void {
     view(s.e("(irregular)"));
   }
 
-  // Display current strength
-  const strength = word.memorizationStrength ?? 0;
-  const strengthBar =
-    "█".repeat(Math.floor(strength / 5)) +
-    "░".repeat(20 - Math.floor(strength / 5));
-  view(`\nStrength: [${strengthBar}] ${strength}/100`);
+  const strengthDays = word.memoryStrength ?? DEFAULT_STRENGTH;
+  const difficulty = word.memoryDifficulty ?? DEFAULT_DIFFICULTY;
+  const streak = word.memoryStreak ?? 0;
+  const lastReviewed = word.memoryLastReviewed ?? "(never)";
+
+  view(`\nStrength: ${strengthDays.toFixed(2)} day(s)`);
+  view(`Difficulty: ${difficulty.toFixed(2)} (1-10)`);
+  view(`Streak: ${streak}`);
+  view(`Last reviewed: ${lastReviewed}`);
 }
 
 /**
@@ -154,8 +140,13 @@ async function reviewWord(
   word: Vocab,
   index: number,
   total: number,
-): Promise<RecallScore> {
+): Promise<{
+  recallScore: RecallScore;
+  answerScore: AnswerScore;
+  answerTime: number;
+}> {
   let clueLevel = 0; // 0 = no clue, 1 = example, 2 = related
+  const startedAt = Date.now();
 
   while (true) {
     console.clear();
@@ -181,7 +172,16 @@ async function reviewWord(
     const choice = response.trim().toLowerCase();
 
     if (choice === "k") {
-      return clueLevel > 0 ? RecallScore.CLUE_USED : RecallScore.KNOW;
+      return {
+        recallScore: clueLevel > 0 ? RecallScore.CLUE_USED : RecallScore.KNOW,
+        answerScore:
+          clueLevel === 0
+            ? AnswerScore.KNOW
+            : clueLevel === 1
+              ? AnswerScore.CLUE
+              : AnswerScore.CLUES,
+        answerTime: Date.now() - startedAt,
+      };
     } else if (choice === "d") {
       // Show all info before moving on
       console.clear();
@@ -190,7 +190,11 @@ async function reviewWord(
       displayRelatedClue(word);
       view(`\n${s.e("Study this word carefully!")}`);
       await ask("\nPress Enter to continue...");
-      return RecallScore.DONT_KNOW;
+      return {
+        recallScore: RecallScore.DONT_KNOW,
+        answerScore: AnswerScore.NO,
+        answerTime: Date.now() - startedAt,
+      };
     } else if (choice === "c" && clueLevel < 2) {
       clueLevel++;
     } else if (choice === "q") {
@@ -235,7 +239,7 @@ export async function startStudySession(
   }
 
   // Sort by priority
-  const sortedWords = sortByPriority(allWords, BETA);
+  const sortedWords = sortByPriority(allWords);
 
   // Select words based on range or max words
   let sessionWords: WordWithPriority[];
@@ -272,7 +276,11 @@ export async function startStudySession(
     for (let i = 0; i < sessionWords.length; i++) {
       const word = sessionWords[i];
 
-      const recallScore = await reviewWord(word, i, sessionWords.length);
+      const { recallScore, answerScore, answerTime } = await reviewWord(
+        word,
+        i,
+        sessionWords.length,
+      );
 
       // Update statistics
       stats.wordsReviewed++;
@@ -285,10 +293,31 @@ export async function startStudySession(
       }
 
       // Update word in repository
-      const newStrength = updateStrength(word, recallScore);
+      const now = Date.now();
+      const lastReviewedMs = word.memoryLastReviewed
+        ? new Date(word.memoryLastReviewed).getTime()
+        : null;
+      const msSinceLastReview = lastReviewedMs
+        ? Math.max(0, now - lastReviewedMs)
+        : 0;
+
+      const { newStrength, newDifficulty, newStreak } = getNewStateWithDefaults(
+        {
+          answerScore,
+          answerTime,
+          itemLength: Math.max(1, word.word.length),
+          strength: word.memoryStrength ?? 0,
+          msSinceLastReview,
+          difficulty: word.memoryDifficulty ?? 0,
+          streak: word.memoryStreak ?? 0,
+        },
+      );
+
       repo.update(word.word, {
-        memorizationStrength: newStrength,
-        lastReviewed: new Date().toISOString(),
+        memoryStrength: newStrength,
+        memoryDifficulty: newDifficulty,
+        memoryStreak: newStreak,
+        memoryLastReviewed: new Date(now).toISOString(),
       });
     }
 
@@ -309,71 +338,6 @@ export async function startStudySession(
 }
 
 /**
- * Apply multiple days of decay to all words
- * @param repo - The vocabulary repository
- * @param days - Number of days of decay to apply
- * @param silent - If true, don't display output messages
- * @returns Number of words that were decayed
- */
-export function applyMultipleDaysDecay(
-  repo: VocabRepository,
-  days: number,
-  silent: boolean = false,
-): number {
-  const allWords = repo.getAll();
-  let decayedCount = 0;
-
-  for (const word of allWords) {
-    if (word.memorizationStrength !== undefined) {
-      const newStrength = word.memorizationStrength - DAILY_DECAY_AMOUNT * days;
-      if (newStrength !== word.memorizationStrength) {
-        repo.update(word.word, {
-          memorizationStrength: newStrength,
-        });
-        decayedCount++;
-      }
-    }
-  }
-
-  if (!silent) {
-    view(s.aH(`\n✓ Applied ${days} day(s) of decay to ${decayedCount} words.`));
-  }
-
-  return decayedCount;
-}
-
-/**
- * Check for overdue decay and apply if needed
- * @param repo - The vocabulary repository
- * @param decayStore - The decay timestamp store
- * @param silent - If true, don't display output messages
- */
-export function checkAndApplyOverdueDecay(
-  repo: VocabRepository,
-  decayStore: DecayStore,
-  silent: boolean = false,
-): void {
-  const daysSinceLastDecay = decayStore.getDaysSinceLastDecay();
-
-  if (daysSinceLastDecay === null) {
-    // First time running - initialize decay timestamp
-    if (!silent) {
-      view("Initializing decay tracking...");
-    }
-    decayStore.updateLastDecayDate();
-    return;
-  }
-
-  if (daysSinceLastDecay > 0) {
-    if (!silent) {
-      view(`Applying ${daysSinceLastDecay} day(s) of overdue decay...`);
-    }
-    applyMultipleDaysDecay(repo, daysSinceLastDecay, silent);
-    decayStore.updateLastDecayDate();
-  }
-}
-
-/**
  * Configure study session parameters
  */
 export async function configureStudySession(
@@ -382,7 +346,7 @@ export async function configureStudySession(
   view(s.aH("\n📚 Study Session Configuration"));
 
   const allWords = repo.getAll();
-  const sortedWords = sortByPriority(allWords, BETA);
+  const sortedWords = sortByPriority(allWords);
   view(`Total words available (sorted by priority): ${sortedWords.length}\n`);
 
   view("Study by:");
