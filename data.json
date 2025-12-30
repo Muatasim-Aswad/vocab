@@ -9,11 +9,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.158Z",
-    "modifiedAt": "2025-12-15T22:42:21.743Z",
+    "modifiedAt": "2025-12-30T20:10:49.351Z",
     "related": [
       "de slede"
     ],
-    "memorizationStrength": 4,
+    "memorizationStrength": -3.5,
     "lastReviewed": "2025-12-15T22:42:21.743Z"
   },
   {
@@ -25,8 +25,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-12-15T22:45:23.115Z",
-    "memorizationStrength": 6,
+    "modifiedAt": "2025-12-30T20:10:49.355Z",
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:23.115Z"
   },
   {
@@ -39,8 +39,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.161Z",
-    "modifiedAt": "2025-12-15T22:45:24.523Z",
-    "memorizationStrength": 6,
+    "modifiedAt": "2025-12-30T20:10:49.358Z",
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:24.523Z"
   },
   {
@@ -52,11 +52,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-15T22:45:26.122Z",
+    "modifiedAt": "2025-12-30T20:10:49.359Z",
     "related": [
       "de rivier is breed"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:26.122Z"
   },
   {
@@ -68,11 +68,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-15T22:45:28.721Z",
+    "modifiedAt": "2025-12-30T20:10:49.361Z",
     "related": [
       "de streek"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:28.721Z"
   },
   {
@@ -84,11 +84,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-15T22:45:29.834Z",
+    "modifiedAt": "2025-12-30T20:10:49.365Z",
     "related": [
       "het gebied"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:29.834Z"
   },
   {
@@ -100,11 +100,11 @@
       "plural"
     ],
     "addedAt": "2025-11-19T12:19:24.162Z",
-    "modifiedAt": "2025-12-15T22:45:31.633Z",
+    "modifiedAt": "2025-12-30T20:10:49.367Z",
     "related": [
       "we wandelen in het bos"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:31.633Z"
   },
   {
@@ -116,10 +116,10 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-12-15T22:45:33.677Z",
+    "modifiedAt": "2025-12-30T20:10:49.369Z",
     "example": "We wandelen graag over de heide.",
     "irregular": false,
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:33.677Z"
   },
   {
@@ -131,8 +131,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-12-15T22:46:18.041Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.371Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:46:18.041Z"
   },
   {
@@ -145,8 +145,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-12-15T22:46:20.593Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.373Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:46:20.593Z"
   },
   {
@@ -156,8 +156,8 @@
       "verb"
     ],
     "addedAt": "2025-11-19T12:19:24.163Z",
-    "modifiedAt": "2025-12-15T22:46:31.608Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.375Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:46:31.608Z"
   },
   {
@@ -170,11 +170,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.164Z",
-    "modifiedAt": "2025-12-15T22:47:04.766Z",
+    "modifiedAt": "2025-12-30T20:10:49.377Z",
     "related": [
       "de waterkraan"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:47:04.766Z"
   },
   {
@@ -186,8 +186,8 @@
       "plural"
     ],
     "addedAt": "2025-11-19T12:19:24.164Z",
-    "modifiedAt": "2025-12-15T22:47:07.038Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.379Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:47:07.038Z"
   },
   {
@@ -199,11 +199,11 @@
       "separable"
     ],
     "addedAt": "2025-11-19T12:19:24.164Z",
-    "modifiedAt": "2025-12-15T22:47:26.360Z",
+    "modifiedAt": "2025-12-30T20:10:49.382Z",
     "related": [
       "kun je het licht uitdoen?"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:47:26.360Z"
   },
   {
@@ -216,8 +216,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.164Z",
-    "modifiedAt": "2025-12-15T22:48:02.878Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.384Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:48:02.878Z"
   },
   {
@@ -229,7 +229,7 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.165Z",
-    "modifiedAt": "2025-12-15T22:48:14.254Z",
+    "modifiedAt": "2025-12-30T20:10:49.387Z",
     "related": [
       "ontbijtbord"
     ],
@@ -240,7 +240,7 @@
     "phrases": [
       "diep bord"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:48:14.254Z"
   },
   {
@@ -253,19 +253,19 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.165Z",
-    "modifiedAt": "2025-12-15T22:48:20.782Z",
+    "modifiedAt": "2025-12-30T20:10:49.389Z",
     "related": [
       "het gebied"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:48:20.782Z"
   },
   {
     "word": "beschikbaar",
     "example": "Ik ben vanavond beschikbaar.",
     "addedAt": "2025-11-19T12:19:24.166Z",
-    "modifiedAt": "2025-12-15T22:48:23.734Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.391Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:48:23.734Z"
   },
   {
@@ -278,8 +278,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.166Z",
-    "modifiedAt": "2025-12-15T22:48:26.037Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.392Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:48:26.037Z"
   },
   {
@@ -292,8 +292,8 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.166Z",
-    "modifiedAt": "2025-12-15T22:48:36.678Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.394Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:48:36.678Z"
   },
   {
@@ -306,22 +306,22 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.167Z",
-    "modifiedAt": "2025-12-15T22:48:41.573Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.396Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:48:41.573Z"
   },
   {
     "word": "vereniging",
     "addedAt": "2025-11-19T12:19:24.168Z",
-    "modifiedAt": "2025-12-15T22:49:01.381Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.398Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:49:01.381Z"
   },
   {
     "word": "druppels",
     "addedAt": "2025-11-19T12:19:24.168Z",
-    "modifiedAt": "2025-12-15T22:49:22.556Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.400Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:49:22.556Z"
   },
   {
@@ -334,11 +334,11 @@
       "singular"
     ],
     "addedAt": "2025-11-19T12:19:24.169Z",
-    "modifiedAt": "2025-12-15T22:49:29.828Z",
+    "modifiedAt": "2025-12-30T20:10:49.402Z",
     "related": [
       "riviergeul"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:49:29.828Z"
   },
   {
@@ -348,11 +348,11 @@
       "verb"
     ],
     "addedAt": "2025-11-19T12:19:24.169Z",
-    "modifiedAt": "2025-12-15T22:49:38.692Z",
+    "modifiedAt": "2025-12-30T20:10:49.404Z",
     "related": [
       "verdrinkingsgevaar"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:49:38.692Z"
   },
   {
@@ -362,12 +362,12 @@
       "verb"
     ],
     "addedAt": "2025-11-19T12:19:24.170Z",
-    "modifiedAt": "2025-12-15T22:50:01.467Z",
+    "modifiedAt": "2025-12-30T20:10:49.406Z",
     "related": [
       "komen"
     ],
     "irregular": true,
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:50:01.467Z"
   },
   {
@@ -380,8 +380,8 @@
       "separable"
     ],
     "addedAt": "2025-11-19T12:19:24.170Z",
-    "modifiedAt": "2025-12-15T22:50:10.899Z",
-    "memorizationStrength": 1,
+    "modifiedAt": "2025-12-30T20:10:49.408Z",
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:50:10.899Z"
   },
   {
@@ -391,8 +391,8 @@
       "verb"
     ],
     "addedAt": "2025-11-19T12:19:24.170Z",
-    "modifiedAt": "2025-12-15T22:50:50.802Z",
-    "memorizationStrength": 3,
+    "modifiedAt": "2025-12-30T20:10:49.409Z",
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:50:50.802Z"
   },
   {
@@ -14364,7 +14364,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-07T22:57:27.724Z",
-    "modifiedAt": "2025-12-15T22:40:52.273Z",
+    "modifiedAt": "2025-12-30T20:10:49.411Z",
     "related": [
       "+begrafenis",
       "+crematie",
@@ -14377,7 +14377,7 @@
       "uitvaart regelen",
       "uitvaartplechtigheid"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:40:52.273Z"
   },
   {
@@ -14393,7 +14393,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-07T22:58:23.939Z",
-    "modifiedAt": "2025-12-15T22:41:10.138Z",
+    "modifiedAt": "2025-12-30T20:10:49.413Z",
     "related": [
       "+wees",
       "+verweesd",
@@ -14405,7 +14405,7 @@
       "weduwnaar worden",
       "als weduwnaar leven"
     ],
-    "memorizationStrength": 1,
+    "memorizationStrength": -6.5,
     "lastReviewed": "2025-12-15T22:41:10.137Z"
   },
   {
@@ -14418,7 +14418,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T21:54:10.437Z",
-    "modifiedAt": "2025-12-15T22:41:16.192Z",
+    "modifiedAt": "2025-12-30T20:10:49.415Z",
     "related": [
       "+vlijtig",
       "+hardwerkend",
@@ -14429,7 +14429,7 @@
       "ijverig werken",
       "een ijverige leerling"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:16.192Z"
   },
   {
@@ -14439,7 +14439,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T21:55:08.923Z",
-    "modifiedAt": "2025-12-15T22:41:21.912Z",
+    "modifiedAt": "2025-12-30T20:10:49.417Z",
     "related": [
       "+beneden",
       "-bovenaan"
@@ -14449,7 +14449,7 @@
       "onderaan beginnen",
       "onderaan staan"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:21.912Z"
   },
   {
@@ -14465,7 +14465,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T21:56:21.561Z",
-    "modifiedAt": "2025-12-15T22:41:23.465Z",
+    "modifiedAt": "2025-12-30T20:10:49.419Z",
     "related": [
       "+strijkinstrument",
       "viool",
@@ -14476,7 +14476,7 @@
       "cello spelen",
       "cello muziek"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:23.465Z"
   },
   {
@@ -14492,7 +14492,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T21:57:05.353Z",
-    "modifiedAt": "2025-12-15T22:41:24.712Z",
+    "modifiedAt": "2025-12-30T20:10:49.421Z",
     "related": [
       "+vereniging",
       "+groep",
@@ -14503,7 +14503,7 @@
       "bij een club horen",
       "een club oprichten"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:24.712Z"
   },
   {
@@ -14519,7 +14519,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:00:20.343Z",
-    "modifiedAt": "2025-12-15T22:41:32.369Z",
+    "modifiedAt": "2025-12-30T20:10:49.422Z",
     "related": [
       "+grafiek",
       "schema",
@@ -14530,7 +14530,7 @@
       "een diagram maken",
       "een diagram lezen"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:32.369Z"
   },
   {
@@ -14546,7 +14546,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:01:33.764Z",
-    "modifiedAt": "2025-12-15T22:41:35.529Z",
+    "modifiedAt": "2025-12-30T20:10:49.424Z",
     "related": [
       "+enthousiast",
       "+gedreven",
@@ -14557,7 +14557,7 @@
       "fanatiek sporten",
       "fanatiek bezig zijn"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:35.529Z"
   },
   {
@@ -14570,7 +14570,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:04:10.233Z",
-    "modifiedAt": "2025-12-15T22:41:37.337Z",
+    "modifiedAt": "2025-12-30T20:10:49.426Z",
     "related": [
       "+domestic",
       "+thuis",
@@ -14581,7 +14581,7 @@
       "huishoudelijke taken",
       "huishoudelijk apparaat"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:37.337Z"
   },
   {
@@ -14597,7 +14597,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:04:49.239Z",
-    "modifiedAt": "2025-12-15T22:41:40.817Z",
+    "modifiedAt": "2025-12-30T20:10:49.428Z",
     "related": [
       "+zanggroep",
       "ensemble"
@@ -14607,7 +14607,7 @@
       "in een koor zingen",
       "kerkkoor"
     ],
-    "memorizationStrength": 3,
+    "memorizationStrength": -4.5,
     "lastReviewed": "2025-12-15T22:41:40.817Z"
   },
   {
@@ -14623,7 +14623,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:06:00.702Z",
-    "modifiedAt": "2025-12-15T22:42:26.135Z",
+    "modifiedAt": "2025-12-30T20:10:49.430Z",
     "related": [
       "+ijsbaan",
       "-natuurijs"
@@ -14633,7 +14633,7 @@
       "op de kunstijsbaan schaatsen",
       "kunstijsbaan huren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:26.135Z"
   },
   {
@@ -14649,7 +14649,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:07:58.042Z",
-    "modifiedAt": "2025-12-15T22:42:28.687Z",
+    "modifiedAt": "2025-12-30T20:10:49.432Z",
     "related": [
       "+groentetuin",
       "volkstuin"
@@ -14659,7 +14659,7 @@
       "een moestuin aanleggen",
       "in de moestuin werken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:28.687Z"
   },
   {
@@ -14679,7 +14679,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:09:35.104Z",
-    "modifiedAt": "2025-12-15T22:42:30.711Z",
+    "modifiedAt": "2025-12-30T20:10:49.434Z",
     "related": [
       "+relaxen",
       "+uitrusten",
@@ -14690,7 +14690,7 @@
       "zich ontspannen bij muziek",
       "zich ontspannen na werk"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:30.711Z"
   },
   {
@@ -14708,7 +14708,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:11:10.517Z",
-    "modifiedAt": "2025-12-15T22:42:32.127Z",
+    "modifiedAt": "2025-12-30T20:10:49.436Z",
     "related": [
       "+groenteteelt",
       "+plant verzorgen"
@@ -14718,7 +14718,7 @@
       "in de tuin tuinieren",
       "tuinieren als hobby"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:32.127Z"
   },
   {
@@ -14728,7 +14728,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:12:02.826Z",
-    "modifiedAt": "2025-12-15T22:42:38.719Z",
+    "modifiedAt": "2025-12-30T20:10:49.437Z",
     "related": [
       "+er tussenin",
       "+ondertussen"
@@ -14738,7 +14738,7 @@
       "iets tussendoor doen",
       "pauze tussendoor"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:38.719Z"
   },
   {
@@ -14756,7 +14756,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:13:26.760Z",
-    "modifiedAt": "2025-12-15T22:41:47.881Z",
+    "modifiedAt": "2025-12-30T20:10:49.439Z",
     "related": [
       "+kwijtraken",
       "+de weg verliezen",
@@ -14767,7 +14767,7 @@
       "in het bos verdwalen",
       "verdwalen tijdens een reis"
     ],
-    "memorizationStrength": 4,
+    "memorizationStrength": -3.5,
     "lastReviewed": "2025-12-15T22:41:47.880Z"
   },
   {
@@ -14781,7 +14781,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T22:14:58.196Z",
-    "modifiedAt": "2025-12-15T22:42:41.759Z",
+    "modifiedAt": "2025-12-30T20:10:49.441Z",
     "related": [
       "+hulp",
       "+onderhoud",
@@ -14792,7 +14792,7 @@
       "medische verzorging",
       "persoonlijke verzorging"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:41.759Z"
   },
   {
@@ -14808,7 +14808,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:16:20.234Z",
-    "modifiedAt": "2025-12-15T22:42:43.998Z",
+    "modifiedAt": "2025-12-30T20:10:49.443Z",
     "related": [
       "+hobby",
       "+ontspanning",
@@ -14819,7 +14819,7 @@
       "creatieve vrijetijdsbesteding",
       "actieve vrijetijdsbesteding"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:43.998Z"
   },
   {
@@ -14835,7 +14835,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:19:03.316Z",
-    "modifiedAt": "2025-12-15T22:42:46.751Z",
+    "modifiedAt": "2025-12-30T20:10:49.445Z",
     "related": [
       "+interen",
       "+ten grave dragen",
@@ -14846,7 +14846,7 @@
       "iemand begraven",
       "een schat begraven"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:46.751Z"
   },
   {
@@ -14862,7 +14862,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:20:33.585Z",
-    "modifiedAt": "2025-12-15T22:42:50.759Z",
+    "modifiedAt": "2025-12-30T20:10:49.447Z",
     "related": [
       "+attractie",
       "+trekpleister",
@@ -14873,7 +14873,7 @@
       "een bezienswaardigheid bezoeken",
       "toeristische bezienswaardigheid"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:50.759Z"
   },
   {
@@ -14889,7 +14889,7 @@
     ],
     "irregular": true,
     "addedAt": "2025-12-11T22:21:24.695Z",
-    "modifiedAt": "2025-12-15T22:42:53.670Z",
+    "modifiedAt": "2025-12-30T20:10:49.449Z",
     "related": [
       "+opzoeken",
       "+aanwippen",
@@ -14900,7 +14900,7 @@
       "een museum bezoeken",
       "vrienden bezoeken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:53.670Z"
   },
   {
@@ -14916,7 +14916,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:22:40.029Z",
-    "modifiedAt": "2025-12-15T22:42:55.871Z",
+    "modifiedAt": "2025-12-30T20:10:49.451Z",
     "related": [
       "+gast",
       "+toeschouwer",
@@ -14927,7 +14927,7 @@
       "museumbezoeker",
       "websitebezoeker"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:55.871Z"
   },
   {
@@ -14945,7 +14945,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:23:10.700Z",
-    "modifiedAt": "2025-12-15T22:42:56.965Z",
+    "modifiedAt": "2025-12-30T20:10:49.453Z",
     "related": [
       "+reserveren",
       "+afspreken",
@@ -14956,7 +14956,7 @@
       "een tafel boeken",
       "tickets boeken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:56.965Z"
   },
   {
@@ -14972,7 +14972,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:23:52.547Z",
-    "modifiedAt": "2025-12-15T22:42:57.767Z",
+    "modifiedAt": "2025-12-30T20:10:49.455Z",
     "related": [
       "+reservering",
       "+afspraak",
@@ -14983,7 +14983,7 @@
       "een boeking maken",
       "een boeking annuleren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:57.766Z"
   },
   {
@@ -14999,7 +14999,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:25:15.064Z",
-    "modifiedAt": "2025-12-15T22:42:13.272Z",
+    "modifiedAt": "2025-12-30T20:10:49.456Z",
     "related": [
       "+levendig",
       "+energiek",
@@ -15010,7 +15010,7 @@
       "bruisend nachtleven",
       "bruisende stad"
     ],
-    "memorizationStrength": 4,
+    "memorizationStrength": -3.5,
     "lastReviewed": "2025-12-15T22:42:13.272Z"
   },
   {
@@ -15026,7 +15026,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:26:13.142Z",
-    "modifiedAt": "2025-12-15T22:42:58.909Z",
+    "modifiedAt": "2025-12-30T20:10:49.458Z",
     "related": [
       "+avondmaaltijd",
       "+maal",
@@ -15037,7 +15037,7 @@
       "avond diner",
       "formeel diner"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:42:58.909Z"
   },
   {
@@ -15053,7 +15053,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:27:15.547Z",
-    "modifiedAt": "2025-12-15T22:43:00.087Z",
+    "modifiedAt": "2025-12-30T20:10:49.460Z",
     "related": [
       "+restaurantje",
       "+cafétje"
@@ -15063,7 +15063,7 @@
       "een eethuisje bezoeken",
       "gezellig eethuisje"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:00.086Z"
   },
   {
@@ -15079,7 +15079,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:28:19.104Z",
-    "modifiedAt": "2025-12-15T22:43:07.958Z",
+    "modifiedAt": "2025-12-30T20:10:49.462Z",
     "related": [
       "+antiek",
       "+oud",
@@ -15090,7 +15090,7 @@
       "eeuwenoud gebouw",
       "eeuwenoude traditie"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:07.958Z"
   },
   {
@@ -15106,7 +15106,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:28:49.504Z",
-    "modifiedAt": "2025-12-15T22:43:17.190Z",
+    "modifiedAt": "2025-12-30T20:10:49.465Z",
     "related": [
       "+uitstap",
       "+reis",
@@ -15117,7 +15117,7 @@
       "schoolexcursie",
       "een excursie maken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:17.190Z"
   },
   {
@@ -15133,7 +15133,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:29:51.559Z",
-    "modifiedAt": "2025-12-15T22:43:20.884Z",
+    "modifiedAt": "2025-12-30T20:10:49.466Z",
     "related": [
       "+deel",
       "+sectie",
@@ -15144,7 +15144,7 @@
       "een gedeelte van",
       "het centrale gedeelte"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:20.884Z"
   },
   {
@@ -15160,7 +15160,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:31:15.540Z",
-    "modifiedAt": "2025-12-15T22:43:22.390Z",
+    "modifiedAt": "2025-12-30T20:10:49.468Z",
     "related": [
       "+leider",
       "+instructeur",
@@ -15172,7 +15172,7 @@
       "studiegids",
       "een gids volgen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:22.390Z"
   },
   {
@@ -15188,7 +15188,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:32:18.225Z",
-    "modifiedAt": "2025-12-15T22:43:23.377Z",
+    "modifiedAt": "2025-12-30T20:10:49.470Z",
     "related": [
       "+dok",
       "+port",
@@ -15200,7 +15200,7 @@
       "havenstad",
       "de haven binnenlopen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:23.377Z"
   },
   {
@@ -15213,7 +15213,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:33:13.243Z",
-    "modifiedAt": "2025-12-15T22:43:25.086Z",
+    "modifiedAt": "2025-12-30T20:10:49.472Z",
     "related": [
       "+duidelijk",
       "+transparant",
@@ -15224,7 +15224,7 @@
       "helder licht",
       "helder uitleggen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:25.086Z"
   },
   {
@@ -15240,7 +15240,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:33:47.298Z",
-    "modifiedAt": "2025-12-15T22:43:26.181Z",
+    "modifiedAt": "2025-12-30T20:10:49.474Z",
     "related": [
       "+oud",
       "+verleden",
@@ -15251,7 +15251,7 @@
       "historisch centrum",
       "historisch monument"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:26.181Z"
   },
   {
@@ -15262,7 +15262,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T22:34:33.974Z",
-    "modifiedAt": "2025-12-15T22:43:27.118Z",
+    "modifiedAt": "2025-12-30T20:10:49.476Z",
     "related": [
       "+met",
       "+inbegrepen",
@@ -15273,7 +15273,7 @@
       "inclusief belasting",
       "inclusief servicekosten"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:27.118Z"
   },
   {
@@ -15289,7 +15289,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:36:18.022Z",
-    "modifiedAt": "2025-12-15T22:43:30.614Z",
+    "modifiedAt": "2025-12-30T20:10:49.478Z",
     "related": [
       "+imposant",
       "+spectaculair",
@@ -15300,7 +15300,7 @@
       "indrukwekkend gebouw",
       "indrukwekkende prestatie"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:30.614Z"
   },
   {
@@ -15316,7 +15316,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:36:48.753Z",
-    "modifiedAt": "2025-12-15T22:43:31.854Z",
+    "modifiedAt": "2025-12-30T20:10:49.480Z",
     "related": [
       "+vorstelijk",
       "+regal",
@@ -15327,7 +15327,7 @@
       "koninklijk gezelschap",
       "koninklijk bezoek"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:31.854Z"
   },
   {
@@ -15343,7 +15343,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:38:29.787Z",
-    "modifiedAt": "2025-12-15T22:43:34.654Z",
+    "modifiedAt": "2025-12-30T20:10:49.483Z",
     "related": [
       "+achterwerk",
       "+bil",
@@ -15354,7 +15354,7 @@
       "iemand op de kont slaan",
       "dikke kont"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:34.654Z"
   },
   {
@@ -15370,7 +15370,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:39:07.707Z",
-    "modifiedAt": "2025-12-15T22:43:35.942Z",
+    "modifiedAt": "2025-12-30T20:10:49.484Z",
     "related": [
       "+zeekant",
       "+oever",
@@ -15381,7 +15381,7 @@
       "aan de kust",
       "kustlijn"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:35.942Z"
   },
   {
@@ -15397,7 +15397,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:39:38.665Z",
-    "modifiedAt": "2025-12-15T22:43:37.253Z",
+    "modifiedAt": "2025-12-30T20:10:49.486Z",
     "related": [
       "+plattelands",
       "+rustig",
@@ -15408,7 +15408,7 @@
       "landelijk landschap",
       "landelijk wonen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:37.253Z"
   },
   {
@@ -15425,7 +15425,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:40:41.182Z",
-    "modifiedAt": "2025-12-15T22:43:38.374Z",
+    "modifiedAt": "2025-12-30T20:10:49.488Z",
     "related": [
       "+schat",
       "+vriendje",
@@ -15436,7 +15436,7 @@
       "mijn lieverd",
       "kleine lieverd"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:38.373Z"
   },
   {
@@ -15452,7 +15452,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:41:24.956Z",
-    "modifiedAt": "2025-12-15T22:43:39.870Z",
+    "modifiedAt": "2025-12-30T20:10:49.490Z",
     "related": [
       "+vliegveld",
       "+aerodrome"
@@ -15462,7 +15462,7 @@
       "internationale luchthaven",
       "luchthaven bezoeken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:39.869Z"
   },
   {
@@ -15476,7 +15476,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T22:51:45.365Z",
-    "modifiedAt": "2025-12-15T22:43:42.253Z",
+    "modifiedAt": "2025-12-30T20:10:49.491Z",
     "related": [
       "+middeleeuwen",
       "-moderniteit",
@@ -15487,7 +15487,7 @@
       "in de middeleeuwen",
       "de late middeleeuwen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:42.253Z"
   },
   {
@@ -15497,7 +15497,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:52:30.165Z",
-    "modifiedAt": "2025-12-15T22:43:43.669Z",
+    "modifiedAt": "2025-12-30T20:10:49.494Z",
     "related": [
       "+nadat",
       "-voordat"
@@ -15506,7 +15506,7 @@
     "phrases": [
       "nadat iets gebeurd is"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:43.669Z"
   },
   {
@@ -15523,7 +15523,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:53:24.659Z",
-    "modifiedAt": "2025-12-15T22:42:16.478Z",
+    "modifiedAt": "2025-12-30T20:10:49.496Z",
     "related": [
       "+ontdekken",
       "+vinden",
@@ -15534,7 +15534,7 @@
       "iets ontdekken",
       "een nieuwe plek ontdekken"
     ],
-    "memorizationStrength": 4,
+    "memorizationStrength": -3.5,
     "lastReviewed": "2025-12-15T22:42:16.478Z"
   },
   {
@@ -15548,7 +15548,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T22:54:16.944Z",
-    "modifiedAt": "2025-12-15T22:43:48.333Z",
+    "modifiedAt": "2025-12-30T20:10:49.498Z",
     "related": [
       "+overnachting",
       "+logies",
@@ -15559,7 +15559,7 @@
       "een overnachting boeken",
       "een overnachting regelen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:48.333Z"
   },
   {
@@ -15575,7 +15575,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:54:53.574Z",
-    "modifiedAt": "2025-12-15T22:43:49.901Z",
+    "modifiedAt": "2025-12-30T20:10:49.500Z",
     "related": [
       "+piramide",
       "+grafgebouw"
@@ -15585,7 +15585,7 @@
       "de piramide van gizeh",
       "een piramide bouwen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:49.901Z"
   },
   {
@@ -15601,7 +15601,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:57:18.544Z",
-    "modifiedAt": "2025-12-15T22:43:52.533Z",
+    "modifiedAt": "2025-12-30T20:10:49.502Z",
     "related": [
       "+rots",
       "+steen",
@@ -15613,7 +15613,7 @@
       "op een rots klimmen",
       "een rots beklimmen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:52.533Z"
   },
   {
@@ -15629,7 +15629,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:57:55.733Z",
-    "modifiedAt": "2025-12-15T22:43:58.501Z",
+    "modifiedAt": "2025-12-30T20:10:49.503Z",
     "related": [
       "+schip",
       "+boot",
@@ -15640,7 +15640,7 @@
       "een schip bouwen",
       "met een schip varen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:58.501Z"
   },
   {
@@ -15656,7 +15656,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:58:37.067Z",
-    "modifiedAt": "2025-12-15T22:43:59.901Z",
+    "modifiedAt": "2025-12-30T20:10:49.506Z",
     "related": [
       "+schitterend",
       "+prachtig",
@@ -15667,7 +15667,7 @@
       "schitterend weer",
       "een schitterend uitzicht"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:43:59.901Z"
   },
   {
@@ -15683,7 +15683,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:59:11.282Z",
-    "modifiedAt": "2025-12-15T22:44:03.045Z",
+    "modifiedAt": "2025-12-30T20:10:49.508Z",
     "related": [
       "+toerist",
       "-inwoner"
@@ -15693,7 +15693,7 @@
       "een toerist bezoeken",
       "de toeristengids"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:03.045Z"
   },
   {
@@ -15709,7 +15709,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T22:59:48.105Z",
-    "modifiedAt": "2025-12-15T22:44:04.205Z",
+    "modifiedAt": "2025-12-30T20:10:49.509Z",
     "related": [
       "+toeristisch",
       "-onbekend",
@@ -15720,7 +15720,7 @@
       "toeristische attractie",
       "toeristische route"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:04.205Z"
   },
   {
@@ -15730,7 +15730,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:00:34.176Z",
-    "modifiedAt": "2025-12-15T22:44:06.093Z",
+    "modifiedAt": "2025-12-30T20:10:49.512Z",
     "related": [
       "+vanuit",
       "-ernaast"
@@ -15740,7 +15740,7 @@
       "vanuit huis",
       "vanuit het vliegtuig"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:06.093Z"
   },
   {
@@ -15757,7 +15757,7 @@
     ],
     "irregular": true,
     "addedAt": "2025-12-11T23:01:29.845Z",
-    "modifiedAt": "2025-12-15T22:44:09.869Z",
+    "modifiedAt": "2025-12-30T20:10:49.514Z",
     "related": [
       "+verblijven",
       "+logeren",
@@ -15768,7 +15768,7 @@
       "in een hotel verblijven",
       "tijdelijk verblijven"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:09.869Z"
   },
   {
@@ -15786,7 +15786,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:02:18.835Z",
-    "modifiedAt": "2025-12-15T22:44:12.270Z",
+    "modifiedAt": "2025-12-30T20:10:49.516Z",
     "related": [
       "+vormen",
       "+creëren",
@@ -15797,7 +15797,7 @@
       "een groep vormen",
       "vormen van kunst"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:12.270Z"
   },
   {
@@ -15813,7 +15813,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:03:28.210Z",
-    "modifiedAt": "2025-12-15T22:44:16.636Z",
+    "modifiedAt": "2025-12-30T20:10:49.518Z",
     "related": [
       "+waddeneiland",
       "+eilanden"
@@ -15823,7 +15823,7 @@
       "een waddeneiland bezoeken",
       "vakantie op een waddeneiland"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:16.636Z"
   },
   {
@@ -15841,7 +15841,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:04:03.519Z",
-    "modifiedAt": "2025-12-15T22:42:18.488Z",
+    "modifiedAt": "2025-12-30T20:10:49.520Z",
     "related": [
       "+zeilen",
       "+varen",
@@ -15852,7 +15852,7 @@
       "op het water zeilen",
       "zeilwedstrijd"
     ],
-    "memorizationStrength": 4,
+    "memorizationStrength": -3.5,
     "lastReviewed": "2025-12-15T22:42:18.488Z"
   },
   {
@@ -15873,7 +15873,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:05:39.180Z",
-    "modifiedAt": "2025-12-15T22:44:18.404Z",
+    "modifiedAt": "2025-12-30T20:10:49.522Z",
     "related": [
       "+inschrijven",
       "+registreren",
@@ -15884,7 +15884,7 @@
       "zich aanmelden voor iets",
       "aanmelden bij de school"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:18.404Z"
   },
   {
@@ -15901,7 +15901,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:07:17.345Z",
-    "modifiedAt": "2025-12-15T22:44:22.524Z",
+    "modifiedAt": "2025-12-30T20:10:49.524Z",
     "related": [
       "+belasten",
       "+heffen",
@@ -15912,7 +15912,7 @@
       "belasting heffen",
       "zwaar belasten"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:22.524Z"
   },
   {
@@ -15928,7 +15928,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:07:46.470Z",
-    "modifiedAt": "2025-12-15T22:44:25.700Z",
+    "modifiedAt": "2025-12-30T20:10:49.526Z",
     "related": [
       "+bikini",
       "+badkleding"
@@ -15938,7 +15938,7 @@
       "een bikini dragen",
       "kopen van een bikini"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:25.700Z"
   },
   {
@@ -15956,7 +15956,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:08:52.053Z",
-    "modifiedAt": "2025-12-15T22:44:26.988Z",
+    "modifiedAt": "2025-12-30T20:10:49.528Z",
     "related": [
       "+boksen",
       "+vechten",
@@ -15967,7 +15967,7 @@
       "boksen in de ring",
       "bokstraining"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:26.988Z"
   },
   {
@@ -15981,7 +15981,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T23:09:36.028Z",
-    "modifiedAt": "2025-12-15T22:44:28.252Z",
+    "modifiedAt": "2025-12-30T20:10:49.530Z",
     "related": [
       "+creativiteit",
       "+vindingrijkheid",
@@ -15992,7 +15992,7 @@
       "creativiteit tonen",
       "creativiteit stimuleren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:28.252Z"
   },
   {
@@ -16010,7 +16010,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:10:19.786Z",
-    "modifiedAt": "2025-12-15T22:44:29.588Z",
+    "modifiedAt": "2025-12-30T20:10:49.532Z",
     "related": [
       "+fotograferen",
       "+afbeelden",
@@ -16021,7 +16021,7 @@
       "foto's fotograferen",
       "fotograferen voor werk"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:29.588Z"
   },
   {
@@ -16037,7 +16037,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:10:59.297Z",
-    "modifiedAt": "2025-12-15T22:44:30.916Z",
+    "modifiedAt": "2025-12-30T20:10:49.534Z",
     "related": [
       "+fotografie",
       "+beeldkunst"
@@ -16047,7 +16047,7 @@
       "moderne fotografie",
       "zwarte-wit fotografie"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:30.916Z"
   },
   {
@@ -16063,7 +16063,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:12:27.406Z",
-    "modifiedAt": "2025-12-15T22:44:35.372Z",
+    "modifiedAt": "2025-12-30T20:10:49.536Z",
     "related": [
       "+handdoek",
       "+doek",
@@ -16074,7 +16074,7 @@
       "een handdoek gebruiken",
       "de handdoek drogen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:35.372Z"
   },
   {
@@ -16090,7 +16090,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:13:19.948Z",
-    "modifiedAt": "2025-12-15T22:44:37.283Z",
+    "modifiedAt": "2025-12-30T20:10:49.538Z",
     "related": [
       "+lidmaatschap",
       "+inschrijving",
@@ -16101,7 +16101,7 @@
       "lidmaatschap aanvragen",
       "lidmaatschap beëindigen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:37.283Z"
   },
   {
@@ -16115,7 +16115,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T23:14:25.233Z",
-    "modifiedAt": "2025-12-15T22:44:38.972Z",
+    "modifiedAt": "2025-12-30T20:10:49.539Z",
     "related": [
       "+onzin",
       "+quatsch",
@@ -16126,7 +16126,7 @@
       "onzin praten",
       "totale onzin"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:38.972Z"
   },
   {
@@ -16144,7 +16144,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:15:11.920Z",
-    "modifiedAt": "2025-12-15T22:44:41.835Z",
+    "modifiedAt": "2025-12-30T20:10:49.542Z",
     "related": [
       "+trainen",
       "+oefenen",
@@ -16155,7 +16155,7 @@
       "trainen voor een wedstrijd",
       "trainen in de sportschool"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:41.835Z"
   },
   {
@@ -16171,7 +16171,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:16:04.518Z",
-    "modifiedAt": "2025-12-15T22:44:44.755Z",
+    "modifiedAt": "2025-12-30T20:10:49.544Z",
     "related": [
       "+vorm",
       "+figuur",
@@ -16182,7 +16182,7 @@
       "in vorm zijn",
       "een vorm maken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:44.755Z"
   },
   {
@@ -16198,7 +16198,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:16:44.061Z",
-    "modifiedAt": "2025-12-15T22:44:48.444Z",
+    "modifiedAt": "2025-12-30T20:10:49.546Z",
     "related": [
       "+zwaan",
       "+waterfugel",
@@ -16209,7 +16209,7 @@
       "een zwaan zien",
       "de witte zwaan"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:48.444Z"
   },
   {
@@ -16225,7 +16225,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:18:12.698Z",
-    "modifiedAt": "2025-12-15T22:44:50.308Z",
+    "modifiedAt": "2025-12-30T20:10:49.548Z",
     "related": [
       "+verbeteren",
       "+optimaliseren",
@@ -16236,7 +16236,7 @@
       "iets verbeteren",
       "prestaties verbeteren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:50.307Z"
   },
   {
@@ -16252,7 +16252,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:19:01.928Z",
-    "modifiedAt": "2025-12-15T22:44:52.139Z",
+    "modifiedAt": "2025-12-30T20:10:49.549Z",
     "related": [
       "+zwembad",
       "+bassin",
@@ -16263,7 +16263,7 @@
       "naar het zwembad gaan",
       "zwembad schoonmaken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:52.139Z"
   },
   {
@@ -16279,7 +16279,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:19:35.326Z",
-    "modifiedAt": "2025-12-15T22:44:53.700Z",
+    "modifiedAt": "2025-12-30T20:10:49.551Z",
     "related": [
       "+zwembroek",
       "+badbroek",
@@ -16290,7 +16290,7 @@
       "een zwembroek dragen",
       "zwembroek kopen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:53.699Z"
   },
   {
@@ -16306,7 +16306,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:20:33.628Z",
-    "modifiedAt": "2025-12-15T22:44:55.564Z",
+    "modifiedAt": "2025-12-30T20:10:49.553Z",
     "related": [
       "+zwempak",
       "+badpak"
@@ -16316,7 +16316,7 @@
       "een zwempak dragen",
       "zwempak passen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:55.563Z"
   },
   {
@@ -16332,7 +16332,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:21:47.834Z",
-    "modifiedAt": "2025-12-15T22:44:57.651Z",
+    "modifiedAt": "2025-12-30T20:10:49.555Z",
     "related": [
       "+zwemslag",
       "+slag",
@@ -16343,7 +16343,7 @@
       "een zwemslag doen",
       "verschillende zwemslagen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:57.651Z"
   },
   {
@@ -16359,7 +16359,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:23:42.057Z",
-    "modifiedAt": "2025-12-15T22:44:59.323Z",
+    "modifiedAt": "2025-12-30T20:10:49.557Z",
     "related": [
       "+aanbod",
       "+voorraad",
@@ -16370,7 +16370,7 @@
       "aanbod doen",
       "het aanbod bekijken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:44:59.323Z"
   },
   {
@@ -16386,7 +16386,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:24:29.144Z",
-    "modifiedAt": "2025-12-15T22:45:00.451Z",
+    "modifiedAt": "2025-12-30T20:10:49.559Z",
     "related": [
       "+bladzijde",
       "+pagina",
@@ -16397,7 +16397,7 @@
       "een bladzijde omslaan",
       "op bladzijde kijken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:00.451Z"
   },
   {
@@ -16413,7 +16413,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:25:05.423Z",
-    "modifiedAt": "2025-12-15T22:45:01.530Z",
+    "modifiedAt": "2025-12-30T20:10:49.561Z",
     "related": [
       "+financieel",
       "+monetair",
@@ -16424,7 +16424,7 @@
       "financieel plan",
       "financieel probleem"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:01.530Z"
   },
   {
@@ -16440,7 +16440,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:25:43.613Z",
-    "modifiedAt": "2025-12-15T22:45:02.859Z",
+    "modifiedAt": "2025-12-30T20:10:49.563Z",
     "related": [
       "+geloof",
       "+religie",
@@ -16451,7 +16451,7 @@
       "in geloof geloven",
       "het geloof beoefenen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:02.859Z"
   },
   {
@@ -16468,7 +16468,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:26:21.118Z",
-    "modifiedAt": "2025-12-15T22:45:06.275Z",
+    "modifiedAt": "2025-12-30T20:10:49.565Z",
     "related": [
       "+indeling",
       "+layout",
@@ -16479,7 +16479,7 @@
       "indeling maken",
       "indeling wijzigen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:06.275Z"
   },
   {
@@ -16495,7 +16495,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:27:25.746Z",
-    "modifiedAt": "2025-12-15T22:45:08.523Z",
+    "modifiedAt": "2025-12-30T20:10:49.567Z",
     "related": [
       "+mogelijkheid",
       "+optie",
@@ -16506,7 +16506,7 @@
       "een mogelijkheid hebben",
       "mogelijkheden onderzoeken"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:08.523Z"
   },
   {
@@ -16526,7 +16526,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:28:28.551Z",
-    "modifiedAt": "2025-12-15T22:45:10.203Z",
+    "modifiedAt": "2025-12-30T20:10:49.568Z",
     "related": [
       "+presenteren",
       "+tonen",
@@ -16537,7 +16537,7 @@
       "zich presenteren aan een publiek",
       "zich professioneel presenteren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:10.203Z"
   },
   {
@@ -16553,7 +16553,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:29:04.833Z",
-    "modifiedAt": "2025-12-15T22:45:11.587Z",
+    "modifiedAt": "2025-12-30T20:10:49.571Z",
     "related": [
       "+schaars",
       "+weinig",
@@ -16564,7 +16564,7 @@
       "schaars voedsel",
       "schaars aanwezig"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:11.587Z"
   },
   {
@@ -16577,7 +16577,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:29:35.149Z",
-    "modifiedAt": "2025-12-15T22:45:12.706Z",
+    "modifiedAt": "2025-12-30T20:10:49.572Z",
     "related": [
       "+stress",
       "+spanning",
@@ -16588,7 +16588,7 @@
       "stress ervaren",
       "stress verminderen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:12.706Z"
   },
   {
@@ -16604,7 +16604,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:30:18.348Z",
-    "modifiedAt": "2025-12-15T22:45:13.995Z",
+    "modifiedAt": "2025-12-30T20:10:49.574Z",
     "related": [
       "+uitspraak",
       "+articulatie",
@@ -16615,7 +16615,7 @@
       "correcte uitspraak",
       "uitspraak oefenen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:13.995Z"
   },
   {
@@ -16629,7 +16629,7 @@
     "forms": [],
     "irregular": false,
     "addedAt": "2025-12-11T23:31:33.504Z",
-    "modifiedAt": "2025-12-15T22:45:16.019Z",
+    "modifiedAt": "2025-12-30T20:10:49.576Z",
     "related": [
       "+voldoening",
       "+bevrediging",
@@ -16640,7 +16640,7 @@
       "voldoening ervaren",
       "voldoening krijgen"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:16.019Z"
   },
   {
@@ -16656,7 +16656,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:32:39.031Z",
-    "modifiedAt": "2025-12-15T22:45:17.507Z",
+    "modifiedAt": "2025-12-30T20:10:49.578Z",
     "related": [
       "+concluderend",
       "+samenvattend",
@@ -16667,7 +16667,7 @@
       "concluderend statement",
       "concluderend overzicht"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:17.507Z"
   },
   {
@@ -16683,7 +16683,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:33:26.829Z",
-    "modifiedAt": "2025-12-15T22:45:19.219Z",
+    "modifiedAt": "2025-12-30T20:10:49.580Z",
     "related": [
       "+maatschappelijk",
       "+sociaal",
@@ -16694,7 +16694,7 @@
       "maatschappelijk betrokken",
       "maatschappelijk probleem"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:19.218Z"
   },
   {
@@ -16710,7 +16710,7 @@
     ],
     "irregular": false,
     "addedAt": "2025-12-11T23:33:58.220Z",
-    "modifiedAt": "2025-12-15T22:45:21.091Z",
+    "modifiedAt": "2025-12-30T20:10:49.582Z",
     "related": [
       "+passief",
       "+inactief",
@@ -16721,7 +16721,7 @@
       "passief gedrag",
       "passief luisteren"
     ],
-    "memorizationStrength": 6,
+    "memorizationStrength": -1.5,
     "lastReviewed": "2025-12-15T22:45:21.091Z"
   }
 ]
