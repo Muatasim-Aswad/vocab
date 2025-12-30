@@ -1,4 +1,5 @@
 import { IDataStore } from "./dataStore.mjs";
+import { DEFAULT_DIFFICULTY, DEFAULT_STRENGTH } from "./memory/memory.mjs";
 import { wordTypes } from "./nl/utils/deduceDutchWordInfo.mjs";
 
 export interface Vocab {
@@ -16,15 +17,22 @@ export interface Vocab {
   modifiedAt: string;
 
   // Memory model fields
-  memoryStrength?: number; // strength in days
-  memoryDifficulty?: number; // 1-10
-  memoryStreak?: number; // consecutive correct recalls
-  memoryLastReviewed?: string; // ISO date string
+  memoryStrength: number; // strength in days
+  memoryDifficulty: number; // 1-10
+  memoryStreak: number; // consecutive correct recalls
+  memoryLastReviewed: string; // ISO date string
 }
 
 export type CreateVocab = Pick<
   Vocab,
-  "word" | "related" | "example" | "phrases" | "form" | "types" | "forms" | "irregular"
+  | "word"
+  | "related"
+  | "example"
+  | "phrases"
+  | "form"
+  | "types"
+  | "forms"
+  | "irregular"
 >;
 
 export type UpdateVocab = Partial<CreateVocab> & {
@@ -110,7 +118,8 @@ export class VocabRepository {
   }
 
   create(data: CreateVocab): Result {
-    const { word, related, example, phrases, forms, irregular, form, types } = data;
+    const { word, related, example, phrases, forms, irregular, form, types } =
+      data;
     const processedWord = word.trim().toLowerCase();
 
     // Check if word already exists
@@ -119,14 +128,19 @@ export class VocabRepository {
       return { success: false, found: true, entry: exists };
     }
 
+    const now = new Date().toISOString();
     const entry: Vocab = {
       word: processedWord,
       form: form,
       types: types,
       forms,
       irregular: irregular ?? false,
-      addedAt: new Date().toISOString(),
-      modifiedAt: new Date().toISOString(),
+      addedAt: now,
+      modifiedAt: now,
+      memoryLastReviewed: now,
+      memoryStrength: DEFAULT_STRENGTH,
+      memoryDifficulty: DEFAULT_DIFFICULTY,
+      memoryStreak: 0,
       ...(related && related.length > 0 ? { related } : {}),
       ...(example ? { example: this.processExample(example) } : {}),
       ...(phrases && phrases.length > 0 ? { phrases } : {}),
@@ -226,9 +240,11 @@ export class VocabRepository {
 
     // Handle memory model fields
     if (memoryStrength !== undefined) entry.memoryStrength = memoryStrength;
-    if (memoryDifficulty !== undefined) entry.memoryDifficulty = memoryDifficulty;
+    if (memoryDifficulty !== undefined)
+      entry.memoryDifficulty = memoryDifficulty;
     if (memoryStreak !== undefined) entry.memoryStreak = memoryStreak;
-    if (memoryLastReviewed !== undefined) entry.memoryLastReviewed = memoryLastReviewed;
+    if (memoryLastReviewed !== undefined)
+      entry.memoryLastReviewed = memoryLastReviewed;
 
     entry.modifiedAt = new Date().toISOString();
 
@@ -239,7 +255,9 @@ export class VocabRepository {
 
   delete(word: string): Result {
     const normalizedWord = word.toLowerCase();
-    const index = this.cache.findIndex((entry) => entry.word === normalizedWord);
+    const index = this.cache.findIndex(
+      (entry) => entry.word === normalizedWord,
+    );
 
     if (index === -1) {
       return { success: false, found: false };
@@ -290,7 +308,9 @@ export class VocabRepository {
 
       // Compare based on type
       if (typeof aVal === "string" && typeof bVal === "string") {
-        return order === "asc" ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        return order === "asc"
+          ? aVal.localeCompare(bVal)
+          : bVal.localeCompare(aVal);
       }
 
       return 0;
@@ -361,7 +381,9 @@ export class VocabRepository {
     endIndex: number;
   } {
     const total = this.cache.length;
-    console.log(`Requested pagination with options: ${JSON.stringify(options)}`);
+    console.log(
+      `Requested pagination with options: ${JSON.stringify(options)}`,
+    );
 
     // If no options provided, return all
     if (!options || (!options.cursor && !options.limit)) {
