@@ -4,10 +4,9 @@ import {
   AnswerScore,
   DEFAULT_DIFFICULTY,
   DEFAULT_STRENGTH,
-  MS_IN_DAY,
-  getForgetProbability,
   getNewStateWithDefaults,
 } from "../data/memory/memory.mjs";
+import { sortByPriority } from "../data/memory/memory.priority.mjs";
 
 enum RecallScore {
   DONT_KNOW = 0,
@@ -25,39 +24,6 @@ export interface StudyStats {
 
 interface WordWithPriority extends Vocab {
   priority: number;
-}
-
-/**
- * Calculate priority for each word based on current forget probability.
- * Higher values mean higher priority.
- */
-function calculatePriority(word: Vocab): number {
-  const lastReviewedMs = word.memoryLastReviewed
-    ? new Date(word.memoryLastReviewed).getTime()
-    : null;
-
-  if (!lastReviewedMs) return 2;
-
-  const msSinceLastReview = Math.max(0, Date.now() - lastReviewedMs);
-  const daysSinceLastReview = msSinceLastReview / MS_IN_DAY;
-
-  return getForgetProbability({
-    strength: word.memoryStrength ?? DEFAULT_STRENGTH,
-    difficulty: word.memoryDifficulty ?? DEFAULT_DIFFICULTY,
-    daysSinceLastReview,
-  });
-}
-
-/**
- * Sort words by priority (descending - highest priority first)
- */
-function sortByPriority(words: Vocab[]): WordWithPriority[] {
-  const wordsWithPriority = words.map((word) => ({
-    ...word,
-    priority: calculatePriority(word),
-  }));
-
-  return wordsWithPriority.sort((a, b) => b.priority - a.priority);
 }
 
 /**
@@ -178,8 +144,8 @@ async function reviewWord(
           clueLevel === 0
             ? AnswerScore.KNOW
             : clueLevel === 1
-              ? AnswerScore.CLUE
-              : AnswerScore.CLUES,
+            ? AnswerScore.CLUE
+            : AnswerScore.CLUES,
         answerTime: Date.now() - startedAt,
       };
     } else if (choice === "d") {

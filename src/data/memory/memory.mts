@@ -472,7 +472,7 @@ export function boundedAsymmetricTanh(
   return boundedRescaleTanh(x, k, a, b);
 }
 
-// ! Unused models below - keep for reference
+// ! Others, some are experimental
 // * --------------------------------------------------------------------------------
 /**
  * Log-overdue signal (unsaturated, slow growth)
