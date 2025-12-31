@@ -5,8 +5,10 @@ import {
   DEFAULT_DIFFICULTY,
   DEFAULT_STRENGTH,
   getNewStateWithDefaults,
+  type MemoryInternals,
 } from "../data/memory/memory.mjs";
-import { sortByPriority } from "../data/memory/memory.priority.mjs";
+import { sortByPriority } from "../data/memory/priority.mjs";
+import { createStudySessionLogger } from "../data/memory/logger.mjs";
 
 export interface StudyStats {
   totalWords: number;
@@ -217,6 +219,11 @@ export async function startStudySession(
 
   // Select words based on range or max words (always study highest priority first)
   let sessionWords: WordWithPriority[];
+  const selection =
+    startIndex !== undefined
+      ? ({ type: "range", startIndex, endIndex } as const)
+      : ({ type: "top", maxWords } as const);
+
   if (startIndex !== undefined) {
     // Range is 1-based and refers to the repository order (array index + 1)
     const start = Math.max(0, startIndex - 1);
@@ -243,6 +250,14 @@ export async function startStudySession(
     sessionWords = sortedWords.slice(0, Math.min(maxWords, sortedWords.length));
   }
 
+  const sessionLogger = createStudySessionLogger({
+    selection,
+    startedAtMs: Date.now(),
+  });
+  sessionLogger.recordSortResult(
+    sessionWords.map((w) => ({ word: w.word, priority: w.priority })),
+  );
+
   const stats: StudyStats = {
     totalWords: sessionWords.length,
     wordsReviewed: 0,
@@ -256,6 +271,11 @@ export async function startStudySession(
   view(s.aH("\n🎓 Starting Study Session"));
   view(`You will review ${sessionWords.length} words.\n`);
   await ask("Press Enter to begin...");
+
+  let outcome:
+    | { status: "completed" }
+    | { status: "quit" }
+    | { status: "error"; message: string } = { status: "completed" };
 
   try {
     for (let i = 0; i < sessionWords.length; i++) {
@@ -277,9 +297,11 @@ export async function startStudySession(
 
       // Update word in repository
       const now = Date.now();
+      const nowIso = new Date(now).toISOString();
       const lastReviewedMs = new Date(word.memoryLastReviewed).getTime();
       const msSinceLastReview = Math.max(0, now - lastReviewedMs);
 
+      let memoryInternals: MemoryInternals | undefined;
       const { newStrength, newDifficulty, newStreak } = getNewStateWithDefaults(
         {
           answerScore,
@@ -290,13 +312,23 @@ export async function startStudySession(
           difficulty: word.memoryDifficulty ?? 0,
           streak: word.memoryStreak ?? 0,
         },
+        (internals) => {
+          memoryInternals = internals;
+        },
       );
 
       repo.update(word.word, {
         memoryStrength: newStrength,
         memoryDifficulty: newDifficulty,
         memoryStreak: newStreak,
-        memoryLastReviewed: new Date(now).toISOString(),
+        memoryLastReviewed: nowIso,
+      });
+
+      sessionLogger.recordReview({
+        word: word.word,
+        priority: word.priority,
+        reviewedAt: nowIso,
+        internals: memoryInternals,
       });
     }
 
@@ -305,14 +337,21 @@ export async function startStudySession(
     displayStats(stats);
   } catch (error) {
     if (error instanceof Error && error.message === "QUIT_SESSION") {
+      outcome = { status: "quit" };
       console.clear();
       view(s.w("\nStudy session ended early."));
       if (stats.wordsReviewed > 0) {
         displayStats(stats);
       }
     } else {
+      outcome = {
+        status: "error",
+        message: error instanceof Error ? error.message : String(error),
+      };
       throw error;
     }
+  } finally {
+    await sessionLogger.finalize({ stats, outcome });
   }
 }
 
