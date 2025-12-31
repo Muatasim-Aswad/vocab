@@ -8,18 +8,14 @@ import {
 } from "../data/memory/memory.mjs";
 import { sortByPriority } from "../data/memory/memory.priority.mjs";
 
-enum RecallScore {
-  DONT_KNOW = 0,
-  CLUE_USED = 1,
-  KNOW = 2,
-}
-
 export interface StudyStats {
   totalWords: number;
   wordsReviewed: number;
+  veryKnowCount: number;
   knowCount: number;
-  dontKnowCount: number;
   clueCount: number;
+  cluesCount: number;
+  noCount: number;
 }
 
 interface WordWithPriority extends Vocab {
@@ -53,15 +49,15 @@ function displayWordForStudy(word: Vocab, index: number, total: number): void {
     view(s.e("(irregular)"));
   }
 
-  const strengthDays = word.memoryStrength ?? DEFAULT_STRENGTH;
-  const difficulty = word.memoryDifficulty ?? DEFAULT_DIFFICULTY;
-  const streak = word.memoryStreak ?? 0;
-  const lastReviewed = word.memoryLastReviewed ?? "(never)";
+  // const strengthDays = word.memoryStrength;
+  // const difficulty = word.memoryDifficulty;
+  // const streak = word.memoryStreak;
+  // const lastReviewed = word.memoryLastReviewed;
 
-  view(`\nStrength: ${strengthDays.toFixed(2)} day(s)`);
-  view(`Difficulty: ${difficulty.toFixed(2)} (1-10)`);
-  view(`Streak: ${streak}`);
-  view(`Last reviewed: ${lastReviewed}`);
+  // view(`\nStrength: ${strengthDays.toFixed(2)} day(s)`);
+  // view(`Difficulty: ${difficulty.toFixed(2)} (1-10)`);
+  // view(`Streak: ${streak}`);
+  // view(`Last reviewed: ${lastReviewed}`);
 }
 
 /**
@@ -107,7 +103,6 @@ async function reviewWord(
   index: number,
   total: number,
 ): Promise<{
-  recallScore: RecallScore;
   answerScore: AnswerScore;
   answerTime: number;
 }> {
@@ -127,19 +122,29 @@ async function reviewWord(
     }
 
     view(`\n${s.aH("Options:")}`);
-    view("  k - I know it");
-    view("  d - I don't know it");
+    view("  o - Oh yaa! Perfectly");
+    view("  k - I Know it");
+    view("  n - No! I don't know it");
     if (clueLevel < 2) {
-      view("  c - Give me a clue");
+      view("  h - Hmm! Give me a clue");
     }
     view("  q - Quit study session");
 
     const response = await ask("\nYour choice: ");
     const choice = response.trim().toLowerCase();
 
-    if (choice === "k") {
+    if (choice === "o") {
+      if (clueLevel > 0) {
+        view(s.w("\nYou already used a clue for this word."));
+        await ask("Press Enter to continue...");
+        continue;
+      }
       return {
-        recallScore: clueLevel > 0 ? RecallScore.CLUE_USED : RecallScore.KNOW,
+        answerScore: AnswerScore.VERY_KNOW,
+        answerTime: Date.now() - startedAt,
+      };
+    } else if (choice === "k") {
+      return {
         answerScore:
           clueLevel === 0
             ? AnswerScore.KNOW
@@ -148,7 +153,7 @@ async function reviewWord(
             : AnswerScore.CLUES,
         answerTime: Date.now() - startedAt,
       };
-    } else if (choice === "d") {
+    } else if (choice === "n") {
       // Show all info before moving on
       console.clear();
       displayWordForStudy(word, index, total);
@@ -157,11 +162,10 @@ async function reviewWord(
       view(`\n${s.e("Study this word carefully!")}`);
       await ask("\nPress Enter to continue...");
       return {
-        recallScore: RecallScore.DONT_KNOW,
         answerScore: AnswerScore.NO,
         answerTime: Date.now() - startedAt,
       };
-    } else if (choice === "c" && clueLevel < 2) {
+    } else if (choice === "h" && clueLevel < 2) {
       clueLevel++;
     } else if (choice === "q") {
       throw new Error("QUIT_SESSION");
@@ -178,12 +182,19 @@ function displayStats(stats: StudyStats): void {
   view("=".repeat(60));
   view(`Total words in session: ${stats.totalWords}`);
   view(`Words reviewed: ${stats.wordsReviewed}`);
-  view(`Known immediately: ${s.aH(stats.knowCount.toString())}`);
-  view(`Needed clues: ${s.w(stats.clueCount.toString())}`);
-  view(`Didn't know: ${s.e(stats.dontKnowCount.toString())}`);
+  view(`Perfect recall: ${s.aH(stats.veryKnowCount.toString())}`);
+  view(`Knew it: ${s.aH(stats.knowCount.toString())}`);
+  view(`With 1 clue: ${s.w(stats.clueCount.toString())}`);
+  view(`With 2 clues: ${s.w(stats.cluesCount.toString())}`);
+  view(`Didn't know: ${s.e(stats.noCount.toString())}`);
 
   if (stats.wordsReviewed > 0) {
-    const accuracy = Math.round((stats.knowCount / stats.wordsReviewed) * 100);
+    const correctCount =
+      stats.veryKnowCount +
+      stats.knowCount +
+      stats.clueCount +
+      stats.cluesCount;
+    const accuracy = Math.round((correctCount / stats.wordsReviewed) * 100);
     view(`Accuracy: ${accuracy}%`);
   }
 }
@@ -204,34 +215,42 @@ export async function startStudySession(
     return;
   }
 
-  // Sort by priority
-  const sortedWords = sortByPriority(allWords);
-
-  // Select words based on range or max words
+  // Select words based on range or max words (always study highest priority first)
   let sessionWords: WordWithPriority[];
   if (startIndex !== undefined) {
-    const start = Math.max(0, startIndex - 1); // Convert to 0-based index
-    const end = endIndex !== undefined ? endIndex : sortedWords.length; // Default to last word
-    sessionWords = sortedWords.slice(start, end);
+    // Range is 1-based and refers to the repository order (array index + 1)
+    const start = Math.max(0, startIndex - 1);
+    const endExclusive =
+      endIndex !== undefined
+        ? Math.min(allWords.length, endIndex)
+        : allWords.length;
+
+    const rangeWords = allWords.slice(start, endExclusive);
+    sessionWords = sortByPriority(rangeWords);
 
     if (sessionWords.length === 0) {
       view(
         s.e(
-          `Invalid range: words ${startIndex} to ${end}. Total words available: ${sortedWords.length}`,
+          `Invalid range: words ${startIndex} to ${
+            endIndex ?? allWords.length
+          }. Total words available: ${allWords.length}`,
         ),
       );
       return;
     }
   } else {
+    const sortedWords = sortByPriority(allWords);
     sessionWords = sortedWords.slice(0, Math.min(maxWords, sortedWords.length));
   }
 
   const stats: StudyStats = {
     totalWords: sessionWords.length,
     wordsReviewed: 0,
+    veryKnowCount: 0,
     knowCount: 0,
-    dontKnowCount: 0,
     clueCount: 0,
+    cluesCount: 0,
+    noCount: 0,
   };
 
   view(s.aH("\n🎓 Starting Study Session"));
@@ -242,7 +261,7 @@ export async function startStudySession(
     for (let i = 0; i < sessionWords.length; i++) {
       const word = sessionWords[i];
 
-      const { recallScore, answerScore, answerTime } = await reviewWord(
+      const { answerScore, answerTime } = await reviewWord(
         word,
         i,
         sessionWords.length,
@@ -250,22 +269,16 @@ export async function startStudySession(
 
       // Update statistics
       stats.wordsReviewed++;
-      if (recallScore === RecallScore.KNOW) {
-        stats.knowCount++;
-      } else if (recallScore === RecallScore.CLUE_USED) {
-        stats.clueCount++;
-      } else {
-        stats.dontKnowCount++;
-      }
+      if (answerScore === AnswerScore.VERY_KNOW) stats.veryKnowCount++;
+      else if (answerScore === AnswerScore.KNOW) stats.knowCount++;
+      else if (answerScore === AnswerScore.CLUE) stats.clueCount++;
+      else if (answerScore === AnswerScore.CLUES) stats.cluesCount++;
+      else if (answerScore === AnswerScore.NO) stats.noCount++;
 
       // Update word in repository
       const now = Date.now();
-      const lastReviewedMs = word.memoryLastReviewed
-        ? new Date(word.memoryLastReviewed).getTime()
-        : null;
-      const msSinceLastReview = lastReviewedMs
-        ? Math.max(0, now - lastReviewedMs)
-        : 0;
+      const lastReviewedMs = new Date(word.memoryLastReviewed).getTime();
+      const msSinceLastReview = Math.max(0, now - lastReviewedMs);
 
       const { newStrength, newDifficulty, newStreak } = getNewStateWithDefaults(
         {
@@ -311,8 +324,8 @@ export async function configureStudySession(
 ): Promise<void> {
   view(s.aH("\n📚 Study Session Configuration"));
 
-  const allWords = repo.count();
-  view(`Total words available: ${allWords}\n`);
+  const totalWords = repo.count();
+  view(`Total words available: ${totalWords}\n`);
 
   view("Study by:");
   view("  1 - Number of words (from highest priority)");
@@ -326,15 +339,18 @@ export async function configureStudySession(
     const startStr = await ask("Start position (1-based, e.g., 5): ");
     const startIndex = parseInt(startStr.trim(), 10);
 
-    if (isNaN(startIndex) || startIndex <= 0) {
+    if (isNaN(startIndex) || startIndex <= 0 || startIndex > totalWords) {
       view(s.e("Invalid start position. Cancelled."));
       return;
     }
 
-    const endStr = await ask(`End position (default: ${allWords}): `);
+    const endStr = await ask(`End position (default: ${totalWords}): `);
     const endIndex = endStr.trim() ? parseInt(endStr.trim(), 10) : undefined;
 
-    if (endIndex !== undefined && (isNaN(endIndex) || endIndex < startIndex)) {
+    if (
+      endIndex !== undefined &&
+      (isNaN(endIndex) || endIndex < startIndex || endIndex > totalWords)
+    ) {
       view(s.e("Invalid end position. Cancelled."));
       return;
     }
