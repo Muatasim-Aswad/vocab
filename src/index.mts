@@ -11,6 +11,7 @@ import { handleSearch } from "./commands/searchCommand.mjs";
 import { handleDelete } from "./commands/deleteCommand.mjs";
 import { handleEditInput } from "./commands/editCommand.mjs";
 import { handleList } from "./commands/listCommand.mjs";
+import { handleQuitWithCommit } from "./commands/quitWithCommitCommand.mjs";
 import { configureStudySession } from "./modes/studyMode.mjs";
 
 // Get data file path from environment variable or use default
@@ -38,6 +39,9 @@ const commandRegistry = {
   quit: () => {
     console.clear();
     process.exit(0);
+  },
+  quitWithDbCommit: () => {
+    handleQuitWithCommit(dataFilePath);
   },
   // modes
   fast: () => {
@@ -72,6 +76,7 @@ const commandHandlers = {
   ...commandRegistry,
   // info & control
   q: commandRegistry.quit,
+  qw: commandRegistry.quitWithDbCommit,
   // modes
   n: commandRegistry.normal,
   f: commandRegistry.fast,
@@ -151,5 +156,6 @@ function displayHelp(currentMode: string): void {
   view(`${s.aH("help")} :Show this help`);
   view(`${s.aH("mode")} :Show current mode`);
   view(`${s.aH("q")} :Exit the application`);
+  view(`${s.aH("qw")} :Commit db changes and exit`);
   view(`\nCurrent mode: ${currentMode.toUpperCase()}`);
 }
