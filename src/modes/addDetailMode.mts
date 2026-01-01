@@ -1,7 +1,7 @@
 import { view, s } from "../ui/terminal.mjs";
 import { displayWord } from "../ui/wordViewer.mjs";
 import { VocabRepository } from "../data/repository.mjs";
-import { promptWordFields } from "../ui/wordPrompter.mjs";
+import { promptWordFields, PromptAbortedError } from "../ui/wordPrompter.mjs";
 
 // Handle detail input mode with all fields
 export async function handleDetailInput(word: string, repo: VocabRepository): Promise<boolean> {
@@ -24,22 +24,31 @@ export async function handleDetailInput(word: string, repo: VocabRepository): Pr
   view(`\nAdding word: "${word}" in DETAIL mode`);
 
   // Use unified prompter with all fields
-  const promptedData = await promptWordFields(
-    word,
-    {
-      include: {
-        example: true,
-        form: true,
-        types: true,
-        forms: true,
-        irregular: true,
-        related: true,
-        phrases: true,
+  let promptedData;
+  try {
+    promptedData = await promptWordFields(
+      word,
+      {
+        include: {
+          example: true,
+          form: true,
+          types: true,
+          forms: true,
+          irregular: true,
+          related: true,
+          phrases: true,
+        },
+        mode: "create",
       },
-      mode: "create",
-    },
-    (input, existing) => repo.processArrayInput(input, existing),
-  );
+      (input, existing) => repo.processArrayInput(input, existing),
+    );
+  } catch (error) {
+    if (error instanceof PromptAbortedError) {
+      view("Add cancelled.");
+      return false;
+    }
+    throw error;
+  }
 
   const entryData = {
     word,

@@ -1,7 +1,7 @@
 import { view, s } from "../ui/terminal.mjs";
 import { displayWord } from "../ui/wordViewer.mjs";
 import { VocabRepository } from "../data/repository.mjs";
-import { promptWordFields } from "../ui/wordPrompter.mjs";
+import { promptWordFields, PromptAbortedError } from "../ui/wordPrompter.mjs";
 
 // Handle normal input mode
 export async function handleNormalInput(word: string, repo: VocabRepository): Promise<boolean> {
@@ -24,18 +24,27 @@ export async function handleNormalInput(word: string, repo: VocabRepository): Pr
   view(`\nAdding word: "${word}"`);
 
   // Use unified prompter
-  const promptedData = await promptWordFields(
-    word,
-    {
-      include: {
-        example: true,
-        forms: true,
-        related: true,
+  let promptedData;
+  try {
+    promptedData = await promptWordFields(
+      word,
+      {
+        include: {
+          example: true,
+          forms: true,
+          related: true,
+        },
+        mode: "create",
       },
-      mode: "create",
-    },
-    (input, existing) => repo.processArrayInput(input, existing),
-  );
+      (input, existing) => repo.processArrayInput(input, existing),
+    );
+  } catch (error) {
+    if (error instanceof PromptAbortedError) {
+      view("Add cancelled.");
+      return false;
+    }
+    throw error;
+  }
 
   const entryData = {
     word,

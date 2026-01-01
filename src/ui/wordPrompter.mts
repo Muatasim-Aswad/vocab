@@ -13,6 +13,13 @@ import {
 } from "../data/nl/utils/deduceDutchWordInfo.mjs";
 import { Vocab } from "../data/repository.mjs";
 
+export class PromptAbortedError extends Error {
+  constructor() {
+    super("Prompt aborted by user");
+    this.name = "PromptAbortedError";
+  }
+}
+
 // Form shortcuts mapping
 const FORM_SHORTCUTS: Record<string, keyof typeof wordTypes> = {
   n: "noun",
@@ -112,6 +119,17 @@ function isClearCommand(input: string): boolean {
   return trimmed === "-" || trimmed.toLowerCase() === "clear";
 }
 
+function isQuitCommand(input: string): boolean {
+  const trimmed = input.trim().toLowerCase();
+  return trimmed === "q" || trimmed === "quit";
+}
+
+async function askOrAbort(question: string): Promise<string> {
+  const answer = await ask(question);
+  if (isQuitCommand(answer)) throw new PromptAbortedError();
+  return answer;
+}
+
 /**
  * Build a prompt string with optional current value highlighted
  */
@@ -127,7 +145,7 @@ async function promptStringField(
   currentValue?: string,
 ): Promise<string | undefined> {
   const prompt = buildPrompt(label, currentValue);
-  const input = await ask(prompt);
+  const input = await askOrAbort(prompt);
 
   if (isClearCommand(input)) {
     return "";
@@ -169,7 +187,7 @@ async function promptArrayField<T = string>(
     ? currentValue.map((v) => String(v)).join(", ")
     : "";
   const prompt = buildPrompt(label, currentDisplay);
-  const input = await ask(prompt);
+  const input = await askOrAbort(prompt);
 
   if (isClearCommand(input)) {
     return [];
@@ -187,6 +205,7 @@ function displayInstructions(word: string): void {
   view(s.a("\n📝 Input Instructions:"));
   view("  • Press Enter to skip or keep the current/default value");
   view("  • Type '-' or 'clear' to remove the current/default value");
+  view("  • Type 'q' or 'quit' at any prompt to cancel");
   view("  • For arrays: use comma-separated values, or prefix with 'add ' to append");
   view("  • Use [n/N] to explicitly negate boolean fields");
   view("");
@@ -427,7 +446,7 @@ export async function promptWordFields(
 
       const currentIrregular = existingEntry?.irregular ?? deducedIrregular ?? false;
       const currentValue = currentIrregular ? "y" : "n";
-      const irregularInput = await ask(`Irregular? (${s.alert(currentValue)}) [y/N]: `);
+      const irregularInput = await askOrAbort(`Irregular? (${s.alert(currentValue)}) [y/N]: `);
 
       if (irregularInput.trim()) {
         verifiedIrregular = irregularInput.toLowerCase() === "y";

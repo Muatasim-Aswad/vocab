@@ -1,7 +1,7 @@
 import { view, s } from "../ui/terminal.mjs";
 import { displayWord } from "../ui/wordViewer.mjs";
 import { VocabRepository } from "../data/repository.mjs";
-import { promptWordFields } from "../ui/wordPrompter.mjs";
+import { promptWordFields, PromptAbortedError } from "../ui/wordPrompter.mjs";
 
 // Handle edit mode
 export async function handleEditInput(
@@ -50,17 +50,26 @@ export async function handleEditInput(
 
   // Fast mode: only edit the word itself
   if (mode === "fast") {
-    const promptedData = await promptWordFields(
-      word,
-      {
-        include: {
-          phrases: true,
+    let promptedData;
+    try {
+      promptedData = await promptWordFields(
+        word,
+        {
+          include: {
+            phrases: true,
+          },
+          existingEntry: entry,
+          mode: "edit",
         },
-        existingEntry: entry,
-        mode: "edit",
-      },
-      (input, existing) => repo.processArrayInput(input, existing),
-    );
+        (input, existing) => repo.processArrayInput(input, existing),
+      );
+    } catch (error) {
+      if (error instanceof PromptAbortedError) {
+        view("Edit cancelled.");
+        return false;
+      }
+      throw error;
+    }
 
     // Only update if there are changes
     if (Object.keys(promptedData).length > 0) {
@@ -80,19 +89,28 @@ export async function handleEditInput(
 
   // Normal mode: edit word, related, and example
   else if (mode === "normal") {
-    const promptedData = await promptWordFields(
-      word,
-      {
-        include: {
-          word: true,
-          example: true,
-          related: true,
+    let promptedData;
+    try {
+      promptedData = await promptWordFields(
+        word,
+        {
+          include: {
+            word: true,
+            example: true,
+            related: true,
+          },
+          existingEntry: entry,
+          mode: "edit",
         },
-        existingEntry: entry,
-        mode: "edit",
-      },
-      (input, existing) => repo.processArrayInput(input, existing),
-    );
+        (input, existing) => repo.processArrayInput(input, existing),
+      );
+    } catch (error) {
+      if (error instanceof PromptAbortedError) {
+        view("Edit cancelled.");
+        return false;
+      }
+      throw error;
+    }
 
     // Only update if there are changes
     if (Object.keys(promptedData).length > 0) {
@@ -112,24 +130,33 @@ export async function handleEditInput(
 
   // Detail mode: edit all fields
   else {
-    const promptedData = await promptWordFields(
-      word,
-      {
-        include: {
-          word: true,
-          form: true,
-          types: true,
-          forms: true,
-          irregular: true,
-          related: true,
-          example: true,
-          phrases: true,
+    let promptedData;
+    try {
+      promptedData = await promptWordFields(
+        word,
+        {
+          include: {
+            word: true,
+            form: true,
+            types: true,
+            forms: true,
+            irregular: true,
+            related: true,
+            example: true,
+            phrases: true,
+          },
+          existingEntry: entry,
+          mode: "edit",
         },
-        existingEntry: entry,
-        mode: "edit",
-      },
-      (input, existing) => repo.processArrayInput(input, existing),
-    );
+        (input, existing) => repo.processArrayInput(input, existing),
+      );
+    } catch (error) {
+      if (error instanceof PromptAbortedError) {
+        view("Edit cancelled.");
+        return false;
+      }
+      throw error;
+    }
 
     console.clear();
     // Only update if there are changes
