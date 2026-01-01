@@ -1,16 +1,16 @@
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { view } from "../ui/terminal.mjs";
+import { ask, s, view } from "../ui/terminal.mjs";
 
 const MEMORY_LOGS_DIR_RELATIVE = "src/data/memory/logs";
 
-export function handleQuitWithCommit(dbFilePath: string): void {
-  commitDbAndLogsIfChanged(dbFilePath);
+export async function handleQuitWithCommit(dbFilePath: string): Promise<void> {
+  await commitDbAndLogsIfChanged(dbFilePath);
   process.exit(0);
 }
 
-function commitDbAndLogsIfChanged(dbFilePath: string): void {
+async function commitDbAndLogsIfChanged(dbFilePath: string): Promise<void> {
   const gitRoot = getGitRoot();
   if (!gitRoot) return;
 
@@ -31,6 +31,14 @@ function commitDbAndLogsIfChanged(dbFilePath: string): void {
   }
 
   if (!hasChanges(gitRoot, includedPathspecs)) return;
+
+  const confirmation = await ask(
+    s.alert("Commit and push db changes before quitting? (y/N): "),
+  );
+  if (confirmation.trim().toLowerCase() !== "y") {
+    view("Skipping auto-commit (user declined).");
+    return;
+  }
 
   const add = spawnSync("git", ["add", "--", ...includedPathspecs], {
     cwd: gitRoot,

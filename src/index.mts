@@ -40,8 +40,8 @@ const commandRegistry = {
     console.clear();
     process.exit(0);
   },
-  quitWithDbCommit: () => {
-    handleQuitWithCommit(dataFilePath);
+  quitWithDbCommit: async () => {
+    await handleQuitWithCommit(dataFilePath);
   },
   // modes
   fast: () => {
