@@ -6,11 +6,12 @@ import { ask, s, view } from "../ui/terminal.mjs";
 const MEMORY_LOGS_DIR_RELATIVE = "src/data/memory/logs";
 
 export async function handleQuitWithCommit(dbFilePath: string): Promise<void> {
-  await commitDbAndLogsIfChanged(dbFilePath);
+  commitDbAndLogsIfChanged(dbFilePath);
+  view("Existing...");
   process.exit(0);
 }
 
-async function commitDbAndLogsIfChanged(dbFilePath: string): Promise<void> {
+function commitDbAndLogsIfChanged(dbFilePath: string): void {
   const gitRoot = getGitRoot();
   if (!gitRoot) return;
 
@@ -31,14 +32,6 @@ async function commitDbAndLogsIfChanged(dbFilePath: string): Promise<void> {
   }
 
   if (!hasChanges(gitRoot, includedPathspecs)) return;
-
-  const confirmation = await ask(
-    s.alert("Commit and push db changes before quitting? (y/N): "),
-  );
-  if (confirmation.trim().toLowerCase() !== "y") {
-    view("Skipping auto-commit (user declined).");
-    return;
-  }
 
   const add = spawnSync("git", ["add", "--", ...includedPathspecs], {
     cwd: gitRoot,
