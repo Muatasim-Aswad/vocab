@@ -1,0 +1,113 @@
+{
+  "cases": [
+    {
+      "name": "bijhouden: records vs pace stub",
+      "term": "bijhouden",
+      "candidate": {
+        "term": "bijhouden",
+        "senseCue": "administratie",
+        "extra": "To keep track of or keep records up to date (a diary, accounts).",
+        "partOfSpeech": "VERB",
+        "examples": ["Ik houd mijn uitgaven bij in een app."]
+      },
+      "entries": [
+        {
+          "id": 1,
+          "status": "stub",
+          "relations": [{ "type": "related", "term": "bijblijven", "senseCue": "tempo" }]
+        }
+      ],
+      "expect": { "decision": "new" }
+    },
+    {
+      "name": "bijhouden: pace vs pace stub",
+      "term": "bijhouden",
+      "candidate": {
+        "term": "bijhouden",
+        "senseCue": "tempo",
+        "extra": "To keep up with someone's pace.",
+        "partOfSpeech": "VERB",
+        "examples": ["Ik kan de rest van de groep niet bijhouden."]
+      },
+      "entries": [
+        {
+          "id": 1,
+          "status": "stub",
+          "relations": [{ "type": "related", "term": "bijblijven", "senseCue": "tempo" }]
+        }
+      ],
+      "expect": { "decision": "same", "entryId": 1 }
+    },
+    {
+      "name": "bijhouden: blended draft vs pace stub",
+      "term": "bijhouden",
+      "candidate": {
+        "term": "bijhouden",
+        "extra": "To keep up with, maintain, or keep track of. Separable verb composed of 'bij' and 'houden'.",
+        "partOfSpeech": "VERB",
+        "examples": ["Het is belangrijk om je administratie goed bij te houden."]
+      },
+      "entries": [
+        {
+          "id": 1,
+          "status": "stub",
+          "relations": [{ "type": "related", "term": "bijblijven", "senseCue": "tempo" }]
+        }
+      ],
+      "expect": { "decision": "new" },
+      "notes": "The real production input that flipped between same and new; its example is about records, so new."
+    },
+    {
+      "name": "blad: magazine vs leaf entry",
+      "term": "het blad",
+      "candidate": {
+        "term": "het blad",
+        "senseCue": "tijdschrift",
+        "extra": "A magazine or periodical.",
+        "partOfSpeech": "NOUN",
+        "examples": ["Ze leest graag roddelbladen."]
+      },
+      "entries": [
+        {
+          "id": 7,
+          "status": "active",
+          "senseCue": "plant",
+          "partOfSpeech": "NOUN",
+          "extra": "A leaf of a plant.",
+          "examples": ["In de herfst vallen de bladeren."],
+          "forms": ["bladeren", "blaadje", "blaadjes"]
+        }
+      ],
+      "expect": { "decision": "new" }
+    },
+    {
+      "name": "opnemen: reworded record vs record entry",
+      "term": "opnemen",
+      "candidate": {
+        "term": "opnemen",
+        "extra": "To capture sound or video so it can be played back later.",
+        "partOfSpeech": "VERB",
+        "examples": ["We nemen de podcast vanavond op."]
+      },
+      "entries": [
+        {
+          "id": 3,
+          "status": "active",
+          "senseCue": "telefoon",
+          "partOfSpeech": "VERB",
+          "extra": "To answer the phone.",
+          "examples": ["Ze neemt haar telefoon niet op."]
+        },
+        {
+          "id": 4,
+          "status": "active",
+          "senseCue": "geluid",
+          "partOfSpeech": "VERB",
+          "extra": "To record audio or video.",
+          "examples": ["De band neemt een nieuw album op."]
+        }
+      ],
+      "expect": { "decision": "same", "entryId": 4 }
+    }
+  ]
+}

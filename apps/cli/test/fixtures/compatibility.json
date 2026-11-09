@@ -1,0 +1,250 @@
+{
+  "oracle": {
+    "fixedNow": "2024-04-05T12:00:00.000Z",
+    "cases": {
+      "pageVsCursor": {
+        "list": {
+          "errors": [],
+          "warnings": [],
+          "value": {
+            "cursor": 2,
+            "limit": 5,
+            "typeFilter": "Verb",
+            "showExtra": true
+          }
+        },
+        "search": {
+          "errors": [],
+          "warnings": [],
+          "value": {
+            "query": "het huis",
+            "options": {
+              "keepWhitespace": false,
+              "cursor": 3,
+              "limit": 5,
+              "includeAllFields": true,
+              "highlightAll": true
+            }
+          }
+        },
+        "missing": {
+          "errors": [
+            "Missing value for \"-ft\".",
+            "Missing value for \"-p\" (page number).",
+            "Missing value for \"-l\"."
+          ],
+          "warnings": [],
+          "value": {
+            "limit": 10
+          }
+        },
+        "legacyFlags": {
+          "errors": [],
+          "warnings": [
+            "Flag \"-s\" is no longer supported and was ignored.",
+            "Flag \"-x\" is no longer supported and was ignored.",
+            "Flag \"-t\" is no longer supported and was ignored."
+          ],
+          "value": {
+            "query": "woord",
+            "options": {
+              "keepWhitespace": false,
+              "limit": 10,
+              "includeAllFields": false,
+              "highlightAll": false
+            }
+          }
+        },
+        "literalUnknown": {
+          "errors": [],
+          "warnings": [],
+          "value": {
+            "query": "--unknown woord",
+            "options": {
+              "keepWhitespace": false,
+              "limit": 10,
+              "includeAllFields": false,
+              "highlightAll": false
+            }
+          }
+        },
+        "whitespace": {
+          "errors": [],
+          "warnings": [],
+          "value": {
+            "query": "  het   huis ",
+            "options": {
+              "keepWhitespace": true,
+              "limit": 10,
+              "includeAllFields": false,
+              "highlightAll": false
+            }
+          }
+        }
+      },
+      "termAndRelations": {
+        "article": {
+          "lemma": "huis",
+          "isMultiWord": false,
+          "grammar": {
+            "article": "het"
+          }
+        },
+        "reflexive": {
+          "lemma": "vergissen",
+          "isMultiWord": false,
+          "grammar": {
+            "isReflexive": true
+          }
+        },
+        "multiword": {
+          "lemma": "het huis bouwen",
+          "isMultiWord": true
+        },
+        "display": "het huis",
+        "relationStub": {
+          "type": "synonym",
+          "raw": "+onbekend",
+          "term": "onbekend"
+        },
+        "relationId": {
+          "type": "posVariation",
+          "raw": "^id:7",
+          "targetEntryId": 7
+        },
+        "wordFamily": {
+          "type": "wordFamily",
+          "raw": "~komen",
+          "term": "komen"
+        }
+      },
+      "inference": {
+        "nouns": [
+          ["de tafel", "NOUN"],
+          ["het meisje", "NOUN"],
+          ["kinderen", "NOUN"]
+        ],
+        "reflexive": {
+          "partOfSpeech": "VERB",
+          "tags": ["reflexive"],
+          "verbInfo": {
+            "isSeparable": false,
+            "prefix": "ver",
+            "baseVerb": "gissen",
+            "confidence": "High",
+            "irregular": false,
+            "forms": [
+              "vergis",
+              "vergist",
+              "vergissen",
+              "vergiste",
+              "vergisten",
+              "vergisend",
+              "vergisende"
+            ]
+          }
+        },
+        "multiword": {
+          "partOfSpeech": "ADJ",
+          "adjectiveInfo": {
+            "forms": ["in de war", "in de warre", "in de warrer", "in de warst"]
+          }
+        },
+        "separable": {
+          "partOfSpeech": "VERB",
+          "tags": ["separable"],
+          "verbInfo": {
+            "isSeparable": true,
+            "prefix": "aan",
+            "baseVerb": "komen",
+            "confidence": "High",
+            "irregular": true,
+            "forms": [
+              "kom aan",
+              "aankom",
+              "komt aan",
+              "aankomt",
+              "komen aan",
+              "aankomen",
+              "kwam aan",
+              "aankwam",
+              "kwamen aan",
+              "aankwamen",
+              "aangekomen",
+              "aangekomene",
+              "aankomend",
+              "aankomende"
+            ]
+          }
+        }
+      },
+      "memory": {
+        "strong": {
+          "newStrength": 5.699119403345657,
+          "newDifficulty": 1.920058706443623,
+          "newStreak": 2
+        },
+        "forgotten": {
+          "newStrength": 1.5,
+          "newDifficulty": 2.1,
+          "newStreak": 0
+        },
+        "immediate": {
+          "newStrength": 6,
+          "newDifficulty": 3,
+          "newStreak": 4
+        },
+        "priority": [
+          {
+            "id": 1,
+            "memory": {
+              "strength": 3,
+              "difficulty": 2,
+              "lastReviewed": "2024-04-04T12:00:00.000Z"
+            },
+            "priority": 0.486582880967408
+          },
+          {
+            "id": 2,
+            "memory": {
+              "strength": 3,
+              "difficulty": 2,
+              "lastReviewed": "2024-04-05T11:00:00.000Z"
+            },
+            "priority": -0.9726044771163483
+          }
+        ]
+      },
+      "interruptedStudy": {
+        "schemaVersion": 2,
+        "sessionId": "18eae214600-8",
+        "startedAt": "2024-04-05T12:00:00.000Z",
+        "selection": {
+          "kind": "priority",
+          "maxWords": 2
+        },
+        "reviews": [],
+        "sortResult": [
+          {
+            "id": 7,
+            "term": "het huis",
+            "priority": 0.75
+          }
+        ],
+        "endedAt": "2024-04-05T12:00:01.000Z",
+        "stats": {
+          "totalWords": 1,
+          "wordsReviewed": 0,
+          "veryKnowCount": 0,
+          "knowCount": 0,
+          "clueCount": 0,
+          "cluesCount": 0,
+          "noCount": 0
+        },
+        "outcome": {
+          "status": "quit"
+        }
+      }
+    }
+  }
+}

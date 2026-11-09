@@ -1,0 +1,61 @@
+# Portable same-origin API and web. Supply settings through the root `.env` or process environment.
+# `migrate` applies migrations as an explicit step; `api` starts only after it succeeds.
+name: vocab
+
+x-api: &api
+  image: ${VOCAB_IMAGE:-vocab-api:local}
+  pull_policy: missing
+  build:
+    context: .
+    # Set by srvr on deploy; empty otherwise, and the web app reports revision `dev`
+    args:
+      APP_REVISION: ${APP_REVISION:-}
+      APP_COMMIT_TIME: ${APP_COMMIT_TIME:-}
+      APP_BUILD_TIME: ${APP_BUILD_TIME:-}
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  tmpfs: ["/tmp:size=16m"]
+  volumes:
+    - data:/data
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }
+
+services:
+  migrate:
+    <<: *api
+    command: ["node", "dist/migrate.js"]
+    restart: "no"
+    environment:
+      VOCAB_DATABASE_PATH: ${VOCAB_DATABASE_PATH:-/data/vocab.db}
+
+  api:
+    <<: *api
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    environment:
+      VOCAB_API_TOKEN: ${VOCAB_API_TOKEN:?set VOCAB_API_TOKEN in .env}
+      VOCAB_DATABASE_PATH: ${VOCAB_DATABASE_PATH:-/data/vocab.db}
+      VOCAB_PUBLIC_ORIGIN: ${VOCAB_PUBLIC_ORIGIN:-}
+      VOCAB_CORS_ORIGINS: ${VOCAB_CORS_ORIGINS:-}
+      VOCAB_GEMINI_API_KEY: ${VOCAB_GEMINI_API_KEY:-}
+      VOCAB_GEMINI_MODEL: ${VOCAB_GEMINI_MODEL:-}
+      VOCAB_AI_TIMEOUT_MS: ${VOCAB_AI_TIMEOUT_MS:-}
+      VOCAB_AI_MAX_CONCURRENT: ${VOCAB_AI_MAX_CONCURRENT:-}
+      VOCAB_BODY_LIMIT_BYTES: ${VOCAB_BODY_LIMIT_BYTES:-}
+      VOCAB_REQUEST_TIMEOUT_MS: ${VOCAB_REQUEST_TIMEOUT_MS:-}
+      VOCAB_MAX_CONCURRENT_REQUESTS: ${VOCAB_MAX_CONCURRENT_REQUESTS:-}
+      VOCAB_SHUTDOWN_TIMEOUT_MS: ${VOCAB_SHUTDOWN_TIMEOUT_MS:-}
+      VOCAB_LOG_LEVEL: ${VOCAB_LOG_LEVEL:-}
+      VOCAB_HOSTS: ${VOCAB_HOSTS:-localhost}
+    ports: ["${VOCAB_BIND:-127.0.0.1}:${VOCAB_PORT:-3000}:3000"]
+    restart: unless-stopped
+    # Longer than VOCAB_SHUTDOWN_TIMEOUT_MS (10 s), so the app's own bounded shutdown finishes first
+    stop_grace_period: 15s
+    deploy:
+      resources:
+        limits: { cpus: "1", memory: 256M, pids: 128 }
+
+volumes:
+  data:

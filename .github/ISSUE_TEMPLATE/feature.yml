@@ -1,0 +1,18 @@
+name: Focused improvement
+description: Suggest an improvement within Vocab's personal vocabulary and study workflow.
+body:
+  - type: markdown
+    attributes:
+      value: Use Discussions for broad proposals or questions. Do not include personal vocabulary, credentials, or private host details. Maintenance is best effort.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proposed behavior
+      description: Explain the user need with a synthetic example and the smallest useful change.
+    validations:
+      required: true
+  - type: textarea
+    id: effects
+    attributes:
+      label: Compatibility and data handling
+      description: Mention effects on existing data, clients, AI calls, or the memory model, if relevant.

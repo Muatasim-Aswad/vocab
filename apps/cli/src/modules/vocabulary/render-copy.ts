@@ -1,0 +1,28 @@
+export const renderCopy = {
+  relations: {
+    synonym: "Synonyms",
+    antonym: "Antonyms",
+    wordFamily: "Word family",
+    posVariation: "POS variants",
+    related: "Related",
+  },
+  target: (term: string, cue: string) => `${term} [${cue}]`,
+  position: (position: number) => `${position}. `,
+  cue: (cue: string) => ` [${cue}]`,
+  irregular: "irregular",
+  entry: (
+    position: string,
+    term: string,
+    cue: string,
+    part: string,
+    tags: string,
+    irregular: string,
+    id: number,
+  ) => `${position}${term}${cue} ${part} ${tags} ${irregular} {${id}}`,
+  extra: (value: string) => `Extra: ${value}`,
+  relation: (label: string, targets: string) => `${label}: ${targets}`,
+  unnamedSense: "sense",
+  sibling: (cue: string, id: number) => `${cue} {${id}}`,
+  more: (visible: string, count: number) => `${visible}, and ${count} more`,
+  otherMeanings: (summary: string) => `Other meanings: ${summary}`,
+} as const;

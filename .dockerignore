@@ -1,0 +1,14 @@
+**/node_modules
+**/dist
+**/coverage
+**/*.tsbuildinfo
+**/*.db
+**/*.db-*
+**/.env
+**/.env.*
+!**/.env.example
+.git
+.github
+docs
+**/*.local
+apps/api/data

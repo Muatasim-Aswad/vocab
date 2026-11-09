@@ -1,0 +1,35 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "workspaces": {
+    ".": {
+      "entry": [
+        "scripts/*.ts!",
+        "scripts/migration/*.mjs",
+        "scripts/recovery/recovery.mjs!",
+        "scripts/publication/*.mjs"
+      ]
+    },
+    "apps/api": {
+      "entry": [
+        "src/main.ts!",
+        "src/migrate.ts!",
+        "src/import-study-history.ts!",
+        "evals/*/main.ts",
+        "evals/*/variants/*.ts"
+      ],
+      "project": ["src/**/*.ts!", "test/**/*.ts", "evals/**/*.ts"]
+    },
+    "apps/web": {
+      "entry": ["src/sw.ts!"],
+      "project": ["src/**/*.{ts,tsx,css}!", "e2e/**/*.ts"]
+    },
+    "apps/cli": {
+      "entry": ["src/index.ts!"],
+      "project": ["src/**/*.ts!", "test/**/*.test.ts"]
+    },
+    "packages/*": {
+      "project": ["src/**/*.ts!"]
+    }
+  },
+  "ignoreBinaries": ["local-agent", "gitleaks"]
+}

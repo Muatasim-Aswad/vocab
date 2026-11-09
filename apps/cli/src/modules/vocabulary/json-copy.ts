@@ -1,0 +1,22 @@
+export const jsonCopy = {
+  string: (key: string) => `Invalid "${key}": expected a string.`,
+  nonEmptyString: (key: string) => `Invalid "${key}": expected a non-empty string.`,
+  stringArray: (key: string) => `Invalid "${key}": expected an array of strings.`,
+  nonEmptyStrings: (key: string) => `Invalid "${key}": expected non-empty strings.`,
+  boolean: (key: string) => `Invalid "${key}": expected a boolean.`,
+  constructionString: 'Invalid "constructionType": expected a string.',
+  constructionChoices: (types: string) => `Invalid "constructionType": expected one of ${types}.`,
+  partString: 'Invalid "partOfSpeech": expected a string.',
+  partChoices:
+    'Invalid "partOfSpeech": expected one of NOUN, VERB, ADJ, ADV, PRON, DET, ADP, CCONJ, SCONJ, INTJ, PROPN, NUM, PART.',
+  relationsArray: 'Invalid "relations": expected an array of objects.',
+  relationObject: 'Invalid "relations": expected an array of {type, term} objects.',
+  unknownRelation: (type: string) => `Invalid "relations": unknown relation type "${type}".`,
+  relationTerm: 'Invalid "relations": expected non-empty "term" values.',
+  parseFailed: "Failed to parse JSON input.",
+  invalidJson: (message: string) => `Invalid JSON: ${message}`,
+  emptyArray: "JSON array must include at least one object.",
+  entryObject: (index: number) => `Invalid JSON entry at index ${index}: expected an object.`,
+  entryError: (index: number, error: string) => `Invalid JSON entry at index ${index}: ${error}`,
+  objectOrArray: 'JSON must be an object or an array of objects (e.g., {"term":"..."}).',
+} as const;

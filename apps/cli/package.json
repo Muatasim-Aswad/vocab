@@ -1,0 +1,37 @@
+{
+  "name": "@vocab/cli",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/Muatasim-Aswad/vocab",
+  "bugs": {
+    "url": "https://github.com/Muatasim-Aswad/vocab/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muatasim-Aswad/vocab.git",
+    "directory": "apps/cli"
+  },
+  "bin": {
+    "vocab": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^8.3.0",
+    "@vocab/api-client": "workspace:*",
+    "@vocab/contracts": "workspace:*",
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.5",
+    "string-argv": "^0.3.2",
+    "yargs-parser": "^22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/yargs-parser": "^21.0.3",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

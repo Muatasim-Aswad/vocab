@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem using synthetic vocabulary and study data.
+body:
+  - type: markdown
+    attributes:
+      value: Report security vulnerabilities privately using SECURITY.md. Remove tokens, cookies, personal vocabulary, study history, AI outputs, and private host details.
+  - type: input
+    id: build
+    attributes:
+      label: Commit and environment
+      description: Commit or web Version information, affected client, OS, and browser where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal synthetic inputs and steps; include expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Redacted diagnostics
+      description: Relevant logs or screenshots, with credentials and personal data removed.

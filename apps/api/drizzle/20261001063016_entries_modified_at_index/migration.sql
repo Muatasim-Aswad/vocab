@@ -1,0 +1,1 @@
+CREATE INDEX `entries_modified_at_idx` ON `entries` (`modified_at`);

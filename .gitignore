@@ -1,0 +1,40 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.vitest/
+*.tsbuildinfo
+
+# Local data
+*.db
+*.db-*
+
+# Env
+.env
+.env.*
+!.env.example
+
+.DS_Store
+
+*.log
+*.local
+*.local.md
+
+# Test and tool output
+test-results/
+playwright-report/
+apps/api/evals/results/
+# Temporary probes from scripts/verify-architecture.ts
+**/arch-probe*
+docs/plans/
+docs/migration/*.local.md
+docs/operations.md
+docs/deployment*.md
+docs/**/deployment*.md
+docs/**/operations*.md
+!docs/deployment.md
+compose.override.yaml
+compose.*.local.yaml
+compose.*.private.yaml
+docs/migration/reports/
+scripts/migration/reports/

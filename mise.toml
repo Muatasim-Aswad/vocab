@@ -1,0 +1,43 @@
+[tools]
+node = "24.21.0"
+pnpm = "12.6.0"
+
+[env]
+# `vp` and other workspace CLIs come from the pinned local packages
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[tasks.setup]
+description = "Create the shared root .env with a generated access token"
+run = '''
+set -eu
+if [ -e .env ] || [ -L .env ]; then
+  printf 'Keeping existing .env\n'
+  exit 0
+fi
+generated_token="$(openssl rand -hex 32)"
+(umask 077; set -C; printf 'VOCAB_API_TOKEN=%s\n' "$generated_token" > .env)
+printf 'Created .env\n'
+'''
+
+[tasks.check]
+description = "Build, format/lint/type check, architecture checks, tests, and browser smoke test (local and CI)"
+run = [
+  "node scripts/publication/check.mjs",
+  "node --test scripts/publication/*.test.mjs",
+  # Builds first: apps type-check against built packages; the browser test runs the built apps
+  "vp run -r build",
+  "vp check",
+  "vp lint --deny-warnings",
+  "vp run arch",
+  "vp run -r --concurrency-limit 1 test",
+  "vp run -r e2e",
+]
+
+[tasks.dev]
+description = "Build shared packages, then run every package's dev task in watch mode"
+env._.file = { path = ".env", redact = true }
+run = [
+  # Consumers import built packages, so they must exist before the apps start
+  "vp run --filter './packages/*' build",
+  "vp run -r --parallel dev",
+]

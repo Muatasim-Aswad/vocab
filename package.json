@@ -1,0 +1,27 @@
+{
+  "name": "vocab",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/Muatasim-Aswad/vocab",
+  "bugs": {
+    "url": "https://github.com/Muatasim-Aswad/vocab/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muatasim-Aswad/vocab.git"
+  },
+  "type": "module",
+  "scripts": {
+    "arch": "depcruise apps packages --config .dependency-cruiser.mjs && knip && knip --production && node scripts/verify-architecture.ts"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "dependency-cruiser": "18.4.0",
+    "knip": "6.38.0",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:",
+    "zod": "catalog:"
+  },
+  "packageManager": "pnpm@12.6.0"
+}

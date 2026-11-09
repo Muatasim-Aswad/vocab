@@ -1,0 +1,642 @@
+{
+  "asOf": "2026-10-02",
+  "method": "Forms and lemmas: woordenlijst.org (Taalunie), cross-checked with ANW and Wiktionary. Senses: nl/en Wiktionary, woorden.org (learner dictionary), Taaladvies and Onze Taal, compared across four independent frontier-model research passes (Opus 5.5 web and CLI, Sol with web search, Gemini 3.1 Pro). A sense is essential when every pass ranked it core for B1-B2 learners; valid when a source attests it; uncertain when only model memory supports it. Forms are compared as sets: required forms must all appear, optional forms may.",
+  "cases": [
+    {
+      "input": "bijgehouden",
+      "covers": [
+        "inflected input (past participle)",
+        "separable strong verb",
+        "multiple meanings",
+        "strong participle adjective without -e"
+      ],
+      "lemmas": [
+        {
+          "id": "bijhouden",
+          "terms": ["bijhouden"],
+          "partOfSpeech": "VERB",
+          "separable": true,
+          "irregular": true,
+          "forms": {
+            "required": [
+              "houd bij",
+              "bijhoud",
+              "houdt bij",
+              "bijhoudt",
+              "hield bij",
+              "bijhield",
+              "hielden bij",
+              "bijhielden",
+              "bijgehouden",
+              "bijhoudend",
+              "bijhoudende"
+            ],
+            "optional": ["bijhouden", "hou bij", "bijhou", "houden bij"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "records",
+          "lemma": "bijhouden",
+          "tier": "essential",
+          "gloss": "keep track of; keep (records, accounts, a diary) up to date",
+          "example": "Ik houd mijn uitgaven bij in een app."
+        },
+        {
+          "id": "pace",
+          "lemma": "bijhouden",
+          "tier": "essential",
+          "gloss": "keep up with (someone's pace; also the news, a skill)",
+          "example": "Ik kan de rest van de groep niet bijhouden."
+        },
+        {
+          "id": "skill",
+          "lemma": "bijhouden",
+          "tier": "valid",
+          "gloss": "keep up a skill so it is not lost (may be merged into pace)",
+          "example": "Ze houdt haar Frans bij door elke dag te lezen."
+        },
+        {
+          "id": "maintain",
+          "lemma": "bijhouden",
+          "tier": "valid",
+          "gloss": "maintain, keep (a garden, house) in good order",
+          "example": "Hij houdt de tuin elke week bij."
+        },
+        {
+          "id": "hold-out",
+          "lemma": "bijhouden",
+          "tier": "uncertain",
+          "gloss": "hold out (a glass to be filled)",
+          "example": "Hou je glas even bij."
+        }
+      ],
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=bijhouden",
+        "https://nl.wiktionary.org/wiki/bijhouden",
+        "https://en.wiktionary.org/wiki/bijhouden",
+        "https://anw.ivdnt.org/article/bijhouden",
+        "https://taaladvies.net/hou-of-houd/",
+        "https://www.woorden.org/woord/bijhouden",
+        "https://anw.ivdnt.org/article/de%20boeken%20bijhouden",
+        "https://woordcombinaties.ivdnt.org/docs/bijhouden/689562/combinatiemogelijkheden"
+      ],
+      "notes": "Keep records is confirmed by ANW (de boeken bijhouden) and is the most frequent corpus use (objects administratie, agenda, boekhouding, dagboek in INT Woordcombinaties); woorden.org omits it."
+    },
+    {
+      "input": "opnemen",
+      "covers": ["highly polysemous verb", "separable strong verb with vowel change (nam)"],
+      "lemmas": [
+        {
+          "id": "opnemen",
+          "terms": ["opnemen"],
+          "partOfSpeech": "VERB",
+          "separable": true,
+          "irregular": true,
+          "forms": {
+            "required": [
+              "neem op",
+              "opneem",
+              "neemt op",
+              "opneemt",
+              "nam op",
+              "opnam",
+              "namen op",
+              "opnamen",
+              "opgenomen",
+              "opnemend",
+              "opnemende"
+            ],
+            "optional": ["opnemen", "nemen op"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "phone",
+          "lemma": "opnemen",
+          "tier": "essential",
+          "gloss": "answer, pick up (the phone)",
+          "example": "Ze neemt haar telefoon niet op."
+        },
+        {
+          "id": "record",
+          "lemma": "opnemen",
+          "tier": "essential",
+          "gloss": "record (audio, video)",
+          "example": "De band neemt een nieuw album op."
+        },
+        {
+          "id": "admit",
+          "lemma": "opnemen",
+          "tier": "essential",
+          "gloss": "admit (to hospital, an institution)",
+          "example": "Mijn opa is gisteren in het ziekenhuis opgenomen."
+        },
+        {
+          "id": "withdraw",
+          "lemma": "opnemen",
+          "tier": "essential",
+          "gloss": "withdraw (money)",
+          "example": "Ik moet nog geld opnemen bij de automaat."
+        },
+        {
+          "id": "measure",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "take, measure (a temperature, a meter reading, an order)",
+          "example": "De verpleegkundige neemt je temperatuur op."
+        },
+        {
+          "id": "include",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "include, incorporate (in a text, list, group)",
+          "example": "Dit punt is in het contract opgenomen."
+        },
+        {
+          "id": "leave",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "take (leave, days off)",
+          "example": "Ik neem volgende week drie vrije dagen op."
+        },
+        {
+          "id": "react",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "take (news, a remark) well or badly",
+          "example": "Hij nam het nieuws vrij goed op."
+        },
+        {
+          "id": "defend",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "stand up for (het opnemen voor)",
+          "example": "Ze nam het voor haar broer op."
+        },
+        {
+          "id": "absorb",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "absorb, take in (liquid, nutrients)",
+          "example": "Het lichaam neemt ijzer slecht op."
+        },
+        {
+          "id": "look-over",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "look (someone) up and down",
+          "example": "Hij nam me van top tot teen op."
+        },
+        {
+          "id": "lift",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "pick up, lift (literary)",
+          "example": "Ze nam het glas op."
+        },
+        {
+          "id": "begin",
+          "lemma": "opnemen",
+          "tier": "valid",
+          "gloss": "initiate, take up, resume (contact opnemen met, de draad weer opnemen)",
+          "example": "Neem gerust contact met ons op."
+        },
+        {
+          "id": "compete",
+          "lemma": "opnemen",
+          "tier": "uncertain",
+          "gloss": "take on, compete against (het opnemen tegen)",
+          "example": "Ajax neemt het zondag op tegen PSV."
+        }
+      ],
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=opnemen",
+        "https://nl.wiktionary.org/wiki/opnemen",
+        "https://en.wiktionary.org/wiki/opnemen",
+        "https://anw.ivdnt.org/article/opnemen",
+        "https://taaladvies.net/geld-pinnen-of-afhalen-of-opnemen/",
+        "https://www.woorden.org/woord/opnemen"
+      ]
+    },
+    {
+      "input": "opleveren",
+      "covers": [
+        "separable weak verb with spelling change (lever)",
+        "weak participle adjective with -e"
+      ],
+      "lemmas": [
+        {
+          "id": "opleveren",
+          "terms": ["opleveren"],
+          "partOfSpeech": "VERB",
+          "separable": true,
+          "irregular": false,
+          "forms": {
+            "required": [
+              "lever op",
+              "oplever",
+              "levert op",
+              "oplevert",
+              "leverde op",
+              "opleverde",
+              "leverden op",
+              "opleverden",
+              "opgeleverd",
+              "opgeleverde",
+              "opleverend",
+              "opleverende"
+            ],
+            "optional": ["opleveren", "leveren op"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "yield",
+          "lemma": "opleveren",
+          "tier": "essential",
+          "gloss": "yield, produce, result in (money, results; also cause problems)",
+          "example": "Die investering heeft weinig opgeleverd."
+        },
+        {
+          "id": "hand-over",
+          "lemma": "opleveren",
+          "tier": "essential",
+          "gloss": "complete and hand over (a building, project)",
+          "example": "Het nieuwe huis wordt in maart opgeleverd."
+        }
+      ],
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=opleveren",
+        "https://nl.wiktionary.org/wiki/opleveren",
+        "https://en.wiktionary.org/wiki/opleveren",
+        "https://anw.ivdnt.org/article/opleveren",
+        "https://www.woorden.org/woord/opleveren"
+      ]
+    },
+    {
+      "input": "scheelt",
+      "covers": [
+        "inflected input (present 3rd sg)",
+        "non-separable weak verb",
+        "mostly impersonal verb"
+      ],
+      "lemmas": [
+        {
+          "id": "schelen",
+          "terms": ["schelen"],
+          "partOfSpeech": "VERB",
+          "separable": false,
+          "irregular": false,
+          "forms": {
+            "required": [
+              "scheel",
+              "scheelt",
+              "scheelde",
+              "scheelden",
+              "gescheeld",
+              "schelend",
+              "schelende"
+            ],
+            "optional": ["schelen", "gescheelde"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "difference",
+          "lemma": "schelen",
+          "tier": "essential",
+          "gloss": "make a difference; save (time, money); differ by (an amount)",
+          "example": "Met de trein scheelt het een uur."
+        },
+        {
+          "id": "care",
+          "lemma": "schelen",
+          "tier": "valid",
+          "gloss": "care, matter to someone (het kan me niet schelen)",
+          "example": "Het kan me niet schelen."
+        },
+        {
+          "id": "ail",
+          "lemma": "schelen",
+          "tier": "valid",
+          "gloss": "be wrong, be the matter (wat scheelt eraan?)",
+          "example": "Wat scheelt er met hem?"
+        },
+        {
+          "id": "nearly",
+          "lemma": "schelen",
+          "tier": "valid",
+          "gloss": "nearly happen (het scheelde weinig of...)",
+          "example": "Het scheelde weinig of hij was gevallen."
+        }
+      ],
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=schelen",
+        "https://nl.wiktionary.org/wiki/schelen",
+        "https://en.wiktionary.org/wiki/schelen",
+        "https://anw.ivdnt.org/article/schelen",
+        "https://www.woorden.org/woord/schelen"
+      ]
+    },
+    {
+      "input": "voorkomen",
+      "covers": [
+        "one spelling, separable and inseparable verbs with different forms",
+        "noun homograph"
+      ],
+      "lemmas": [
+        {
+          "id": "voorkomen-occur",
+          "terms": ["voorkomen"],
+          "partOfSpeech": "VERB",
+          "separable": true,
+          "irregular": true,
+          "forms": {
+            "required": [
+              "kom voor",
+              "voorkom",
+              "komt voor",
+              "voorkomt",
+              "kwam voor",
+              "voorkwam",
+              "kwamen voor",
+              "voorkwamen",
+              "voorgekomen",
+              "voorkomend",
+              "voorkomende"
+            ],
+            "optional": ["voorkomen", "komen voor"]
+          }
+        },
+        {
+          "id": "voorkomen-prevent",
+          "terms": ["voorkomen"],
+          "partOfSpeech": "VERB",
+          "separable": false,
+          "irregular": true,
+          "forms": {
+            "required": [
+              "voorkom",
+              "voorkomt",
+              "voorkwam",
+              "voorkwamen",
+              "voorkomen",
+              "voorkomend",
+              "voorkomende"
+            ],
+            "optional": []
+          }
+        },
+        {
+          "id": "voorkomen-noun",
+          "terms": ["het voorkomen"],
+          "partOfSpeech": "NOUN",
+          "forms": {
+            "required": [],
+            "optional": ["voorkomens"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "prevent",
+          "lemma": "voorkomen-prevent",
+          "tier": "essential",
+          "gloss": "prevent, avoid",
+          "example": "Een helm kan ernstig letsel voorkomen."
+        },
+        {
+          "id": "occur",
+          "lemma": "voorkomen-occur",
+          "tier": "essential",
+          "gloss": "occur, happen; be found (somewhere)",
+          "example": "Zulke fouten komen vaak voor."
+        },
+        {
+          "id": "seem",
+          "lemma": "voorkomen-occur",
+          "tier": "valid",
+          "gloss": "seem, strike (someone) as",
+          "example": "Haar gezicht komt me bekend voor."
+        },
+        {
+          "id": "court",
+          "lemma": "voorkomen-occur",
+          "tier": "valid",
+          "gloss": "appear in court; (a case) be heard",
+          "example": "Deze zaak komt voor op 2 mei."
+        },
+        {
+          "id": "ahead",
+          "lemma": "voorkomen-occur",
+          "tier": "valid",
+          "gloss": "come round to the front; get ahead",
+          "example": "Laat de auto even voorkomen."
+        },
+        {
+          "id": "appearance",
+          "lemma": "voorkomen-noun",
+          "tier": "valid",
+          "gloss": "(outward) appearance, look (noun)",
+          "example": "Hij heeft een verzorgd voorkomen."
+        },
+        {
+          "id": "occurrence",
+          "lemma": "voorkomen-noun",
+          "tier": "valid",
+          "gloss": "occurrence, presence (noun)",
+          "example": "Het voorkomen van wolven in Nederland is zeldzaam."
+        }
+      ],
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=voorkomen",
+        "https://nl.wiktionary.org/wiki/voorkomen",
+        "https://en.wiktionary.org/wiki/voorkomen",
+        "https://anw.ivdnt.org/article/voorkomen",
+        "https://www.woorden.org/woord/voorkomen"
+      ]
+    },
+    {
+      "input": "herinnerde",
+      "covers": [
+        "inflected input (past sg)",
+        "reflexive versus non-reflexive meaning",
+        "inseparable prefix (her-)"
+      ],
+      "lemmas": [
+        {
+          "id": "herinneren",
+          "terms": ["herinneren", "zich herinneren"],
+          "partOfSpeech": "VERB",
+          "separable": false,
+          "irregular": false,
+          "forms": {
+            "required": [
+              "herinner",
+              "herinnert",
+              "herinnerde",
+              "herinnerden",
+              "herinnerd",
+              "herinnerend",
+              "herinnerende"
+            ],
+            "optional": ["herinneren"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "remember",
+          "lemma": "herinneren",
+          "tier": "essential",
+          "gloss": "remember, recall (reflexive: zich herinneren)",
+          "example": "Ik herinner me haar naam niet meer."
+        },
+        {
+          "id": "remind",
+          "lemma": "herinneren",
+          "tier": "essential",
+          "gloss": "remind (someone of something; not reflexive)",
+          "example": "Die geur herinnert me aan mijn jeugd."
+        },
+        {
+          "id": "commemorate",
+          "lemma": "herinneren",
+          "tier": "uncertain",
+          "gloss": "commemorate (an object recalling something)",
+          "example": "Het monument herinnert aan de gevallenen."
+        }
+      ],
+      "notes": "The term for the remember sense should keep zich; the remind sense should not. Taaladvies (Taalunie): reflexive for remember, not reflexive in herinneren aan (remind); woorden.org omits remind.",
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=herinneren",
+        "https://nl.wiktionary.org/wiki/herinneren",
+        "https://en.wiktionary.org/wiki/herinneren",
+        "https://taaladvies.net/herinneren-of-zich-herinneren/",
+        "https://onzetaal.nl/taalloket/herinneren-zich-herinneren",
+        "https://www.woorden.org/woord/herinneren"
+      ]
+    },
+    {
+      "input": "blad",
+      "covers": ["noun with article (het)", "plural depends on the meaning", "diminutive"],
+      "lemmas": [
+        {
+          "id": "blad-plant",
+          "terms": ["het blad"],
+          "partOfSpeech": "NOUN",
+          "forms": {
+            "required": ["bladeren", "blaadje", "blaadjes"],
+            "optional": ["bladen", "blaren", "bladertje", "bladertjes"]
+          }
+        },
+        {
+          "id": "blad-flat",
+          "terms": ["het blad"],
+          "partOfSpeech": "NOUN",
+          "forms": {
+            "required": ["bladen", "blaadje", "blaadjes"],
+            "optional": []
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "leaf",
+          "lemma": "blad-plant",
+          "tier": "essential",
+          "gloss": "leaf (of a plant); foliage",
+          "example": "In de herfst vallen de bladeren."
+        },
+        {
+          "id": "paper",
+          "lemma": "blad-flat",
+          "tier": "essential",
+          "gloss": "sheet (of paper)",
+          "example": "Geef me een blad papier."
+        },
+        {
+          "id": "magazine",
+          "lemma": "blad-flat",
+          "tier": "essential",
+          "gloss": "magazine, periodical",
+          "example": "Ze leest graag roddelbladen."
+        },
+        {
+          "id": "tray",
+          "lemma": "blad-flat",
+          "tier": "valid",
+          "gloss": "tray (dienblad)",
+          "example": "Hij zette de kopjes op een blad."
+        },
+        {
+          "id": "top",
+          "lemma": "blad-flat",
+          "tier": "valid",
+          "gloss": "top, flat surface (of a table, desk)",
+          "example": "Het blad van de tafel is van eiken."
+        },
+        {
+          "id": "blade",
+          "lemma": "blad-flat",
+          "tier": "valid",
+          "gloss": "blade (of a saw, oar, tool)",
+          "example": "Het blad van de zaag is bot."
+        }
+      ],
+      "notes": "woordenlijst.org lists two entries: plant (plurals bladen, bladeren, blaren) and paper/tray/flat object (plural bladen only). Standard Dutch (woordenlijst.org; Van Dale as quoted in Taal en Tongval 1974): bladeren for leaves, bladen for every other sense; woorden.org's bladeren for all senses is wrong. Blaren is listed but dated.",
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=blad",
+        "https://nl.wiktionary.org/wiki/blad",
+        "https://en.wiktionary.org/wiki/blad",
+        "https://webwoordenboek.nl/meervoud-van/blad",
+        "https://www.woorden.org/woord/blad",
+        "https://www.dbnl.org/tekst/_taa007197401_01/_taa007197401_01_0016.php"
+      ]
+    },
+    {
+      "input": "breed",
+      "covers": ["adjective with spelling change (brede)", "control: should not be over-split"],
+      "lemmas": [
+        {
+          "id": "breed",
+          "terms": ["breed"],
+          "partOfSpeech": "ADJ",
+          "forms": {
+            "required": ["brede", "breder", "breedst"],
+            "optional": ["breed", "bredere", "breedste", "breeds"]
+          }
+        }
+      ],
+      "senses": [
+        {
+          "id": "wide",
+          "lemma": "breed",
+          "tier": "essential",
+          "gloss": "wide, broad (physical size and figurative scope)",
+          "example": "Het is een brede straat."
+        },
+        {
+          "id": "well-off",
+          "lemma": "breed",
+          "tier": "valid",
+          "gloss": "be well off (mostly negated: het niet breed hebben = not be well off)",
+          "example": "Ze hebben het niet breed."
+        }
+      ],
+      "notes": "A split into physical width and broad scope is acceptable but not needed; both translate as wide/broad.",
+      "sources": [
+        "https://woordenlijst.org/zoeken/?q=breed",
+        "https://nl.wiktionary.org/wiki/breed",
+        "https://en.wiktionary.org/wiki/breed",
+        "https://anw.ivdnt.org/article/breed",
+        "https://www.woorden.org/woord/breed"
+      ]
+    }
+  ]
+}

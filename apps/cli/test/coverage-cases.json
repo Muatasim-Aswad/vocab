@@ -1,0 +1,312 @@
+[
+  {
+    "id": "fast/f",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: fast/f"
+  },
+  {
+    "id": "normal/n",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: normal/n"
+  },
+  {
+    "id": "detail/dt",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: detail/dt"
+  },
+  {
+    "id": "json/j",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: json/j"
+  },
+  {
+    "id": "ai",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: ai"
+  },
+  {
+    "id": "searchmode/sm",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: searchmode/sm"
+  },
+  {
+    "id": "study/st",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study/st"
+  },
+  {
+    "id": "delete/d",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: delete/d"
+  },
+  {
+    "id": "edit/e",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: edit/e"
+  },
+  {
+    "id": "list/ls",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: list/ls"
+  },
+  {
+    "id": "search/s",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search/s"
+  },
+  {
+    "id": "show",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: show"
+  },
+  {
+    "id": "help",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: help"
+  },
+  {
+    "id": "mode",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: mode"
+  },
+  {
+    "id": "quit/q",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: quit/q"
+  },
+  {
+    "id": "clear",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: clear"
+  },
+  {
+    "id": "quitWithDbCommit/qw",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: quitWithDbCommit/qw"
+  },
+  {
+    "id": "list:-p",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: list:-p"
+  },
+  {
+    "id": "list:-l",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: list:-l"
+  },
+  {
+    "id": "list:-ft",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: list:-ft"
+  },
+  {
+    "id": "list:-se",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: list:-se"
+  },
+  {
+    "id": "search:-p",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-p"
+  },
+  {
+    "id": "search:-l",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-l"
+  },
+  {
+    "id": "search:-ft",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-ft"
+  },
+  {
+    "id": "search:-a",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-a"
+  },
+  {
+    "id": "search:-ss",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-ss"
+  },
+  {
+    "id": "search:-ha",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-ha"
+  },
+  {
+    "id": "search:-se",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-se"
+  },
+  {
+    "id": "search:-s",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-s"
+  },
+  {
+    "id": "search:-x",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-x"
+  },
+  {
+    "id": "search:-t",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: search:-t"
+  },
+  {
+    "id": "parser:quoted",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: parser:quoted"
+  },
+  {
+    "id": "parser:unknown",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: parser:unknown"
+  },
+  {
+    "id": "parser:repeated",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: parser:repeated"
+  },
+  {
+    "id": "parser:missing",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: parser:missing"
+  },
+  {
+    "id": "parser:whitespace",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: parser:whitespace"
+  },
+  {
+    "id": "add:duplicate",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:duplicate"
+  },
+  {
+    "id": "add:sense-cue",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:sense-cue"
+  },
+  {
+    "id": "add:relation-choice",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:relation-choice"
+  },
+  {
+    "id": "add:forms-conflict",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:forms-conflict"
+  },
+  {
+    "id": "add:json-batch",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:json-batch"
+  },
+  {
+    "id": "add:ai-retry",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: add:ai-retry"
+  },
+  {
+    "id": "study:config",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study:config"
+  },
+  {
+    "id": "study:hints",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study:hints"
+  },
+  {
+    "id": "study:consolidation",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study:consolidation"
+  },
+  {
+    "id": "study:interrupt",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study:interrupt"
+  },
+  {
+    "id": "study:log-failure",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: study:log-failure"
+  },
+  {
+    "id": "settings:show",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:show"
+  },
+  {
+    "id": "settings:dark",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:dark"
+  },
+  {
+    "id": "settings:formsConflict",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:formsConflict"
+  },
+  {
+    "id": "settings:connection",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:connection"
+  },
+  {
+    "id": "settings:allowCommit",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:allowCommit"
+  },
+  {
+    "id": "settings:allowPush",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:allowPush"
+  },
+  {
+    "id": "settings:allowPull",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:allowPull"
+  },
+  {
+    "id": "settings:sync",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:sync"
+  },
+  {
+    "id": "settings:geminiApiKey",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings:geminiApiKey"
+  },
+  {
+    "id": "cli:http",
+    "test": "apps/cli/test/cli-http.integration.test.ts",
+    "case": "compatibility: cli:http"
+  },
+  {
+    "id": "cli:unavailable",
+    "test": "apps/cli/test/cli-http.integration.test.ts",
+    "case": "compatibility: cli:unavailable"
+  },
+  {
+    "id": "cli:lost-response",
+    "test": "apps/cli/test/cli-http.integration.test.ts",
+    "case": "compatibility: cli:lost-response"
+  },
+  {
+    "id": "cli:auth-failure",
+    "test": "apps/cli/test/cli-http.integration.test.ts",
+    "case": "compatibility: cli:auth-failure"
+  },
+  {
+    "id": "settings",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: settings"
+  },
+  {
+    "id": "prompt:-d-stale",
+    "test": "apps/cli/test/compatibility.test.ts",
+    "case": "compatibility: prompt:-d-stale"
+  }
+]

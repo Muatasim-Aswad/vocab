@@ -1,0 +1,60 @@
+import type { AppMode } from "./platform/context.ts";
+
+export const appCopy = {
+  descriptions: {
+    fast: "Switch to Fast Input Mode (capture terms for later review)",
+    normal: "Switch to Normal Input Mode (term with optional fields)",
+    detail: "Switch to Detail Input Mode (all fields with auto-defaults)",
+    json: "Switch to JSON Input Mode (paste defaults, then edit all fields)",
+    ai: "Switch to AI Input Mode (AI defaults, then edit all fields)",
+    searchmode:
+      "Switch to Search Mode (interactive search; flags: -p page, -l limit, -ft type filter, -a all fields, -ss space sensitive, -ha highlight all occurrences, -se show extra)",
+    delete: "Delete a specific term (or last term if no argument)",
+    edit: "Edit a term's entries (or last term if no argument)",
+    list: "List terms (default: 10 entries)",
+    captures: "List captured terms awaiting review, newest first (default: 10 entries)",
+    search: "Search for terms (same flags as search mode, default limit 10)",
+    show: "Show a single entry by id",
+    study: "Start a study session with spaced repetition",
+    help: "Show this help",
+    mode: "Show current mode",
+    quit: "Exit the application",
+    quitWithDbCommit: "Commit storage changes and exit",
+    settings: "Show or update CLI preferences and the API connection",
+    clear: "Clear terminal output",
+  },
+  categories: { modes: "Modes", commands: "Commands", other: "Other" },
+  usages: {
+    delete: "<term|id>",
+    edit: "<term|id>",
+    list: "-p <page> -l <limit> -ft <type filter>",
+    captures: "-p <page> -l <limit>",
+    search: "<query> -p <page> -l <limit> -ft <type filter> -a",
+    show: "<id>",
+    settings:
+      "set dark <true|false> | set formsConflict <ask|inferred|provided|manual> | set apiUrl <url>",
+  },
+  retiredCommit: "the API stores every change, so there is no storage commit",
+  helpHeading: "\n=== Dutch Vocabulary App ===",
+  category: (category: string) => `\n${category}:`,
+  helpRow: (usage: string, description: string) => `${usage} :${description}`,
+  helpMode: (mode: AppMode) => `\nCurrent mode: ${mode.toUpperCase()}`,
+  mode: (mode: AppMode) => `Current mode: ${mode.toUpperCase()}`,
+  switched: {
+    fast: "Switched to FAST INPUT mode.",
+    normal: "Switched to NORMAL INPUT mode.",
+    detail: "Switched to DETAIL INPUT mode.",
+    json: "Switched to JSON INPUT mode.",
+    ai: "Switched to AI INPUT mode.",
+    search: "Switched to SEARCH mode.",
+  },
+  retired: (name: string, aliases: string, reason: string) =>
+    `"${name}" (${aliases}) was retired: ${reason}. Use "quit" to exit.`,
+  retrying: (input: string) => `Retrying "${input}"...`,
+  kept: (input: string) =>
+    `Your input was kept. Press Enter on an empty prompt to retry "${input}".`,
+  apiUnavailable: "Commands will reach the API once it is running; nothing was started locally.",
+  heading: "=== Dutch Vocabulary App ===",
+  helpHint: "Type 'help' for available commands.\n",
+  prompt: (mode: AppMode) => `\n[${mode.toUpperCase()}] > `,
+} as const;
