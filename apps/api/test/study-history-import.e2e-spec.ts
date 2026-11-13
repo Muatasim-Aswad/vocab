@@ -1,11 +1,20 @@
 import { createHash } from "node:crypto";
-import { cpSync, mkdirSync, readFileSync, readdirSync, symlinkSync, writeFileSync } from "node:fs";
+import fs, {
+  cpSync,
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  renameSync,
+  symlinkSync,
+  writeFileSync,
+} from "node:fs";
+import { syncBuiltinESMExports } from "node:module";
 import { join, resolve } from "node:path";
 
 import { routes } from "@vocab/contracts";
 import BetterSqlite3 from "better-sqlite3";
 import request from "supertest";
-import { afterEach, describe, expect, it } from "vite-plus/test";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 
 import { Database } from "../src/infra/db/database.js";
 import {
@@ -290,6 +299,33 @@ describe("explicit study history import", () => {
     const pairError = refusal(() => apply(db, pair));
     expect(pairError.report!.inputs.map((input) => input.status)).toEqual(["conflict", "conflict"]);
     expect(counts(db)).toEqual(baseline);
+  });
+
+  it("refuses a regular study log swapped for a symlink before reading", () => {
+    const w = workspace();
+    const victim = join(w.logs, "race.json");
+    const outside = join(w.dir, "outside.json");
+    createLegacyLogs(victim);
+    createLegacyLogs(outside, legacyLog({ sessionId: "18eae214604-9" }));
+    const original = fs.lstatSync;
+    let swapped = false;
+    const stat = vi.spyOn(fs, "lstatSync").mockImplementation((path, options) => {
+      const result = original(path, options);
+      if (path === victim && !swapped) {
+        swapped = true;
+        renameSync(victim, join(w.logs, "original.json"));
+        symlinkSync(outside, victim);
+      }
+      return result;
+    });
+    syncBuiltinESMExports();
+    try {
+      expect(() => readStudyHistorySource(w.logs)).toThrow(/changed|outside|symlink/i);
+      expect(swapped).toBe(true);
+    } finally {
+      stat.mockRestore();
+      syncBuiltinESMExports();
+    }
   });
 
   it("compatibility: history-import:paths — symlinks, escapes and changing sources are refused", () => {

@@ -8,6 +8,8 @@ Changes are recorded here using [Keep a Changelog](https://keepachangelog.com/en
 
 ### Security
 
+- Refused study-log files replaced during offline import, created private CLI temporary files exclusively, and removed URL-normalization backtracking and prototype-bearing CLI argument maps.
+
 - Updated application dependencies and vulnerable transitive packages; aligned Vite+ with its core and test runner while retaining TypeScript 6 compatibility.
 
 ## [0.1.0]
