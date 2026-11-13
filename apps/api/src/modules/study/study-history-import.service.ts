@@ -1,5 +1,14 @@
 import { createHash } from "node:crypto";
-import { lstatSync, readFileSync, readdirSync } from "node:fs";
+import {
+  closeSync,
+  constants,
+  fstatSync,
+  lstatSync,
+  openSync,
+  readFileSync,
+  readdirSync,
+  realpathSync,
+} from "node:fs";
 import { isAbsolute, join, relative, resolve } from "node:path";
 
 import { Injectable } from "@nestjs/common";
@@ -83,6 +92,7 @@ export function readStudyHistorySource(path: string): StudyHistorySource {
   }
   if (stat.isSymbolicLink()) throw new StudyHistoryImportError("Study log source is a symlink");
   if (!stat.isDirectory()) throw new StudyHistoryImportError("Study log source is not a directory");
+  const canonicalRoot = realpathSync(root);
   const digest = createHash("sha256");
   const files: SourceFile[] = [];
   const unsupported: StudyHistorySource["unsupported"] = [];
@@ -104,7 +114,25 @@ export function readStudyHistorySource(path: string): StudyHistorySource {
         digest.update(name).update("\0special");
         unsupported.push({ name, problem: "not a regular file" });
       } else {
-        const bytes = readFileSync(full);
+        const canonical = realpathSync(full);
+        const location = relative(canonicalRoot, canonical);
+        if (!location || location.startsWith("..") || isAbsolute(location))
+          throw new StudyHistoryImportError(
+            "Study log changed to a path outside the source directory",
+          );
+        const descriptor = openSync(
+          canonical,
+          constants.O_RDONLY | constants.O_NOFOLLOW | constants.O_NONBLOCK,
+        );
+        let bytes: Buffer;
+        try {
+          const opened = fstatSync(descriptor);
+          if (!opened.isFile() || opened.dev !== item.dev || opened.ino !== item.ino)
+            throw new StudyHistoryImportError("Study log changed before reading");
+          bytes = readFileSync(descriptor);
+        } finally {
+          closeSync(descriptor);
+        }
         digest.update(name).update("\0").update(bytes);
         if (entry.endsWith(".json"))
           files.push({ name, sha256: createHash("sha256").update(bytes).digest("hex"), bytes });

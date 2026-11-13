@@ -5,6 +5,7 @@ import { describe, expect, it, vi } from "vite-plus/test";
 import { Database } from "../src/infra/db/database.js";
 import { AiAuditService } from "../src/modules/ai/ai-audit.service.js";
 import { CapturesService } from "../src/modules/captures/captures.service.js";
+import { AnswerScore } from "../src/modules/study/memory.js";
 import { StudySessionRepository } from "../src/modules/study/study-session.repository.js";
 import { StudyService } from "../src/modules/study/study.service.js";
 import { VocabularyService } from "../src/modules/vocabulary/vocabulary.service.js";
@@ -138,7 +139,7 @@ describe("feature service transactions", () => {
           started.id,
           started.revision,
           created.entry.id,
-          1,
+          AnswerScore.KNOW,
           900,
           Date.now(),
         ),

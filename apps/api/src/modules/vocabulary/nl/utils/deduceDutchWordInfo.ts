@@ -113,7 +113,8 @@ function deduceNounTags(word: string): string[] {
 
   // Check for plural indicators
   const isCommonPluralS = COMMON_PLURAL_S_ENDINGS.some(
-    (pattern) => nounWithoutArticle === pattern || nounWithoutArticle === pattern.replace("'", ""),
+    (pattern) =>
+      nounWithoutArticle === pattern || nounWithoutArticle === pattern.replaceAll("'", ""),
   );
   const isDiminutivePlural = DIMINUTIVE_PLURAL_ENDINGS.some((ending) =>
     nounWithoutArticle.endsWith(ending),

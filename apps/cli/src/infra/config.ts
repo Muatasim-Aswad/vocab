@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, join } from "node:path";
@@ -60,8 +61,8 @@ function readJsonFile(path: string): unknown {
 /** Replaces a private file atomically. */
 export function writePrivateJson(path: string, value: unknown): void {
   mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
-  const temporary = `${path}.${process.pid}.tmp`;
-  writeFileSync(temporary, JSON.stringify(value, null, 2) + "\n", { mode: 0o600 });
+  const temporary = `${path}.${randomUUID()}.tmp`;
+  writeFileSync(temporary, JSON.stringify(value, null, 2) + "\n", { mode: 0o600, flag: "wx" });
   renameSync(temporary, path);
 }
 
@@ -81,7 +82,9 @@ export function readConnection(paths: CliPaths, env: Env = process.env): Connect
   const apiUrl =
     env.VOCAB_API_URL || (typeof file.apiUrl === "string" && file.apiUrl) || defaultApiUrl;
   const token = env.VOCAB_API_TOKEN || (typeof file.token === "string" ? file.token : undefined);
-  return { apiUrl: apiUrl.replace(/\/+$/, ""), token: token?.trim() || undefined };
+  let end = apiUrl.length;
+  while (end > 0 && apiUrl[end - 1] === "/") end -= 1;
+  return { apiUrl: apiUrl.slice(0, end), token: token?.trim() || undefined };
 }
 
 export function writeApiUrl(paths: CliPaths, apiUrl: string): void {

@@ -5,7 +5,7 @@ import type { z } from "zod";
 import { MutationReceipts } from "../../infra/db/mutation-receipts.js";
 import { AppError } from "../../shared/app-error.js";
 import { summarizeEntry } from "../vocabulary/vocabulary.service.js";
-import type { AnswerScore } from "./memory.js";
+import { AnswerScore } from "./memory.js";
 import { historyRow, sessionHistoryDocument } from "./study-history.js";
 import { StudyHistoryRepository, type StoredStudyHistory } from "./study-history.repository.js";
 import { StudyMemoryRepository } from "./study-memory.repository.js";
@@ -23,6 +23,14 @@ import {
   type StudySessionState,
   type StoredStudySession,
 } from "./study-session.repository.js";
+
+const answerScores: Record<z.output<typeof routes.answerStudy.body>["answerScore"], AnswerScore> = {
+  0: AnswerScore.NO,
+  0.2: AnswerScore.CLUES,
+  0.5: AnswerScore.CLUE,
+  1: AnswerScore.KNOW,
+  1.5: AnswerScore.VERY_KNOW,
+};
 
 function validateHintLimit(hintCount: number, answerScore: number): void {
   if ((hintCount === 1 && answerScore > 0.5) || (hintCount >= 2 && answerScore > 0.2))
@@ -233,7 +241,7 @@ export class StudyService {
         params.id,
         body.expectedRevision,
         body.entryId,
-        body.answerScore,
+        answerScores[body.answerScore],
         body.answerTimeMs,
         Date.now(),
         body.hintCount,

@@ -9,6 +9,7 @@ import { afterEach, describe, expect, it } from "vite-plus/test";
 
 import type { AppConfig } from "../src/config.js";
 import { Database } from "../src/infra/db/database.js";
+import { AnswerScore } from "../src/modules/study/memory.js";
 import {
   createStudyHistoryImporter,
   readStudyHistorySource,
@@ -231,7 +232,7 @@ describe("database-only study history", () => {
       started.id,
       started.revision,
       started.state.sessionWords[0]!.id,
-      1,
+      AnswerScore.KNOW,
       900,
       Date.parse("2024-04-05T12:00:01.000Z"),
     ).session;

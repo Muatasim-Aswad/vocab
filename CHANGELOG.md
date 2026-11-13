@@ -4,6 +4,16 @@ Changes are recorded here using [Keep a Changelog](https://keepachangelog.com/en
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-13
+
+### Security
+
+- Refused study-log files replaced during offline import, created private CLI temporary files exclusively, and removed URL-normalization backtracking and prototype-bearing CLI argument maps.
+
+- Updated application dependencies and vulnerable transitive packages; aligned Vite+ with its core and test runner while retaining TypeScript 6 compatibility.
+
+## [0.1.0]
+
 ### Added
 
 - Source distribution of the self-hosted Dutch vocabulary API, web app, and terminal client.
@@ -11,4 +21,4 @@ Changes are recorded here using [Keep a Changelog](https://keepachangelog.com/en
 - SQLite migrations, durable mutation receipts and study history, backup/recovery checks, and portable Docker Compose deployment.
 - MIT licensing, contribution/security guidance, and repository verification.
 
-No tagged release, prebuilt image, or package has been published. The development version is `0.1.0`.
+No tagged release, prebuilt image, or package has been published. The development version is `0.1.1`.

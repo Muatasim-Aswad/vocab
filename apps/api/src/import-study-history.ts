@@ -10,14 +10,14 @@ import {
 const usage =
   "Usage: import-study-history --database FILE --logs DIR (--dry-run true | --expect SHA256)";
 
-function flags(args: string[]): Record<string, string> {
-  const result: Record<string, string> = {};
+function flags(args: string[]): Map<string, string> {
+  const result = new Map<string, string>();
   for (let i = 0; i < args.length; i += 2) {
     const name = args[i];
     const value = args[i + 1];
-    if (!name?.startsWith("--") || !value || value.startsWith("--") || name in result)
+    if (!name?.startsWith("--") || !value || value.startsWith("--") || result.has(name))
       throw new Error(usage);
-    result[name] = value;
+    result.set(name, value);
   }
   return result;
 }
@@ -28,10 +28,10 @@ function flags(args: string[]): Record<string, string> {
  */
 try {
   const args = flags(process.argv.slice(2));
-  const databasePath = args["--database"];
-  const logsPath = args["--logs"];
-  const dryRun = args["--dry-run"] === "true";
-  const expected = args["--expect"];
+  const databasePath = args.get("--database");
+  const logsPath = args.get("--logs");
+  const dryRun = args.get("--dry-run") === "true";
+  const expected = args.get("--expect");
   if (!databasePath || !logsPath || dryRun === Boolean(expected)) throw new Error(usage);
   if (expected && !/^[a-f0-9]{64}$/.test(expected))
     throw new Error("Expected source SHA-256 is required");
