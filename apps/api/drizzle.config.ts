@@ -6,6 +6,4 @@ export default defineConfig({
   dialect: "sqlite",
   schema: ["./src/modules/*/*.schema.ts", "./src/infra/db/*.schema.ts"],
   out: "./drizzle",
-  strict: true,
-  verbose: true,
 });

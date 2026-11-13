@@ -1,6 +1,6 @@
 {
   "name": "vocab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": "https://github.com/Muatasim-Aswad/vocab",
   "bugs": {
@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "dependency-cruiser": "18.4.0",
-    "knip": "6.38.0",
+    "dependency-cruiser": "18.7.2",
+    "knip": "6.44.1",
     "typescript": "catalog:",
     "vite-plus": "catalog:",
     "zod": "catalog:"
