@@ -4,6 +4,12 @@ Changes are recorded here using [Keep a Changelog](https://keepachangelog.com/en
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-15
+
+### Changed
+
+- Updated NestJS, query/localization libraries, browser tooling, and Vite+; retained TypeScript 6 for NestJS compiler compatibility.
+
 ## [0.1.1] - 2026-11-13
 
 ### Security
@@ -21,4 +27,4 @@ Changes are recorded here using [Keep a Changelog](https://keepachangelog.com/en
 - SQLite migrations, durable mutation receipts and study history, backup/recovery checks, and portable Docker Compose deployment.
 - MIT licensing, contribution/security guidance, and repository verification.
 
-No tagged release, prebuilt image, or package has been published. The development version is `0.1.1`.
+No tagged release, prebuilt image, or package has been published. The development version is `0.1.2`.
