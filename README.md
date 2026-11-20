@@ -30,14 +30,13 @@ Vocab assumes one trusted owner and a private deployment. All authenticated clie
 
 ## Documentation
 
-| I want to… | Read |
-| --- | --- |
-| Configure, update, back up, or manage with srvr | [Deployment](docs/deployment.md) |
-| Use the terminal client or study mode | [Terminal client](docs/cli.md) |
-| Develop, test, or contribute | [Development](docs/development.md) · [Contributing](CONTRIBUTING.md) |
-| Understand the code and vocabulary model | [Architecture](docs/architecture.md) · [Domain language](CONTEXT.md) · [Decisions](docs/decisions.md) |
-| Check security, data handling, or changes | [Security](SECURITY.md) · [Data handling](docs/deployment.md#data-and-network) · [Changelog](CHANGELOG.md) |
+- [Deployment](docs/deployment.md) — Configure, back up, and update a self-hosted instance.
+- [Terminal client](docs/cli.md) — Capture and edit vocabulary or start a study session.
+- [Security](SECURITY.md) — Understand the single-owner trust boundary and report vulnerabilities privately.
+- [Development](docs/development.md) — Set up a checkout, run checks, and find contribution instructions.
+- [Architecture](docs/architecture.md) — Find where the code lives and understand the vocabulary model.
+- [Changelog](CHANGELOG.md) — See what changed in each release.
 
-Ask questions in [Discussions](https://github.com/Muatasim-Aswad/vocab/discussions); report vulnerabilities through [Security](SECURITY.md).
+Ask questions in [Discussions](https://github.com/Muatasim-Aswad/vocab/discussions).
 
 Licensed under [MIT](LICENSE). Bundled asset attribution is in [third-party notices](THIRD_PARTY_NOTICES.md).
