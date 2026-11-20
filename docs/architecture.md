@@ -1,14 +1,21 @@
 # Architecture
 
-## Layout
+Vocab's web app and terminal client use a shared HTTP client and route contracts to read and update vocabulary through one API. The API owns SQLite storage and can serve the built web app when `VOCAB_WEB_ROOT` is set.
 
-| Path | Package | Notes |
-| --- | --- | --- |
-| `apps/api` | `@vocab/api` | NestJS 12 (ESM), Drizzle + better-sqlite3; also serves the built web app when `VOCAB_WEB_ROOT` is set |
-| `apps/web` | `@vocab/web` | React 19 and Tailwind CSS 4 on Vite+; `e2e/` holds the Playwright smoke test |
-| `apps/cli` | `@vocab/cli` | Interactive terminal client over `@vocab/api-client`; local preferences and pending-write journal |
-| `packages/contracts` | `@vocab/contracts` | Zod schemas and route contracts; built to `dist/` with `vp pack` |
-| `packages/api-client` | `@vocab/api-client` | Typed HTTP client over the contracts; built to `dist/` with `vp pack` |
+## Repository layout
+
+```text
+vocab/
+├── apps/
+│   ├── api/         NestJS API with Drizzle and SQLite via better-sqlite3
+│   ├── web/         React and Tailwind CSS on Vite+, with Playwright smoke tests
+│   └── cli/         TypeScript terminal client with local preferences and a pending-write journal
+├── packages/
+│   ├── contracts/   Zod schemas and shared route contracts
+│   └── api-client/  Typed HTTP client shared by web and CLI
+├── scripts/        Verification and publication tooling
+└── docs/           Project guides and decisions
+```
 
 ## Sources of truth
 

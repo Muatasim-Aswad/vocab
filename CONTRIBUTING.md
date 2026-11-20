@@ -8,4 +8,6 @@ Fork and clone the repository, then follow [development](docs/development.md) fo
 
 Send focused pull requests from your fork, with meaningful tests for behavior changes. Describe the resulting behavior, privacy implications, migrations/compatibility effects, and checks run; mark inapplicable items. Follow [architecture](docs/architecture.md) and update the authoritative documentation. Changes to the memory model need evaluation evidence as well as calculation tests.
 
-Use synthetic data in tests, screenshots, logs, and reports. Remove real vocabulary, study history, credentials, private hostnames, and personal information. Applied database migrations must not be edited. Commit messages should explain the change; Conventional Commits are optional. Contributions use the repository's [MIT license](LICENSE).
+Write short, specific commit subjects and pull request titles that start with an action verb and omit type prefixes. Review the pull request title before squash merging because it can become the commit subject.
+
+Use synthetic data in tests, screenshots, logs, and reports. Remove real vocabulary, study history, credentials, private hostnames, and personal information. Applied database migrations must not be edited. Contributions use the repository's [MIT license](LICENSE).
