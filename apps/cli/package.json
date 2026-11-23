@@ -20,7 +20,7 @@
   ],
   "type": "module",
   "dependencies": {
-    "@inquirer/prompts": "^8.7.5",
+    "@inquirer/prompts": "^8.8.0",
     "@vocab/api-client": "workspace:*",
     "@vocab/contracts": "workspace:*",
     "chalk": "^6.0.1",
